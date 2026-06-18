@@ -1,0 +1,216 @@
+<root>
+<document scada='0' projtype='1' schema='103' license='1,FREE_VERSION,TCW03R' title='Display OLED' description='New &lt;Arduino Uno R3 PDIP&gt; Embedded Project' fcversion='720898' target='ARD.ATMEGA.Arduino Uno R3 PDIP' >
+	<config data='' clkspd='16000000' simspd='0' usewdt='0' constif='0' SSH_IP='DD6171BB7AD97877' SSH_User='DD6171BB7AD97877' SSH_Pass='DD6171BB7AD97877' Use3V3='0' />
+	<plugins >
+		<dll_models enabled='1' />
+	</plugins>
+	<supplement use='0' head='' body='' />
+	<debug />
+	<traces />
+	<ghost >
+		<FK2 >
+			<data name='FK2D0' port='4294967295' pin='4294967295' />
+			<data name='FK2D1' port='4294967295' pin='4294967295' />
+			<data name='FK2D2' port='4294967295' pin='4294967295' />
+			<data name='FK2D3' port='4294967295' pin='4294967295' />
+			<data name='FK2D4' port='4294967295' pin='4294967295' />
+			<data name='FK2D5' port='4294967295' pin='4294967295' />
+			<data name='FK2D6' port='4294967295' pin='4294967295' />
+			<data name='FK2D7' port='4294967295' pin='4294967295' />
+			<data name='FK2D8' port='4294967295' pin='4294967295' />
+			<data name='FK2D9' port='4294967295' pin='4294967295' />
+			<data name='FK2D10' port='4294967295' pin='4294967295' />
+			<data name='FK2D11' port='4294967295' pin='4294967295' />
+			<data name='FK2D12' port='4294967295' pin='4294967295' />
+			<data name='FK2D13' port='4294967295' pin='4294967295' />
+			<data name='FK2D14' port='4294967295' pin='4294967295' />
+			<data name='FK2D15' port='4294967295' pin='4294967295' />
+			<data name='FK2A0' port='4294967295' pin='4294967295' />
+			<data name='FK2A1' port='4294967295' pin='4294967295' />
+			<data name='FK2A2' port='4294967295' pin='4294967295' />
+			<data name='FK2A3' port='4294967295' pin='4294967295' />
+			<data name='FK2A4' port='4294967295' pin='4294967295' />
+			<data name='FK2A5' port='4294967295' pin='4294967295' />
+		</FK2>
+		<ICD >
+			<data name='AnalogPrescaleValue' value='19' />
+			<data name='DigitalSampleRate' value='100000' />
+			<data name='BreakpointCount' value='8' />
+			<data name='CallStackDepthCount' value='8' />
+			<data name='ClockPort' value='3' />
+			<data name='ClockPin' value='1' />
+			<data name='DataPort' value='3' />
+			<data name='DataPin' value='0' />
+			<data name='UseDefaultPins' value='1' />
+			<data name='WrapEnabled' value='1' />
+			<data name='CommsDelayOverridden' value='0' />
+			<data name='CommsDelay' value='11' />
+			<data name='CalculatedCommsDelay' value='11' />
+			<data name='AnalogEB2PrescaleValue' value='2' />
+			<data name='DigitalEB2SampleRate' value='100000' />
+		</ICD>
+		<pins >
+			<digital A='0' B='0' C='0' D='0' E='0' F='0' G='0' H='0' I='0' J='0' K='0' L='0' M='0' N='0' O='0' P='0' Q='0' R='0' S='0' T='0' U='0' V='0' W='0' X='0' Y='0' Z='0' />
+			<analog A='0' B='0' C='0' D='0' E='0' F='0' G='0' H='0' I='0' J='0' K='0' L='0' M='0' N='0' O='0' P='0' Q='0' R='0' S='0' T='0' U='0' V='0' W='0' X='0' Y='0' Z='0' />
+		</pins>
+	</ghost>
+	<components >
+		<settings autoimg='0' center='1' unitscale='0' fixedscale='0' fixedx='25' fixedy='25' fixedz='25' headcode='0' />
+		<definition guid='91898b6a-f26b-4a3f-be04-4650610021a0' vstate='40' vmin='0' vmaj='1' srcleaf='' visiblename='' description='' category='' category2='' category3='' bIs2dOnly='0' bIs3dOnly='0' bIsWysiwyg='0' catenable='1' author='' manuname='' manucode='' sysinfo='0' keywords='' dynamic='1' scadaCompatible='0' embeddedCompatible='1' showmacros='1' iconpath='' />
+		<component class_type='root' codename='ComponentRoot' panelId='-1' x='0' y='0' z='0' xsz='1' ysz='1' zsz='1' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='0' poslock='0' ancTop='0' ancBottom='0' ancLeft='0' ancRight='0' ancMinX='0' ancMinY='0' comp2dType='0' >
+			<resources />
+			<properties />
+			<values />
+			<events />
+			<apis />
+			<variables >
+				<variable public='0' >
+					<def class_type='variable' name='false' type='b1' description='' isconst='1' isHidden='0' isinit='1' usrinit='0' setinit='0' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='true' type='b1' description='' isconst='1' isHidden='0' isinit='1' usrinit='1' setinit='1' />
+				</variable>
+			</variables>
+			<macros >
+				<macro >
+					<flowline name='Main' description='' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<command class_type='call' title='Component Macro' component='gLCD_SSD1306_i2c1' macro='Initialise' />
+						<command class_type='call' title='Component Macro' component='gLCD_SSD1306_i2c1' macro='ClearDisplay' />
+						<command class_type='loop' title='Loop' type='3' exp='1' for1='' for3='' >
+							<flowline >
+								<command class_type='call' title='Component Macro' component='gLCD_SSD1306_i2c1' macro='ClearDisplay' />
+								<command class_type='call' title='Component Macro' component='gLCD_SSD1306_i2c1' macro='DrawCircle' >
+									<argument exp='10' />
+									<argument exp='10' />
+									<argument exp='5' />
+									<argument exp='0' />
+									<argument exp='0' />
+								</command>
+								<command class_type='delay' title='Delay' exp='500' type='1' />
+								<command class_type='call' title='Component Macro' component='gLCD_SSD1306_i2c1' macro='DrawRectangle' >
+									<argument exp='1' />
+									<argument exp='1' />
+									<argument exp='126' />
+									<argument exp='62' />
+									<argument exp='0' />
+									<argument exp='0' />
+								</command>
+								<command class_type='delay' title='Delay' exp='500' type='1' />
+								<command class_type='call' title='Component Macro' component='gLCD_SSD1306_i2c1' macro='Print' >
+									<argument exp='&quot;Fernando Caxinda&quot;' />
+									<argument exp='20' />
+									<argument exp='20' />
+									<argument exp='0' />
+									<argument exp='0' />
+								</command>
+								<command class_type='delay' title='Delay' exp='1' type='2' />
+								<command class_type='call' title='Component Macro' component='gLCD_SSD1306_i2c1' macro='Print' >
+									<argument exp='&quot;DEV Senior&quot;' />
+									<argument exp='20' />
+									<argument exp='40' />
+									<argument exp='0' />
+									<argument exp='0' />
+								</command>
+								<command class_type='delay' title='Delay' exp='1' type='2' />
+								<command class_type='call' title='Component Macro' component='gLCD_SSD1306_i2c1' macro='InvertDisplay' />
+								<command class_type='delay' title='Delay' exp='2' type='2' />
+								<command class_type='call' title='Component Macro' component='gLCD_SSD1306_i2c1' macro='InvertDisplay' />
+								<command class_type='delay' title='Delay' exp='2' type='2' />
+							</flowline>
+						</command>
+					</flowline>
+				</macro>
+			</macros>
+			<component class_type='ref' guid='f6ab6074-68ba-4cd4-9274-f973102f8518' vmin='9' vmaj='1' codename='gLCD_SSD1306_i2c1' panelId='0' x='325.5' y='-134' z='0' xsz='71.6813' ysz='71.3642' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='1' ancTop='0' ancBottom='0' ancLeft='0' ancRight='0' ancMinX='0' ancMinY='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='pixel_width' data='128' />
+					<value target='pixel_height' data='64' />
+					<value target='Interlaced' data='1' />
+					<value target='OffsetX' data='0' />
+					<value target='OffsetY' data='0' />
+					<value target='RefreshMode' data='0' />
+					<value target='monochrome' data='1' />
+					<value target='foreground_colour' data='16777215' />
+					<value target='background_colour' data='0' />
+					<value target='colour_bit_depth' data='1' />
+					<value target='red_bit_depth' data='0' />
+					<value target='green_bit_depth' data='0' />
+					<value target='blue_bit_depth' data='0' />
+					<value target='Address' data='120' />
+					<value target='cal_i2c1::CHANNEL' data='001' />
+					<value target='cal_i2c1::BAUD_LIST' data='001' />
+					<value target='cal_i2c1::BAUD' data='100000' />
+					<value target='cal_i2c1::StopDel' data='0' />
+					<value target='cal_i2c1::SDA' data='$PORTC.4' />
+					<value target='cal_i2c1::SDAPins' data='000' />
+					<value target='cal_i2c1::SCL' data='$PORTC.5' />
+					<value target='cal_i2c1::SCLPins' data='000' />
+					<value target='Base_GLCD::FontCount' data='001' />
+					<value target='Base_GLCD::gLCD_Font1::Font' data='000' />
+					<value target='Base_GLCD::gLCD_Font1::CustomFontFile' data='' />
+					<value target='Base_GLCD::gLCD_Font1::BytesRequired' data='' />
+					<value target='Base_GLCD::gLCD_Font1::FontSpace' data='001' />
+					<value target='Base_GLCD::gLCD_Font1::SpaceWidth' data='004' />
+					<value target='Base_GLCD::gLCD_Font2::Font' data='005' />
+					<value target='Base_GLCD::gLCD_Font2::CustomFontFile' data='' />
+					<value target='Base_GLCD::gLCD_Font2::BytesRequired' data='' />
+					<value target='Base_GLCD::gLCD_Font8::FontSpace' data='' />
+					<value target='Base_GLCD::gLCD_Font2::SpaceWidth' data='004' />
+					<value target='Base_GLCD::gLCD_Font3::Font' data='002' />
+					<value target='Base_GLCD::gLCD_Font3::CustomFontFile' data='' />
+					<value target='Base_GLCD::gLCD_Font3::BytesRequired' data='' />
+					<value target='Base_GLCD::gLCD_Font3::SpaceWidth' data='004' />
+					<value target='Base_GLCD::gLCD_Font4::Font' data='015' />
+					<value target='Base_GLCD::gLCD_Font4::CustomFontFile' data='' />
+					<value target='Base_GLCD::gLCD_Font4::BytesRequired' data='' />
+					<value target='Base_GLCD::gLCD_Font4::SpaceWidth' data='004' />
+					<value target='DisplayMethod' data='000' />
+					<value target='Base_GLCD::PhysicalOrientation' data='000' />
+					<value target='SimComms' data='1' />
+					<value target='cal_i2c1::ConsoleData' data='0' />
+					<value target='cal_i2c1::ScopeTraces' data='0' />
+					<value target='cal_i2c1::Injector' data='000' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+		</component>
+	</components>
+	<scadaresourcelookup />
+	<keymap />
+	<panel2d shadows='0' lighting='2' brightness='0' >
+		<background rgb='7292207' img='' style='0' />
+		<camera xe='0' ye='0' ze='355.74' xt='0' yt='0' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
+		<viewport dx='128' dy='128' zoom='43.5374' fix_topleft='0' />
+		<page x='1000' y='1000' show='0' rgb='7360576' />
+		<winpos ID='7005' RectRecentFloat='1890,288,2540,738' RectRecentDocked='1052,141,1366,709' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='0' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='0' />
+	</panel2d>
+	<panel3d shadows='0' lighting='2' brightness='0' perspective='1' >
+		<background rgb='8409120' img='' style='0' />
+		<table rgb='7360576' img='' style='0' size='0' />
+		<camera xe='60.8162' ye='333.682' ze='572.19' xt='60.8162' yt='333.682' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
+		<camerakey0 xe='0' ye='0' ze='300' xt='0' yt='0' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
+		<camerakey1 xe='-3.67394e-14' ye='0' ze='-300' xt='0' yt='0' zt='0' xquat='0' yquat='1' zquat='0' wquat='6.12323e-17' />
+		<camerakey2 xe='0' ye='-300' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.707107' yquat='0' zquat='0' wquat='0.707107' />
+		<camerakey3 xe='-3.67394e-14' ye='300' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-4.32978e-17' yquat='0.707107' zquat='0.707107' wquat='4.32978e-17' />
+		<camerakey4 xe='-300' ye='-6.66134e-14' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.5' yquat='0.5' zquat='0.5' wquat='0.5' />
+		<camerakey5 xe='300' ye='-6.66134e-14' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.5' yquat='-0.5' zquat='-0.5' wquat='0.5' />
+		<camerakey6 xe='-173.205' ye='-173.205' ze='173.205' xt='0' yt='0' zt='0' xquat='-0.424708' yquat='0.17592' zquat='0.339851' wquat='0.820473' />
+		<winpos ID='7004' RectRecentFloat='2105,224,2755,674' RectRecentDocked='1189,141,1600,841' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='0' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='0' />
+	</panel3d>
+	<panels2d count='1' >
+		<panel2d_0 id='0' name='NewPanel' type='0' >
+			<winpos ID='1171' RectRecentFloat='1913,188,2563,638' RectRecentDocked='0,0,650,450' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='1' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='0' />
+			<background fill='288230376151053813' showgrid='1' gridstyle='1' gridsize='10' gridbrush='71776119075691740' snaptogrid='1' fitcomp='0' disp_x='300' disp_y='400' scale='100' disp_col='16777215' />
+		</panel2d_0>
+	</panels2d>
+	<layout >
+		<view type='0' name='Main' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAewQAALcCAAA' zoom='100' scrollx='0' scrolly='0' flags='0' />
+	</layout>
+</document>
+</root>

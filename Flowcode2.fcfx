@@ -1,0 +1,253 @@
+<root>
+<document scada='0' projtype='1' schema='103' license='1,FREE_VERSION,TCW03R' title='esteira eletrica' description='New &lt;Arduino Uno R3 PDIP&gt; Embedded Project' fcversion='720898' target='ARD.ATMEGA.Arduino Uno R3 PDIP' >
+	<config data='' clkspd='16000000' simspd='0' usewdt='0' constif='0' SSH_IP='DD6171BB7AD97877' SSH_User='DD6171BB7AD97877' SSH_Pass='DD6171BB7AD97877' Use3V3='0' />
+	<plugins >
+		<dll_models enabled='1' />
+	</plugins>
+	<supplement use='0' head='' body='' />
+	<debug />
+	<traces />
+	<ghost >
+		<FK2 >
+			<data name='FK2D0' port='4294967295' pin='4294967295' />
+			<data name='FK2D1' port='4294967295' pin='4294967295' />
+			<data name='FK2D2' port='4294967295' pin='4294967295' />
+			<data name='FK2D3' port='4294967295' pin='4294967295' />
+			<data name='FK2D4' port='4294967295' pin='4294967295' />
+			<data name='FK2D5' port='4294967295' pin='4294967295' />
+			<data name='FK2D6' port='4294967295' pin='4294967295' />
+			<data name='FK2D7' port='4294967295' pin='4294967295' />
+			<data name='FK2D8' port='4294967295' pin='4294967295' />
+			<data name='FK2D9' port='4294967295' pin='4294967295' />
+			<data name='FK2D10' port='4294967295' pin='4294967295' />
+			<data name='FK2D11' port='4294967295' pin='4294967295' />
+			<data name='FK2D12' port='4294967295' pin='4294967295' />
+			<data name='FK2D13' port='4294967295' pin='4294967295' />
+			<data name='FK2D14' port='4294967295' pin='4294967295' />
+			<data name='FK2D15' port='4294967295' pin='4294967295' />
+			<data name='FK2A0' port='4294967295' pin='4294967295' />
+			<data name='FK2A1' port='4294967295' pin='4294967295' />
+			<data name='FK2A2' port='4294967295' pin='4294967295' />
+			<data name='FK2A3' port='4294967295' pin='4294967295' />
+			<data name='FK2A4' port='4294967295' pin='4294967295' />
+			<data name='FK2A5' port='4294967295' pin='4294967295' />
+		</FK2>
+		<ICD >
+			<data name='AnalogPrescaleValue' value='19' />
+			<data name='DigitalSampleRate' value='100000' />
+			<data name='BreakpointCount' value='8' />
+			<data name='CallStackDepthCount' value='8' />
+			<data name='ClockPort' value='3' />
+			<data name='ClockPin' value='1' />
+			<data name='DataPort' value='3' />
+			<data name='DataPin' value='0' />
+			<data name='UseDefaultPins' value='1' />
+			<data name='WrapEnabled' value='1' />
+			<data name='CommsDelayOverridden' value='0' />
+			<data name='CommsDelay' value='11' />
+			<data name='CalculatedCommsDelay' value='11' />
+			<data name='AnalogEB2PrescaleValue' value='2' />
+			<data name='DigitalEB2SampleRate' value='100000' />
+		</ICD>
+		<pins >
+			<digital A='0' B='0' C='0' D='0' E='0' F='0' G='0' H='0' I='0' J='0' K='0' L='0' M='0' N='0' O='0' P='0' Q='0' R='0' S='0' T='0' U='0' V='0' W='0' X='0' Y='0' Z='0' />
+			<analog A='0' B='0' C='0' D='0' E='0' F='0' G='0' H='0' I='0' J='0' K='0' L='0' M='0' N='0' O='0' P='0' Q='0' R='0' S='0' T='0' U='0' V='0' W='0' X='0' Y='0' Z='0' />
+		</pins>
+	</ghost>
+	<components >
+		<settings autoimg='0' center='1' unitscale='0' fixedscale='0' fixedx='25' fixedy='25' fixedz='25' headcode='0' />
+		<definition guid='0eb0edff-9334-451c-b7a9-27fa31860b86' vstate='40' vmin='0' vmaj='1' srcleaf='' visiblename='' description='' category='' category2='' category3='' bIs2dOnly='0' bIs3dOnly='0' bIsWysiwyg='0' catenable='1' author='' manuname='' manucode='' sysinfo='0' keywords='' dynamic='1' scadaCompatible='0' embeddedCompatible='1' showmacros='1' iconpath='' />
+		<component class_type='root' codename='ComponentRoot' panelId='-1' x='0' y='0' z='0' xsz='1' ysz='1' zsz='1' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='0' poslock='0' ancTop='0' ancBottom='0' ancLeft='0' ancRight='0' ancMinX='0' ancMinY='0' comp2dType='0' >
+			<resources />
+			<properties />
+			<values />
+			<events />
+			<apis />
+			<variables >
+				<variable public='0' >
+					<def class_type='variable' name='false' type='b1' description='' isconst='1' isHidden='0' isinit='1' usrinit='0' setinit='0' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='sensor' type='b1' description='' isconst='0' isHidden='0' isinit='1' usrinit='1' setinit='1' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='BotaoLiga' type='b1' description='' isconst='0' isHidden='0' isinit='1' usrinit='1' setinit='1' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='true' type='b1' description='' isconst='1' isHidden='0' isinit='1' usrinit='1' setinit='1' />
+				</variable>
+			</variables>
+			<macros >
+				<macro >
+					<flowline name='Main' description='' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<command class_type='output' title='Output' mode='1' port='1048577' mask='32' exp='1' usechipref='0' />
+						<command class_type='loop' title='Loop' type='3' exp='1' for1='' for3='' >
+							<flowline >
+								<command class_type='input' title='Input' mode='1' port='1048578' mask='2' exp='BotaoLiga' usechipref='0' />
+								<command class_type='decision' title='Decision' exp='BotaoLiga == 0' swap='0' >
+									<flowline >
+										<command class_type='output' title='Output' mode='1' port='1048577' mask='32' exp='0' usechipref='0' />
+										<command class_type='delay' title='Delay' exp='50' type='1' />
+									</flowline>
+									<flowline />
+								</command>
+								<command class_type='input' title='Input' mode='1' port='1048578' mask='4' exp='sensor' usechipref='0' />
+								<command class_type='decision' title='Decision' exp='sensor == 0' swap='0' >
+									<flowline >
+										<command class_type='output' title='Output' mode='1' port='1048577' mask='32' exp='1' usechipref='0' />
+										<command class_type='delay' title='Delay' exp='50' type='1' />
+									</flowline>
+									<flowline />
+								</command>
+							</flowline>
+						</command>
+					</flowline>
+				</macro>
+			</macros>
+			<component class_type='ref' guid='b3a7287a-4070-49d1-9122-bf6169f67cd1' vmin='8' vmaj='8' codename='Switch_BL01451' panelId='-1' x='-40' y='260' z='0' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='1' poslock='0' ancTop='0' ancBottom='0' ancLeft='0' ancRight='0' ancMinX='0' ancMinY='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='count' data='8' />
+					<value target='port' data='000' />
+					<value target='PortByte' data='$PORTA' />
+					<value target='pin0' data='$PORTA.0' />
+					<value target='pin1' data='$PORTA.1' />
+					<value target='pin2' data='$PORTA.2' />
+					<value target='pin3' data='$PORTA.3' />
+					<value target='pin4' data='$PORTA.4' />
+					<value target='pin5' data='$PORTA.5' />
+					<value target='pin6' data='$PORTA.6' />
+					<value target='pin7' data='$PORTA.7' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='b3a7287a-4070-49d1-9122-bf6169f67cd1' vmin='8' vmaj='8' codename='Switch_BL01452' panelId='-1' x='-180' y='230' z='0' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='1' poslock='0' ancTop='0' ancBottom='0' ancLeft='0' ancRight='0' ancMinX='0' ancMinY='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='count' data='8' />
+					<value target='port' data='000' />
+					<value target='PortByte' data='$PORTA' />
+					<value target='pin0' data='$PORTA.0' />
+					<value target='pin1' data='$PORTA.1' />
+					<value target='pin2' data='$PORTA.2' />
+					<value target='pin3' data='$PORTA.3' />
+					<value target='pin4' data='$PORTA.4' />
+					<value target='pin5' data='$PORTA.5' />
+					<value target='pin6' data='$PORTA.6' />
+					<value target='pin7' data='$PORTA.7' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='9a7d4e50-8d7e-4c5e-9a93-7948ab47edad' vmin='0' vmaj='1' codename='ComboBoard1' panelId='0' x='120.379' y='-123.401' z='0' xsz='24.9909' ysz='24.9836' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='1' ancTop='0' ancBottom='0' ancLeft='0' ancRight='0' ancMinX='0' ancMinY='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='ConnType' data='1' />
+					<value target='Bank0' data='$PORTC0' />
+					<value target='PinA0' data='$PORTC.0' />
+					<value target='PinA1' data='$PORTC.1' />
+					<value target='PinA2' data='$PORTC.2' />
+					<value target='PinA3' data='$PORTC.3' />
+					<value target='PinA4' data='$PORTC.4' />
+					<value target='PinA5' data='$PORTC.5' />
+					<value target='PinA6' data='$PORTC.5' />
+					<value target='PinA7' data='$PORTC.5' />
+					<value target='Bank1' data='$PORTD0' />
+					<value target='PinB0' data='$PORTD.0' />
+					<value target='PinB1' data='$PORTD.1' />
+					<value target='PinB2' data='$PORTD.2' />
+					<value target='PinB3' data='$PORTD.3' />
+					<value target='PinB4' data='$PORTD.4' />
+					<value target='PinB5' data='$PORTD.5' />
+					<value target='PinB6' data='$PORTD.6' />
+					<value target='PinB7' data='$PORTD.7' />
+					<value target='Init' data='1' />
+					<value target='LightSensorADC' data='0' />
+					<value target='PotADC' data='1' />
+					<value target='AnaScopeTraces' data='0' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='3bdcb2e0-ed44-451f-9889-66f316359482' vmin='3' vmaj='1' codename='sim_switch_base1' panelId='0' x='115.5' y='-116' z='1' xsz='25.18' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' ancTop='0' ancBottom='0' ancLeft='0' ancRight='0' ancMinX='0' ancMinY='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='operation' data='000' />
+					<value target='send_event' data='000' />
+					<value target='target' data='' />
+					<value target='pivot' data='' />
+					<value target='movetype' data='000' />
+					<value target='axis' data='000' />
+					<value target='move' data='0.000000' />
+					<value target='component_label1::show_label' data='' />
+					<value target='component_label1::label_property' data='pin' />
+					<value target='StartupState' data='000' />
+					<value target='StoredState' data='0' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='fc04a65f-f03d-40c8-9f69-0d23d2daac29' vmin='1' vmaj='1' codename='pcb_switch1' panelId='-1' x='0' y='0' z='0' xsz='1' ysz='1' zsz='1' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='0' poslock='0' ancTop='0' ancBottom='0' ancLeft='0' ancRight='0' ancMinX='0' ancMinY='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='pin' data='$PORTA.0' />
+					<value target='polarity' data='000' />
+					<value target='debounce' data='' />
+					<value target='operation' data='000' />
+					<value target='color' data='6908265' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+		</component>
+	</components>
+	<scadaresourcelookup />
+	<keymap />
+	<panel2d shadows='0' lighting='2' brightness='0' >
+		<background rgb='7292207' img='' style='0' />
+		<camera xe='0' ye='0' ze='591.69' xt='0' yt='0' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
+		<viewport dx='128' dy='128' zoom='26.1759' fix_topleft='0' />
+		<page x='1000' y='1000' show='0' rgb='7360576' />
+		<winpos ID='7005' RectRecentFloat='1890,288,2540,738' RectRecentDocked='761,141,1270,841' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='0' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='0' />
+	</panel2d>
+	<panel3d shadows='0' lighting='2' brightness='0' perspective='1' >
+		<background rgb='8409120' img='' style='0' />
+		<table rgb='7360576' img='' style='0' size='0' />
+		<camera xe='13.4474' ye='0.661136' ze='111.942' xt='13.4474' yt='0.661136' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
+		<camerakey0 xe='0' ye='0' ze='300' xt='0' yt='0' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
+		<camerakey1 xe='-3.67394e-14' ye='0' ze='-300' xt='0' yt='0' zt='0' xquat='0' yquat='1' zquat='0' wquat='6.12323e-17' />
+		<camerakey2 xe='0' ye='-300' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.707107' yquat='0' zquat='0' wquat='0.707107' />
+		<camerakey3 xe='-3.67394e-14' ye='300' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-4.32978e-17' yquat='0.707107' zquat='0.707107' wquat='4.32978e-17' />
+		<camerakey4 xe='-300' ye='-6.66134e-14' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.5' yquat='0.5' zquat='0.5' wquat='0.5' />
+		<camerakey5 xe='300' ye='-6.66134e-14' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.5' yquat='-0.5' zquat='-0.5' wquat='0.5' />
+		<camerakey6 xe='-173.205' ye='-173.205' ze='173.205' xt='0' yt='0' zt='0' xquat='-0.424708' yquat='0.17592' zquat='0.339851' wquat='0.820473' />
+		<winpos ID='7004' RectRecentFloat='1922,304,2572,754' RectRecentDocked='771,141,1270,841' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='0' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='1' />
+	</panel3d>
+	<panels2d count='1' >
+		<panel2d_0 id='0' name='NewPanel' type='0' >
+			<winpos ID='1171' RectRecentFloat='2082,384,2732,834' RectRecentDocked='720,411,1362,830' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='1' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='0' />
+			<background fill='288230376151053813' showgrid='1' gridstyle='1' gridsize='10' gridbrush='71776119075691740' snaptogrid='1' fitcomp='0' disp_x='300' disp_y='400' scale='100' disp_col='16777215' />
+		</panel2d_0>
+	</panels2d>
+	<layout >
+		<view type='0' name='Main' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAA.AIAALcCAAA' zoom='100' scrollx='0' scrolly='342' flags='0' />
+	</layout>
+</document>
+</root>

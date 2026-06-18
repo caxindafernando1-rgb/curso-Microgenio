@@ -1,0 +1,1411 @@
+
+C:\Users\Adão Caxinda Kianga\Documents\curso Microgenio\Display Oled.elf:     file format elf32-avr
+
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 3b 00 	jmp	0x76	; 0x76 <__ctors_end>
+   4:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+   8:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+   c:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  10:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  14:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  18:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  1c:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  20:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  24:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  28:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  2c:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  30:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  34:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  38:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  3c:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  40:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  44:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  48:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  4c:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  50:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  54:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  58:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  5c:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  60:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  64:	0c 94 58 00 	jmp	0xb0	; 0xb0 <__bad_interrupt>
+  68:	a0 03       	fmuls	r18, r16
+  6a:	a4 03       	fmuls	r18, r20
+  6c:	a8 03       	fmulsu	r18, r16
+  6e:	ac 03       	fmulsu	r18, r20
+  70:	b0 03       	fmuls	r19, r16
+  72:	b4 03       	fmuls	r19, r20
+  74:	b8 03       	fmulsu	r19, r16
+
+00000076 <__ctors_end>:
+  76:	11 24       	eor	r1, r1
+  78:	1f be       	out	0x3f, r1	; 63
+  7a:	cf ef       	ldi	r28, 0xFF	; 255
+  7c:	d8 e0       	ldi	r29, 0x08	; 8
+  7e:	de bf       	out	0x3e, r29	; 62
+  80:	cd bf       	out	0x3d, r28	; 61
+
+00000082 <__do_copy_data>:
+  82:	11 e0       	ldi	r17, 0x01	; 1
+  84:	a0 e0       	ldi	r26, 0x00	; 0
+  86:	b1 e0       	ldi	r27, 0x01	; 1
+  88:	ea ef       	ldi	r30, 0xFA	; 250
+  8a:	fb e0       	ldi	r31, 0x0B	; 11
+  8c:	02 c0       	rjmp	.+4      	; 0x92 <__do_copy_data+0x10>
+  8e:	05 90       	lpm	r0, Z+
+  90:	0d 92       	st	X+, r0
+  92:	a0 30       	cpi	r26, 0x00	; 0
+  94:	b1 07       	cpc	r27, r17
+  96:	d9 f7       	brne	.-10     	; 0x8e <__do_copy_data+0xc>
+
+00000098 <__do_clear_bss>:
+  98:	25 e0       	ldi	r18, 0x05	; 5
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	01 c0       	rjmp	.+2      	; 0xa2 <.do_clear_bss_start>
+
+000000a0 <.do_clear_bss_loop>:
+  a0:	1d 92       	st	X+, r1
+
+000000a2 <.do_clear_bss_start>:
+  a2:	a8 32       	cpi	r26, 0x28	; 40
+  a4:	b2 07       	cpc	r27, r18
+  a6:	e1 f7       	brne	.-8      	; 0xa0 <.do_clear_bss_loop>
+  a8:	0e 94 ce 05 	call	0xb9c	; 0xb9c <main>
+  ac:	0c 94 fb 05 	jmp	0xbf6	; 0xbf6 <_exit>
+
+000000b0 <__bad_interrupt>:
+  b0:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000b4 <FCI_DELAYINT_MS>:
+  b4:	40 ea       	ldi	r20, 0xA0	; 160
+  b6:	5f e0       	ldi	r21, 0x0F	; 15
+  b8:	8f 3f       	cpi	r24, 0xFF	; 255
+  ba:	91 05       	cpc	r25, r1
+  bc:	51 f0       	breq	.+20     	; 0xd2 <FCI_DELAYINT_MS+0x1e>
+  be:	48 f0       	brcs	.+18     	; 0xd2 <FCI_DELAYINT_MS+0x1e>
+  c0:	2f ef       	ldi	r18, 0xFF	; 255
+  c2:	fa 01       	movw	r30, r20
+  c4:	31 97       	sbiw	r30, 0x01	; 1
+  c6:	f1 f7       	brne	.-4      	; 0xc4 <FCI_DELAYINT_MS+0x10>
+  c8:	21 50       	subi	r18, 0x01	; 1
+  ca:	d9 f7       	brne	.-10     	; 0xc2 <FCI_DELAYINT_MS+0xe>
+  cc:	8f 5f       	subi	r24, 0xFF	; 255
+  ce:	91 09       	sbc	r25, r1
+  d0:	f3 cf       	rjmp	.-26     	; 0xb8 <FCI_DELAYINT_MS+0x4>
+  d2:	00 97       	sbiw	r24, 0x00	; 0
+  d4:	49 f0       	breq	.+18     	; 0xe8 <FCI_DELAYINT_MS+0x34>
+  d6:	90 e0       	ldi	r25, 0x00	; 0
+  d8:	20 ea       	ldi	r18, 0xA0	; 160
+  da:	3f e0       	ldi	r19, 0x0F	; 15
+  dc:	f9 01       	movw	r30, r18
+  de:	31 97       	sbiw	r30, 0x01	; 1
+  e0:	f1 f7       	brne	.-4      	; 0xde <FCI_DELAYINT_MS+0x2a>
+  e2:	9f 5f       	subi	r25, 0xFF	; 255
+  e4:	98 17       	cp	r25, r24
+  e6:	d0 f3       	brcs	.-12     	; 0xdc <FCI_DELAYINT_MS+0x28>
+  e8:	08 95       	ret
+
+000000ea <FC_CAL_I2C_Master_Init_1>:
+  ea:	88 e4       	ldi	r24, 0x48	; 72
+  ec:	80 93 b8 00 	sts	0x00B8, r24	; 0x8000b8 <__TEXT_REGION_LENGTH__+0x7e00b8>
+  f0:	10 92 b9 00 	sts	0x00B9, r1	; 0x8000b9 <__TEXT_REGION_LENGTH__+0x7e00b9>
+  f4:	08 95       	ret
+
+000000f6 <FC_CAL_I2C_Master_Restart_1>:
+  f6:	84 ea       	ldi	r24, 0xA4	; 164
+  f8:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+  fc:	8f ef       	ldi	r24, 0xFF	; 255
+  fe:	9f ef       	ldi	r25, 0xFF	; 255
+ 100:	90 93 27 05 	sts	0x0527, r25	; 0x800527 <MX_I2C_TIMEOUT_1+0x1>
+ 104:	80 93 26 05 	sts	0x0526, r24	; 0x800526 <MX_I2C_TIMEOUT_1>
+ 108:	80 91 bc 00 	lds	r24, 0x00BC	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+ 10c:	87 fd       	sbrc	r24, 7
+ 10e:	0d c0       	rjmp	.+26     	; 0x12a <FC_CAL_I2C_Master_Restart_1+0x34>
+ 110:	80 91 26 05 	lds	r24, 0x0526	; 0x800526 <MX_I2C_TIMEOUT_1>
+ 114:	90 91 27 05 	lds	r25, 0x0527	; 0x800527 <MX_I2C_TIMEOUT_1+0x1>
+ 118:	9c 01       	movw	r18, r24
+ 11a:	21 50       	subi	r18, 0x01	; 1
+ 11c:	31 09       	sbc	r19, r1
+ 11e:	30 93 27 05 	sts	0x0527, r19	; 0x800527 <MX_I2C_TIMEOUT_1+0x1>
+ 122:	20 93 26 05 	sts	0x0526, r18	; 0x800526 <MX_I2C_TIMEOUT_1>
+ 126:	89 2b       	or	r24, r25
+ 128:	79 f7       	brne	.-34     	; 0x108 <FC_CAL_I2C_Master_Restart_1+0x12>
+ 12a:	08 95       	ret
+
+0000012c <FC_CAL_I2C_Master_TxByte_1>:
+ 12c:	80 93 bb 00 	sts	0x00BB, r24	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7e00bb>
+ 130:	88 e2       	ldi	r24, 0x28	; 40
+ 132:	90 e0       	ldi	r25, 0x00	; 0
+ 134:	01 97       	sbiw	r24, 0x01	; 1
+ 136:	f1 f7       	brne	.-4      	; 0x134 <FC_CAL_I2C_Master_TxByte_1+0x8>
+ 138:	84 e8       	ldi	r24, 0x84	; 132
+ 13a:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+ 13e:	8f ef       	ldi	r24, 0xFF	; 255
+ 140:	9f ef       	ldi	r25, 0xFF	; 255
+ 142:	90 93 27 05 	sts	0x0527, r25	; 0x800527 <MX_I2C_TIMEOUT_1+0x1>
+ 146:	80 93 26 05 	sts	0x0526, r24	; 0x800526 <MX_I2C_TIMEOUT_1>
+ 14a:	80 91 bc 00 	lds	r24, 0x00BC	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+ 14e:	87 ff       	sbrs	r24, 7
+ 150:	06 c0       	rjmp	.+12     	; 0x15e <FC_CAL_I2C_Master_TxByte_1+0x32>
+ 152:	80 91 b9 00 	lds	r24, 0x00B9	; 0x8000b9 <__TEXT_REGION_LENGTH__+0x7e00b9>
+ 156:	88 7f       	andi	r24, 0xF8	; 248
+ 158:	88 31       	cpi	r24, 0x18	; 24
+ 15a:	79 f4       	brne	.+30     	; 0x17a <FC_CAL_I2C_Master_TxByte_1+0x4e>
+ 15c:	1e c0       	rjmp	.+60     	; 0x19a <FC_CAL_I2C_Master_TxByte_1+0x6e>
+ 15e:	80 91 26 05 	lds	r24, 0x0526	; 0x800526 <MX_I2C_TIMEOUT_1>
+ 162:	90 91 27 05 	lds	r25, 0x0527	; 0x800527 <MX_I2C_TIMEOUT_1+0x1>
+ 166:	9c 01       	movw	r18, r24
+ 168:	21 50       	subi	r18, 0x01	; 1
+ 16a:	31 09       	sbc	r19, r1
+ 16c:	30 93 27 05 	sts	0x0527, r19	; 0x800527 <MX_I2C_TIMEOUT_1+0x1>
+ 170:	20 93 26 05 	sts	0x0526, r18	; 0x800526 <MX_I2C_TIMEOUT_1>
+ 174:	89 2b       	or	r24, r25
+ 176:	49 f7       	brne	.-46     	; 0x14a <FC_CAL_I2C_Master_TxByte_1+0x1e>
+ 178:	ec cf       	rjmp	.-40     	; 0x152 <FC_CAL_I2C_Master_TxByte_1+0x26>
+ 17a:	80 91 b9 00 	lds	r24, 0x00B9	; 0x8000b9 <__TEXT_REGION_LENGTH__+0x7e00b9>
+ 17e:	88 7f       	andi	r24, 0xF8	; 248
+ 180:	88 32       	cpi	r24, 0x28	; 40
+ 182:	59 f0       	breq	.+22     	; 0x19a <FC_CAL_I2C_Master_TxByte_1+0x6e>
+ 184:	80 91 b9 00 	lds	r24, 0x00B9	; 0x8000b9 <__TEXT_REGION_LENGTH__+0x7e00b9>
+ 188:	88 7f       	andi	r24, 0xF8	; 248
+ 18a:	80 34       	cpi	r24, 0x40	; 64
+ 18c:	31 f0       	breq	.+12     	; 0x19a <FC_CAL_I2C_Master_TxByte_1+0x6e>
+ 18e:	90 91 b9 00 	lds	r25, 0x00B9	; 0x8000b9 <__TEXT_REGION_LENGTH__+0x7e00b9>
+ 192:	98 7f       	andi	r25, 0xF8	; 248
+ 194:	81 e0       	ldi	r24, 0x01	; 1
+ 196:	90 35       	cpi	r25, 0x50	; 80
+ 198:	09 f4       	brne	.+2      	; 0x19c <FC_CAL_I2C_Master_TxByte_1+0x70>
+ 19a:	80 e0       	ldi	r24, 0x00	; 0
+ 19c:	08 95       	ret
+
+0000019e <FC_CAL_I2C_Transaction_Init_1>:
+ 19e:	80 93 25 05 	sts	0x0525, r24	; 0x800525 <MX_I2C_ADDRESS_1>
+ 1a2:	80 91 01 01 	lds	r24, 0x0101	; 0x800101 <MX_I2C_INIT_1>
+ 1a6:	81 11       	cpse	r24, r1
+ 1a8:	05 c0       	rjmp	.+10     	; 0x1b4 <FC_CAL_I2C_Transaction_Init_1+0x16>
+ 1aa:	81 e0       	ldi	r24, 0x01	; 1
+ 1ac:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <MX_I2C_INIT_1>
+ 1b0:	0e 94 75 00 	call	0xea	; 0xea <FC_CAL_I2C_Master_Init_1>
+ 1b4:	81 e0       	ldi	r24, 0x01	; 1
+ 1b6:	08 95       	ret
+
+000001b8 <FC_CAL_I2C_Transaction_Write_1>:
+ 1b8:	df 92       	push	r13
+ 1ba:	ef 92       	push	r14
+ 1bc:	ff 92       	push	r15
+ 1be:	0f 93       	push	r16
+ 1c0:	1f 93       	push	r17
+ 1c2:	cf 93       	push	r28
+ 1c4:	df 93       	push	r29
+ 1c6:	8c 01       	movw	r16, r24
+ 1c8:	ea 01       	movw	r28, r20
+ 1ca:	57 ff       	sbrs	r21, 7
+ 1cc:	03 c0       	rjmp	.+6      	; 0x1d4 <FC_CAL_I2C_Transaction_Write_1+0x1c>
+ 1ce:	df 77       	andi	r29, 0x7F	; 127
+ 1d0:	d1 2c       	mov	r13, r1
+ 1d2:	02 c0       	rjmp	.+4      	; 0x1d8 <FC_CAL_I2C_Transaction_Write_1+0x20>
+ 1d4:	dd 24       	eor	r13, r13
+ 1d6:	d3 94       	inc	r13
+ 1d8:	6c 17       	cp	r22, r28
+ 1da:	7d 07       	cpc	r23, r29
+ 1dc:	18 f4       	brcc	.+6      	; 0x1e4 <FC_CAL_I2C_Transaction_Write_1+0x2c>
+ 1de:	80 e0       	ldi	r24, 0x00	; 0
+ 1e0:	90 e0       	ldi	r25, 0x00	; 0
+ 1e2:	21 c0       	rjmp	.+66     	; 0x226 <FC_CAL_I2C_Transaction_Write_1+0x6e>
+ 1e4:	0e 94 7b 00 	call	0xf6	; 0xf6 <FC_CAL_I2C_Master_Restart_1>
+ 1e8:	80 91 25 05 	lds	r24, 0x0525	; 0x800525 <MX_I2C_ADDRESS_1>
+ 1ec:	88 0f       	add	r24, r24
+ 1ee:	0e 94 96 00 	call	0x12c	; 0x12c <FC_CAL_I2C_Master_TxByte_1>
+ 1f2:	81 11       	cpse	r24, r1
+ 1f4:	f4 cf       	rjmp	.-24     	; 0x1de <FC_CAL_I2C_Transaction_Write_1+0x26>
+ 1f6:	78 01       	movw	r14, r16
+ 1f8:	00 e0       	ldi	r16, 0x00	; 0
+ 1fa:	10 e0       	ldi	r17, 0x00	; 0
+ 1fc:	c0 17       	cp	r28, r16
+ 1fe:	d1 07       	cpc	r29, r17
+ 200:	41 f0       	breq	.+16     	; 0x212 <FC_CAL_I2C_Transaction_Write_1+0x5a>
+ 202:	f7 01       	movw	r30, r14
+ 204:	81 91       	ld	r24, Z+
+ 206:	7f 01       	movw	r14, r30
+ 208:	0e 94 96 00 	call	0x12c	; 0x12c <FC_CAL_I2C_Master_TxByte_1>
+ 20c:	88 23       	and	r24, r24
+ 20e:	39 f0       	breq	.+14     	; 0x21e <FC_CAL_I2C_Transaction_Write_1+0x66>
+ 210:	e8 01       	movw	r28, r16
+ 212:	dd 20       	and	r13, r13
+ 214:	39 f0       	breq	.+14     	; 0x224 <FC_CAL_I2C_Transaction_Write_1+0x6c>
+ 216:	84 e9       	ldi	r24, 0x94	; 148
+ 218:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+ 21c:	03 c0       	rjmp	.+6      	; 0x224 <FC_CAL_I2C_Transaction_Write_1+0x6c>
+ 21e:	0f 5f       	subi	r16, 0xFF	; 255
+ 220:	1f 4f       	sbci	r17, 0xFF	; 255
+ 222:	ec cf       	rjmp	.-40     	; 0x1fc <FC_CAL_I2C_Transaction_Write_1+0x44>
+ 224:	ce 01       	movw	r24, r28
+ 226:	df 91       	pop	r29
+ 228:	cf 91       	pop	r28
+ 22a:	1f 91       	pop	r17
+ 22c:	0f 91       	pop	r16
+ 22e:	ff 90       	pop	r15
+ 230:	ef 90       	pop	r14
+ 232:	df 90       	pop	r13
+ 234:	08 95       	ret
+
+00000236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>:
+ 236:	cf 93       	push	r28
+ 238:	df 93       	push	r29
+ 23a:	00 d0       	rcall	.+0      	; 0x23c <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand+0x6>
+ 23c:	cd b7       	in	r28, 0x3d	; 61
+ 23e:	de b7       	in	r29, 0x3e	; 62
+ 240:	19 82       	std	Y+1, r1	; 0x01
+ 242:	8a 83       	std	Y+2, r24	; 0x02
+ 244:	42 e0       	ldi	r20, 0x02	; 2
+ 246:	50 e0       	ldi	r21, 0x00	; 0
+ 248:	62 e0       	ldi	r22, 0x02	; 2
+ 24a:	70 e0       	ldi	r23, 0x00	; 0
+ 24c:	ce 01       	movw	r24, r28
+ 24e:	01 96       	adiw	r24, 0x01	; 1
+ 250:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <FC_CAL_I2C_Transaction_Write_1>
+ 254:	0f 90       	pop	r0
+ 256:	0f 90       	pop	r0
+ 258:	df 91       	pop	r29
+ 25a:	cf 91       	pop	r28
+ 25c:	08 95       	ret
+
+0000025e <FCD_0cc51_gLCD_SSD1306_i2c1__Goto_XY>:
+ 25e:	1f 93       	push	r17
+ 260:	cf 93       	push	r28
+ 262:	df 93       	push	r29
+ 264:	00 d0       	rcall	.+0      	; 0x266 <FCD_0cc51_gLCD_SSD1306_i2c1__Goto_XY+0x8>
+ 266:	00 d0       	rcall	.+0      	; 0x268 <FCD_0cc51_gLCD_SSD1306_i2c1__Goto_XY+0xa>
+ 268:	00 d0       	rcall	.+0      	; 0x26a <FCD_0cc51_gLCD_SSD1306_i2c1__Goto_XY+0xc>
+ 26a:	cd b7       	in	r28, 0x3d	; 61
+ 26c:	de b7       	in	r29, 0x3e	; 62
+ 26e:	18 2f       	mov	r17, r24
+ 270:	19 82       	std	Y+1, r1	; 0x01
+ 272:	66 95       	lsr	r22
+ 274:	66 95       	lsr	r22
+ 276:	66 95       	lsr	r22
+ 278:	60 6b       	ori	r22, 0xB0	; 176
+ 27a:	6a 83       	std	Y+2, r22	; 0x02
+ 27c:	42 e0       	ldi	r20, 0x02	; 2
+ 27e:	50 e0       	ldi	r21, 0x00	; 0
+ 280:	66 e0       	ldi	r22, 0x06	; 6
+ 282:	70 e0       	ldi	r23, 0x00	; 0
+ 284:	ce 01       	movw	r24, r28
+ 286:	01 96       	adiw	r24, 0x01	; 1
+ 288:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <FC_CAL_I2C_Transaction_Write_1>
+ 28c:	19 82       	std	Y+1, r1	; 0x01
+ 28e:	81 2f       	mov	r24, r17
+ 290:	82 95       	swap	r24
+ 292:	8f 70       	andi	r24, 0x0F	; 15
+ 294:	80 61       	ori	r24, 0x10	; 16
+ 296:	8a 83       	std	Y+2, r24	; 0x02
+ 298:	42 e0       	ldi	r20, 0x02	; 2
+ 29a:	50 e0       	ldi	r21, 0x00	; 0
+ 29c:	66 e0       	ldi	r22, 0x06	; 6
+ 29e:	70 e0       	ldi	r23, 0x00	; 0
+ 2a0:	ce 01       	movw	r24, r28
+ 2a2:	01 96       	adiw	r24, 0x01	; 1
+ 2a4:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <FC_CAL_I2C_Transaction_Write_1>
+ 2a8:	19 82       	std	Y+1, r1	; 0x01
+ 2aa:	1f 70       	andi	r17, 0x0F	; 15
+ 2ac:	1a 83       	std	Y+2, r17	; 0x02
+ 2ae:	42 e0       	ldi	r20, 0x02	; 2
+ 2b0:	50 e0       	ldi	r21, 0x00	; 0
+ 2b2:	66 e0       	ldi	r22, 0x06	; 6
+ 2b4:	70 e0       	ldi	r23, 0x00	; 0
+ 2b6:	ce 01       	movw	r24, r28
+ 2b8:	01 96       	adiw	r24, 0x01	; 1
+ 2ba:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <FC_CAL_I2C_Transaction_Write_1>
+ 2be:	26 96       	adiw	r28, 0x06	; 6
+ 2c0:	0f b6       	in	r0, 0x3f	; 63
+ 2c2:	f8 94       	cli
+ 2c4:	de bf       	out	0x3e, r29	; 62
+ 2c6:	0f be       	out	0x3f, r0	; 63
+ 2c8:	cd bf       	out	0x3d, r28	; 61
+ 2ca:	df 91       	pop	r29
+ 2cc:	cf 91       	pop	r28
+ 2ce:	1f 91       	pop	r17
+ 2d0:	08 95       	ret
+
+000002d2 <FCD_0cc51_gLCD_SSD1306_i2c1__SendData>:
+ 2d2:	cf 93       	push	r28
+ 2d4:	df 93       	push	r29
+ 2d6:	00 d0       	rcall	.+0      	; 0x2d8 <FCD_0cc51_gLCD_SSD1306_i2c1__SendData+0x6>
+ 2d8:	cd b7       	in	r28, 0x3d	; 61
+ 2da:	de b7       	in	r29, 0x3e	; 62
+ 2dc:	90 e4       	ldi	r25, 0x40	; 64
+ 2de:	99 83       	std	Y+1, r25	; 0x01
+ 2e0:	8a 83       	std	Y+2, r24	; 0x02
+ 2e2:	42 e0       	ldi	r20, 0x02	; 2
+ 2e4:	50 e0       	ldi	r21, 0x00	; 0
+ 2e6:	62 e0       	ldi	r22, 0x02	; 2
+ 2e8:	70 e0       	ldi	r23, 0x00	; 0
+ 2ea:	ce 01       	movw	r24, r28
+ 2ec:	01 96       	adiw	r24, 0x01	; 1
+ 2ee:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <FC_CAL_I2C_Transaction_Write_1>
+ 2f2:	0f 90       	pop	r0
+ 2f4:	0f 90       	pop	r0
+ 2f6:	df 91       	pop	r29
+ 2f8:	cf 91       	pop	r28
+ 2fa:	08 95       	ret
+
+000002fc <FCD_0cc51_gLCD_SSD1306_i2c1__Plot>:
+ 2fc:	0f 93       	push	r16
+ 2fe:	1f 93       	push	r17
+ 300:	cf 93       	push	r28
+ 302:	df 93       	push	r29
+ 304:	ec 01       	movw	r28, r24
+ 306:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_end>
+ 30a:	82 30       	cpi	r24, 0x02	; 2
+ 30c:	59 f0       	breq	.+22     	; 0x324 <FCD_0cc51_gLCD_SSD1306_i2c1__Plot+0x28>
+ 30e:	83 30       	cpi	r24, 0x03	; 3
+ 310:	b1 f0       	breq	.+44     	; 0x33e <FCD_0cc51_gLCD_SSD1306_i2c1__Plot+0x42>
+ 312:	81 30       	cpi	r24, 0x01	; 1
+ 314:	d1 f4       	brne	.+52     	; 0x34a <FCD_0cc51_gLCD_SSD1306_i2c1__Plot+0x4e>
+ 316:	8f e7       	ldi	r24, 0x7F	; 127
+ 318:	90 e0       	ldi	r25, 0x00	; 0
+ 31a:	86 1b       	sub	r24, r22
+ 31c:	97 0b       	sbc	r25, r23
+ 31e:	be 01       	movw	r22, r28
+ 320:	ec 01       	movw	r28, r24
+ 322:	13 c0       	rjmp	.+38     	; 0x34a <FCD_0cc51_gLCD_SSD1306_i2c1__Plot+0x4e>
+ 324:	8f e7       	ldi	r24, 0x7F	; 127
+ 326:	90 e0       	ldi	r25, 0x00	; 0
+ 328:	9c 01       	movw	r18, r24
+ 32a:	2c 1b       	sub	r18, r28
+ 32c:	3d 0b       	sbc	r19, r29
+ 32e:	e9 01       	movw	r28, r18
+ 330:	8f e3       	ldi	r24, 0x3F	; 63
+ 332:	90 e0       	ldi	r25, 0x00	; 0
+ 334:	9c 01       	movw	r18, r24
+ 336:	26 1b       	sub	r18, r22
+ 338:	37 0b       	sbc	r19, r23
+ 33a:	b9 01       	movw	r22, r18
+ 33c:	06 c0       	rjmp	.+12     	; 0x34a <FCD_0cc51_gLCD_SSD1306_i2c1__Plot+0x4e>
+ 33e:	8f e3       	ldi	r24, 0x3F	; 63
+ 340:	90 e0       	ldi	r25, 0x00	; 0
+ 342:	8c 1b       	sub	r24, r28
+ 344:	9d 0b       	sbc	r25, r29
+ 346:	eb 01       	movw	r28, r22
+ 348:	bc 01       	movw	r22, r24
+ 34a:	06 2f       	mov	r16, r22
+ 34c:	07 70       	andi	r16, 0x07	; 7
+ 34e:	cb 01       	movw	r24, r22
+ 350:	23 e0       	ldi	r18, 0x03	; 3
+ 352:	96 95       	lsr	r25
+ 354:	87 95       	ror	r24
+ 356:	2a 95       	dec	r18
+ 358:	e1 f7       	brne	.-8      	; 0x352 <FCD_0cc51_gLCD_SSD1306_i2c1__Plot+0x56>
+ 35a:	18 2f       	mov	r17, r24
+ 35c:	8c 2f       	mov	r24, r28
+ 35e:	0e 94 2f 01 	call	0x25e	; 0x25e <FCD_0cc51_gLCD_SSD1306_i2c1__Goto_XY>
+ 362:	11 11       	cpse	r17, r1
+ 364:	07 c0       	rjmp	.+14     	; 0x374 <FCD_0cc51_gLCD_SSD1306_i2c1__Plot+0x78>
+ 366:	80 91 9a 03 	lds	r24, 0x039A	; 0x80039a <FCV_0cc51_gLCD_SSD1306_i2c1__FOREGROUND_COL_VAR>
+ 36a:	90 91 9b 03 	lds	r25, 0x039B	; 0x80039b <FCV_0cc51_gLCD_SSD1306_i2c1__FOREGROUND_COL_VAR+0x1>
+ 36e:	ca 57       	subi	r28, 0x7A	; 122
+ 370:	de 4f       	sbci	r29, 0xFE	; 254
+ 372:	1a c0       	rjmp	.+52     	; 0x3a8 <FCD_0cc51_gLCD_SSD1306_i2c1__Plot+0xac>
+ 374:	11 30       	cpi	r17, 0x01	; 1
+ 376:	39 f4       	brne	.+14     	; 0x386 <FCD_0cc51_gLCD_SSD1306_i2c1__Plot+0x8a>
+ 378:	80 91 9a 03 	lds	r24, 0x039A	; 0x80039a <FCV_0cc51_gLCD_SSD1306_i2c1__FOREGROUND_COL_VAR>
+ 37c:	90 91 9b 03 	lds	r25, 0x039B	; 0x80039b <FCV_0cc51_gLCD_SSD1306_i2c1__FOREGROUND_COL_VAR+0x1>
+ 380:	c8 56       	subi	r28, 0x68	; 104
+ 382:	dd 4f       	sbci	r29, 0xFD	; 253
+ 384:	11 c0       	rjmp	.+34     	; 0x3a8 <FCD_0cc51_gLCD_SSD1306_i2c1__Plot+0xac>
+ 386:	12 30       	cpi	r17, 0x02	; 2
+ 388:	39 f4       	brne	.+14     	; 0x398 <FCD_0cc51_gLCD_SSD1306_i2c1__Plot+0x9c>
+ 38a:	80 91 9a 03 	lds	r24, 0x039A	; 0x80039a <FCV_0cc51_gLCD_SSD1306_i2c1__FOREGROUND_COL_VAR>
+ 38e:	90 91 9b 03 	lds	r25, 0x039B	; 0x80039b <FCV_0cc51_gLCD_SSD1306_i2c1__FOREGROUND_COL_VAR+0x1>
+ 392:	cb 55       	subi	r28, 0x5B	; 91
+ 394:	db 4f       	sbci	r29, 0xFB	; 251
+ 396:	08 c0       	rjmp	.+16     	; 0x3a8 <FCD_0cc51_gLCD_SSD1306_i2c1__Plot+0xac>
+ 398:	13 30       	cpi	r17, 0x03	; 3
+ 39a:	f1 f4       	brne	.+60     	; 0x3d8 <FCD_0cc51_gLCD_SSD1306_i2c1__Plot+0xdc>
+ 39c:	80 91 9a 03 	lds	r24, 0x039A	; 0x80039a <FCV_0cc51_gLCD_SSD1306_i2c1__FOREGROUND_COL_VAR>
+ 3a0:	90 91 9b 03 	lds	r25, 0x039B	; 0x80039b <FCV_0cc51_gLCD_SSD1306_i2c1__FOREGROUND_COL_VAR+0x1>
+ 3a4:	ce 5f       	subi	r28, 0xFE	; 254
+ 3a6:	de 4f       	sbci	r29, 0xFE	; 254
+ 3a8:	28 81       	ld	r18, Y
+ 3aa:	89 2b       	or	r24, r25
+ 3ac:	41 f0       	breq	.+16     	; 0x3be <FCD_0cc51_gLCD_SSD1306_i2c1__Plot+0xc2>
+ 3ae:	81 e0       	ldi	r24, 0x01	; 1
+ 3b0:	90 e0       	ldi	r25, 0x00	; 0
+ 3b2:	01 c0       	rjmp	.+2      	; 0x3b6 <FCD_0cc51_gLCD_SSD1306_i2c1__Plot+0xba>
+ 3b4:	88 0f       	add	r24, r24
+ 3b6:	0a 95       	dec	r16
+ 3b8:	ea f7       	brpl	.-6      	; 0x3b4 <FCD_0cc51_gLCD_SSD1306_i2c1__Plot+0xb8>
+ 3ba:	82 2b       	or	r24, r18
+ 3bc:	08 c0       	rjmp	.+16     	; 0x3ce <FCD_0cc51_gLCD_SSD1306_i2c1__Plot+0xd2>
+ 3be:	81 e0       	ldi	r24, 0x01	; 1
+ 3c0:	90 e0       	ldi	r25, 0x00	; 0
+ 3c2:	01 c0       	rjmp	.+2      	; 0x3c6 <FCD_0cc51_gLCD_SSD1306_i2c1__Plot+0xca>
+ 3c4:	88 0f       	add	r24, r24
+ 3c6:	0a 95       	dec	r16
+ 3c8:	ea f7       	brpl	.-6      	; 0x3c4 <FCD_0cc51_gLCD_SSD1306_i2c1__Plot+0xc8>
+ 3ca:	80 95       	com	r24
+ 3cc:	82 23       	and	r24, r18
+ 3ce:	88 83       	st	Y, r24
+ 3d0:	88 81       	ld	r24, Y
+ 3d2:	0e 94 69 01 	call	0x2d2	; 0x2d2 <FCD_0cc51_gLCD_SSD1306_i2c1__SendData>
+ 3d6:	3e c0       	rjmp	.+124    	; 0x454 <__LOCK_REGION_LENGTH__+0x54>
+ 3d8:	14 30       	cpi	r17, 0x04	; 4
+ 3da:	39 f4       	brne	.+14     	; 0x3ea <FCD_0cc51_gLCD_SSD1306_i2c1__Plot+0xee>
+ 3dc:	80 91 9a 03 	lds	r24, 0x039A	; 0x80039a <FCV_0cc51_gLCD_SSD1306_i2c1__FOREGROUND_COL_VAR>
+ 3e0:	90 91 9b 03 	lds	r25, 0x039B	; 0x80039b <FCV_0cc51_gLCD_SSD1306_i2c1__FOREGROUND_COL_VAR+0x1>
+ 3e4:	c6 5e       	subi	r28, 0xE6	; 230
+ 3e6:	dc 4f       	sbci	r29, 0xFC	; 252
+ 3e8:	1a c0       	rjmp	.+52     	; 0x41e <__LOCK_REGION_LENGTH__+0x1e>
+ 3ea:	15 30       	cpi	r17, 0x05	; 5
+ 3ec:	39 f4       	brne	.+14     	; 0x3fc <FCD_0cc51_gLCD_SSD1306_i2c1__Plot+0x100>
+ 3ee:	80 91 9a 03 	lds	r24, 0x039A	; 0x80039a <FCV_0cc51_gLCD_SSD1306_i2c1__FOREGROUND_COL_VAR>
+ 3f2:	90 91 9b 03 	lds	r25, 0x039B	; 0x80039b <FCV_0cc51_gLCD_SSD1306_i2c1__FOREGROUND_COL_VAR+0x1>
+ 3f6:	cf 5d       	subi	r28, 0xDF	; 223
+ 3f8:	db 4f       	sbci	r29, 0xFB	; 251
+ 3fa:	11 c0       	rjmp	.+34     	; 0x41e <__LOCK_REGION_LENGTH__+0x1e>
+ 3fc:	16 30       	cpi	r17, 0x06	; 6
+ 3fe:	39 f4       	brne	.+14     	; 0x40e <__LOCK_REGION_LENGTH__+0xe>
+ 400:	80 91 9a 03 	lds	r24, 0x039A	; 0x80039a <FCV_0cc51_gLCD_SSD1306_i2c1__FOREGROUND_COL_VAR>
+ 404:	90 91 9b 03 	lds	r25, 0x039B	; 0x80039b <FCV_0cc51_gLCD_SSD1306_i2c1__FOREGROUND_COL_VAR+0x1>
+ 408:	cc 5e       	subi	r28, 0xEC	; 236
+ 40a:	dd 4f       	sbci	r29, 0xFD	; 253
+ 40c:	08 c0       	rjmp	.+16     	; 0x41e <__LOCK_REGION_LENGTH__+0x1e>
+ 40e:	17 30       	cpi	r17, 0x07	; 7
+ 410:	09 f5       	brne	.+66     	; 0x454 <__LOCK_REGION_LENGTH__+0x54>
+ 412:	80 91 9a 03 	lds	r24, 0x039A	; 0x80039a <FCV_0cc51_gLCD_SSD1306_i2c1__FOREGROUND_COL_VAR>
+ 416:	90 91 9b 03 	lds	r25, 0x039B	; 0x80039b <FCV_0cc51_gLCD_SSD1306_i2c1__FOREGROUND_COL_VAR+0x1>
+ 41a:	c4 56       	subi	r28, 0x64	; 100
+ 41c:	dc 4f       	sbci	r29, 0xFC	; 252
+ 41e:	28 81       	ld	r18, Y
+ 420:	89 2b       	or	r24, r25
+ 422:	41 f0       	breq	.+16     	; 0x434 <__LOCK_REGION_LENGTH__+0x34>
+ 424:	81 e0       	ldi	r24, 0x01	; 1
+ 426:	90 e0       	ldi	r25, 0x00	; 0
+ 428:	01 c0       	rjmp	.+2      	; 0x42c <__LOCK_REGION_LENGTH__+0x2c>
+ 42a:	88 0f       	add	r24, r24
+ 42c:	0a 95       	dec	r16
+ 42e:	ea f7       	brpl	.-6      	; 0x42a <__LOCK_REGION_LENGTH__+0x2a>
+ 430:	82 2b       	or	r24, r18
+ 432:	08 c0       	rjmp	.+16     	; 0x444 <__LOCK_REGION_LENGTH__+0x44>
+ 434:	81 e0       	ldi	r24, 0x01	; 1
+ 436:	90 e0       	ldi	r25, 0x00	; 0
+ 438:	01 c0       	rjmp	.+2      	; 0x43c <__LOCK_REGION_LENGTH__+0x3c>
+ 43a:	88 0f       	add	r24, r24
+ 43c:	0a 95       	dec	r16
+ 43e:	ea f7       	brpl	.-6      	; 0x43a <__LOCK_REGION_LENGTH__+0x3a>
+ 440:	80 95       	com	r24
+ 442:	82 23       	and	r24, r18
+ 444:	88 83       	st	Y, r24
+ 446:	88 81       	ld	r24, Y
+ 448:	df 91       	pop	r29
+ 44a:	cf 91       	pop	r28
+ 44c:	1f 91       	pop	r17
+ 44e:	0f 91       	pop	r16
+ 450:	0c 94 69 01 	jmp	0x2d2	; 0x2d2 <FCD_0cc51_gLCD_SSD1306_i2c1__SendData>
+ 454:	df 91       	pop	r29
+ 456:	cf 91       	pop	r28
+ 458:	1f 91       	pop	r17
+ 45a:	0f 91       	pop	r16
+ 45c:	08 95       	ret
+
+0000045e <FCD_0cc51_gLCD_SSD1306_i2c1__DrawLine>:
+ 45e:	2f 92       	push	r2
+ 460:	3f 92       	push	r3
+ 462:	4f 92       	push	r4
+ 464:	5f 92       	push	r5
+ 466:	6f 92       	push	r6
+ 468:	7f 92       	push	r7
+ 46a:	8f 92       	push	r8
+ 46c:	9f 92       	push	r9
+ 46e:	af 92       	push	r10
+ 470:	bf 92       	push	r11
+ 472:	cf 92       	push	r12
+ 474:	df 92       	push	r13
+ 476:	ef 92       	push	r14
+ 478:	ff 92       	push	r15
+ 47a:	0f 93       	push	r16
+ 47c:	1f 93       	push	r17
+ 47e:	cf 93       	push	r28
+ 480:	df 93       	push	r29
+ 482:	00 d0       	rcall	.+0      	; 0x484 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawLine+0x26>
+ 484:	00 d0       	rcall	.+0      	; 0x486 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawLine+0x28>
+ 486:	cd b7       	in	r28, 0x3d	; 61
+ 488:	de b7       	in	r29, 0x3e	; 62
+ 48a:	3a 01       	movw	r6, r20
+ 48c:	3a 83       	std	Y+2, r19	; 0x02
+ 48e:	29 83       	std	Y+1, r18	; 0x01
+ 490:	4a 01       	movw	r8, r20
+ 492:	88 1a       	sub	r8, r24
+ 494:	99 0a       	sbc	r9, r25
+ 496:	79 01       	movw	r14, r18
+ 498:	e6 1a       	sub	r14, r22
+ 49a:	f7 0a       	sbc	r15, r23
+ 49c:	9c 83       	std	Y+4, r25	; 0x04
+ 49e:	8b 83       	std	Y+3, r24	; 0x03
+ 4a0:	8b 01       	movw	r16, r22
+ 4a2:	97 fe       	sbrs	r9, 7
+ 4a4:	07 c0       	rjmp	.+14     	; 0x4b4 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawLine+0x56>
+ 4a6:	91 94       	neg	r9
+ 4a8:	81 94       	neg	r8
+ 4aa:	91 08       	sbc	r9, r1
+ 4ac:	aa 24       	eor	r10, r10
+ 4ae:	aa 94       	dec	r10
+ 4b0:	ba 2c       	mov	r11, r10
+ 4b2:	03 c0       	rjmp	.+6      	; 0x4ba <FCD_0cc51_gLCD_SSD1306_i2c1__DrawLine+0x5c>
+ 4b4:	aa 24       	eor	r10, r10
+ 4b6:	a3 94       	inc	r10
+ 4b8:	b1 2c       	mov	r11, r1
+ 4ba:	f7 fe       	sbrs	r15, 7
+ 4bc:	07 c0       	rjmp	.+14     	; 0x4cc <FCD_0cc51_gLCD_SSD1306_i2c1__DrawLine+0x6e>
+ 4be:	f1 94       	neg	r15
+ 4c0:	e1 94       	neg	r14
+ 4c2:	f1 08       	sbc	r15, r1
+ 4c4:	cc 24       	eor	r12, r12
+ 4c6:	ca 94       	dec	r12
+ 4c8:	dc 2c       	mov	r13, r12
+ 4ca:	03 c0       	rjmp	.+6      	; 0x4d2 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawLine+0x74>
+ 4cc:	cc 24       	eor	r12, r12
+ 4ce:	c3 94       	inc	r12
+ 4d0:	d1 2c       	mov	r13, r1
+ 4d2:	14 01       	movw	r2, r8
+ 4d4:	22 0c       	add	r2, r2
+ 4d6:	33 1c       	adc	r3, r3
+ 4d8:	27 01       	movw	r4, r14
+ 4da:	44 0c       	add	r4, r4
+ 4dc:	55 1c       	adc	r5, r5
+ 4de:	8e 14       	cp	r8, r14
+ 4e0:	9f 04       	cpc	r9, r15
+ 4e2:	e4 f0       	brlt	.+56     	; 0x51c <FCD_0cc51_gLCD_SSD1306_i2c1__DrawLine+0xbe>
+ 4e4:	e1 2c       	mov	r14, r1
+ 4e6:	f1 2c       	mov	r15, r1
+ 4e8:	8b 81       	ldd	r24, Y+3	; 0x03
+ 4ea:	9c 81       	ldd	r25, Y+4	; 0x04
+ 4ec:	68 16       	cp	r6, r24
+ 4ee:	79 06       	cpc	r7, r25
+ 4f0:	89 f1       	breq	.+98     	; 0x554 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawLine+0xf6>
+ 4f2:	b8 01       	movw	r22, r16
+ 4f4:	8b 81       	ldd	r24, Y+3	; 0x03
+ 4f6:	9c 81       	ldd	r25, Y+4	; 0x04
+ 4f8:	0e 94 7e 01 	call	0x2fc	; 0x2fc <FCD_0cc51_gLCD_SSD1306_i2c1__Plot>
+ 4fc:	8b 81       	ldd	r24, Y+3	; 0x03
+ 4fe:	9c 81       	ldd	r25, Y+4	; 0x04
+ 500:	8a 0d       	add	r24, r10
+ 502:	9b 1d       	adc	r25, r11
+ 504:	9c 83       	std	Y+4, r25	; 0x04
+ 506:	8b 83       	std	Y+3, r24	; 0x03
+ 508:	e4 0c       	add	r14, r4
+ 50a:	f5 1c       	adc	r15, r5
+ 50c:	8e 14       	cp	r8, r14
+ 50e:	9f 04       	cpc	r9, r15
+ 510:	5c f7       	brge	.-42     	; 0x4e8 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawLine+0x8a>
+ 512:	0c 0d       	add	r16, r12
+ 514:	1d 1d       	adc	r17, r13
+ 516:	e2 18       	sub	r14, r2
+ 518:	f3 08       	sbc	r15, r3
+ 51a:	e6 cf       	rjmp	.-52     	; 0x4e8 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawLine+0x8a>
+ 51c:	81 2c       	mov	r8, r1
+ 51e:	91 2c       	mov	r9, r1
+ 520:	89 81       	ldd	r24, Y+1	; 0x01
+ 522:	9a 81       	ldd	r25, Y+2	; 0x02
+ 524:	80 17       	cp	r24, r16
+ 526:	91 07       	cpc	r25, r17
+ 528:	a9 f0       	breq	.+42     	; 0x554 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawLine+0xf6>
+ 52a:	b8 01       	movw	r22, r16
+ 52c:	8b 81       	ldd	r24, Y+3	; 0x03
+ 52e:	9c 81       	ldd	r25, Y+4	; 0x04
+ 530:	0e 94 7e 01 	call	0x2fc	; 0x2fc <FCD_0cc51_gLCD_SSD1306_i2c1__Plot>
+ 534:	0c 0d       	add	r16, r12
+ 536:	1d 1d       	adc	r17, r13
+ 538:	82 0c       	add	r8, r2
+ 53a:	93 1c       	adc	r9, r3
+ 53c:	e8 14       	cp	r14, r8
+ 53e:	f9 04       	cpc	r15, r9
+ 540:	7c f7       	brge	.-34     	; 0x520 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawLine+0xc2>
+ 542:	8b 81       	ldd	r24, Y+3	; 0x03
+ 544:	9c 81       	ldd	r25, Y+4	; 0x04
+ 546:	8a 0d       	add	r24, r10
+ 548:	9b 1d       	adc	r25, r11
+ 54a:	9c 83       	std	Y+4, r25	; 0x04
+ 54c:	8b 83       	std	Y+3, r24	; 0x03
+ 54e:	84 18       	sub	r8, r4
+ 550:	95 08       	sbc	r9, r5
+ 552:	e6 cf       	rjmp	.-52     	; 0x520 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawLine+0xc2>
+ 554:	b8 01       	movw	r22, r16
+ 556:	8b 81       	ldd	r24, Y+3	; 0x03
+ 558:	9c 81       	ldd	r25, Y+4	; 0x04
+ 55a:	0f 90       	pop	r0
+ 55c:	0f 90       	pop	r0
+ 55e:	0f 90       	pop	r0
+ 560:	0f 90       	pop	r0
+ 562:	df 91       	pop	r29
+ 564:	cf 91       	pop	r28
+ 566:	1f 91       	pop	r17
+ 568:	0f 91       	pop	r16
+ 56a:	ff 90       	pop	r15
+ 56c:	ef 90       	pop	r14
+ 56e:	df 90       	pop	r13
+ 570:	cf 90       	pop	r12
+ 572:	bf 90       	pop	r11
+ 574:	af 90       	pop	r10
+ 576:	9f 90       	pop	r9
+ 578:	8f 90       	pop	r8
+ 57a:	7f 90       	pop	r7
+ 57c:	6f 90       	pop	r6
+ 57e:	5f 90       	pop	r5
+ 580:	4f 90       	pop	r4
+ 582:	3f 90       	pop	r3
+ 584:	2f 90       	pop	r2
+ 586:	0c 94 7e 01 	jmp	0x2fc	; 0x2fc <FCD_0cc51_gLCD_SSD1306_i2c1__Plot>
+
+0000058a <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot>:
+ 58a:	0f 93       	push	r16
+ 58c:	1f 93       	push	r17
+ 58e:	cf 93       	push	r28
+ 590:	df 93       	push	r29
+ 592:	ec 01       	movw	r28, r24
+ 594:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_end>
+ 598:	82 30       	cpi	r24, 0x02	; 2
+ 59a:	59 f0       	breq	.+22     	; 0x5b2 <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0x28>
+ 59c:	83 30       	cpi	r24, 0x03	; 3
+ 59e:	b1 f0       	breq	.+44     	; 0x5cc <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0x42>
+ 5a0:	81 30       	cpi	r24, 0x01	; 1
+ 5a2:	d1 f4       	brne	.+52     	; 0x5d8 <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0x4e>
+ 5a4:	8f e7       	ldi	r24, 0x7F	; 127
+ 5a6:	90 e0       	ldi	r25, 0x00	; 0
+ 5a8:	86 1b       	sub	r24, r22
+ 5aa:	97 0b       	sbc	r25, r23
+ 5ac:	be 01       	movw	r22, r28
+ 5ae:	ec 01       	movw	r28, r24
+ 5b0:	13 c0       	rjmp	.+38     	; 0x5d8 <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0x4e>
+ 5b2:	8f e7       	ldi	r24, 0x7F	; 127
+ 5b4:	90 e0       	ldi	r25, 0x00	; 0
+ 5b6:	9c 01       	movw	r18, r24
+ 5b8:	2c 1b       	sub	r18, r28
+ 5ba:	3d 0b       	sbc	r19, r29
+ 5bc:	e9 01       	movw	r28, r18
+ 5be:	8f e3       	ldi	r24, 0x3F	; 63
+ 5c0:	90 e0       	ldi	r25, 0x00	; 0
+ 5c2:	9c 01       	movw	r18, r24
+ 5c4:	26 1b       	sub	r18, r22
+ 5c6:	37 0b       	sbc	r19, r23
+ 5c8:	b9 01       	movw	r22, r18
+ 5ca:	06 c0       	rjmp	.+12     	; 0x5d8 <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0x4e>
+ 5cc:	8f e3       	ldi	r24, 0x3F	; 63
+ 5ce:	90 e0       	ldi	r25, 0x00	; 0
+ 5d0:	8c 1b       	sub	r24, r28
+ 5d2:	9d 0b       	sbc	r25, r29
+ 5d4:	eb 01       	movw	r28, r22
+ 5d6:	bc 01       	movw	r22, r24
+ 5d8:	06 2f       	mov	r16, r22
+ 5da:	07 70       	andi	r16, 0x07	; 7
+ 5dc:	cb 01       	movw	r24, r22
+ 5de:	23 e0       	ldi	r18, 0x03	; 3
+ 5e0:	96 95       	lsr	r25
+ 5e2:	87 95       	ror	r24
+ 5e4:	2a 95       	dec	r18
+ 5e6:	e1 f7       	brne	.-8      	; 0x5e0 <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0x56>
+ 5e8:	18 2f       	mov	r17, r24
+ 5ea:	8c 2f       	mov	r24, r28
+ 5ec:	0e 94 2f 01 	call	0x25e	; 0x25e <FCD_0cc51_gLCD_SSD1306_i2c1__Goto_XY>
+ 5f0:	11 11       	cpse	r17, r1
+ 5f2:	07 c0       	rjmp	.+14     	; 0x602 <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0x78>
+ 5f4:	80 91 0d 02 	lds	r24, 0x020D	; 0x80020d <FCV_0cc51_gLCD_SSD1306_i2c1__BACKGROUND_COL_VAR>
+ 5f8:	90 91 0e 02 	lds	r25, 0x020E	; 0x80020e <FCV_0cc51_gLCD_SSD1306_i2c1__BACKGROUND_COL_VAR+0x1>
+ 5fc:	ca 57       	subi	r28, 0x7A	; 122
+ 5fe:	de 4f       	sbci	r29, 0xFE	; 254
+ 600:	1a c0       	rjmp	.+52     	; 0x636 <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0xac>
+ 602:	11 30       	cpi	r17, 0x01	; 1
+ 604:	39 f4       	brne	.+14     	; 0x614 <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0x8a>
+ 606:	80 91 0d 02 	lds	r24, 0x020D	; 0x80020d <FCV_0cc51_gLCD_SSD1306_i2c1__BACKGROUND_COL_VAR>
+ 60a:	90 91 0e 02 	lds	r25, 0x020E	; 0x80020e <FCV_0cc51_gLCD_SSD1306_i2c1__BACKGROUND_COL_VAR+0x1>
+ 60e:	c8 56       	subi	r28, 0x68	; 104
+ 610:	dd 4f       	sbci	r29, 0xFD	; 253
+ 612:	11 c0       	rjmp	.+34     	; 0x636 <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0xac>
+ 614:	12 30       	cpi	r17, 0x02	; 2
+ 616:	39 f4       	brne	.+14     	; 0x626 <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0x9c>
+ 618:	80 91 0d 02 	lds	r24, 0x020D	; 0x80020d <FCV_0cc51_gLCD_SSD1306_i2c1__BACKGROUND_COL_VAR>
+ 61c:	90 91 0e 02 	lds	r25, 0x020E	; 0x80020e <FCV_0cc51_gLCD_SSD1306_i2c1__BACKGROUND_COL_VAR+0x1>
+ 620:	cb 55       	subi	r28, 0x5B	; 91
+ 622:	db 4f       	sbci	r29, 0xFB	; 251
+ 624:	08 c0       	rjmp	.+16     	; 0x636 <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0xac>
+ 626:	13 30       	cpi	r17, 0x03	; 3
+ 628:	f1 f4       	brne	.+60     	; 0x666 <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0xdc>
+ 62a:	80 91 0d 02 	lds	r24, 0x020D	; 0x80020d <FCV_0cc51_gLCD_SSD1306_i2c1__BACKGROUND_COL_VAR>
+ 62e:	90 91 0e 02 	lds	r25, 0x020E	; 0x80020e <FCV_0cc51_gLCD_SSD1306_i2c1__BACKGROUND_COL_VAR+0x1>
+ 632:	ce 5f       	subi	r28, 0xFE	; 254
+ 634:	de 4f       	sbci	r29, 0xFE	; 254
+ 636:	28 81       	ld	r18, Y
+ 638:	89 2b       	or	r24, r25
+ 63a:	41 f0       	breq	.+16     	; 0x64c <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0xc2>
+ 63c:	81 e0       	ldi	r24, 0x01	; 1
+ 63e:	90 e0       	ldi	r25, 0x00	; 0
+ 640:	01 c0       	rjmp	.+2      	; 0x644 <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0xba>
+ 642:	88 0f       	add	r24, r24
+ 644:	0a 95       	dec	r16
+ 646:	ea f7       	brpl	.-6      	; 0x642 <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0xb8>
+ 648:	82 2b       	or	r24, r18
+ 64a:	08 c0       	rjmp	.+16     	; 0x65c <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0xd2>
+ 64c:	81 e0       	ldi	r24, 0x01	; 1
+ 64e:	90 e0       	ldi	r25, 0x00	; 0
+ 650:	01 c0       	rjmp	.+2      	; 0x654 <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0xca>
+ 652:	88 0f       	add	r24, r24
+ 654:	0a 95       	dec	r16
+ 656:	ea f7       	brpl	.-6      	; 0x652 <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0xc8>
+ 658:	80 95       	com	r24
+ 65a:	82 23       	and	r24, r18
+ 65c:	88 83       	st	Y, r24
+ 65e:	88 81       	ld	r24, Y
+ 660:	0e 94 69 01 	call	0x2d2	; 0x2d2 <FCD_0cc51_gLCD_SSD1306_i2c1__SendData>
+ 664:	3e c0       	rjmp	.+124    	; 0x6e2 <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0x158>
+ 666:	14 30       	cpi	r17, 0x04	; 4
+ 668:	39 f4       	brne	.+14     	; 0x678 <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0xee>
+ 66a:	80 91 0d 02 	lds	r24, 0x020D	; 0x80020d <FCV_0cc51_gLCD_SSD1306_i2c1__BACKGROUND_COL_VAR>
+ 66e:	90 91 0e 02 	lds	r25, 0x020E	; 0x80020e <FCV_0cc51_gLCD_SSD1306_i2c1__BACKGROUND_COL_VAR+0x1>
+ 672:	c6 5e       	subi	r28, 0xE6	; 230
+ 674:	dc 4f       	sbci	r29, 0xFC	; 252
+ 676:	1a c0       	rjmp	.+52     	; 0x6ac <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0x122>
+ 678:	15 30       	cpi	r17, 0x05	; 5
+ 67a:	39 f4       	brne	.+14     	; 0x68a <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0x100>
+ 67c:	80 91 0d 02 	lds	r24, 0x020D	; 0x80020d <FCV_0cc51_gLCD_SSD1306_i2c1__BACKGROUND_COL_VAR>
+ 680:	90 91 0e 02 	lds	r25, 0x020E	; 0x80020e <FCV_0cc51_gLCD_SSD1306_i2c1__BACKGROUND_COL_VAR+0x1>
+ 684:	cf 5d       	subi	r28, 0xDF	; 223
+ 686:	db 4f       	sbci	r29, 0xFB	; 251
+ 688:	11 c0       	rjmp	.+34     	; 0x6ac <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0x122>
+ 68a:	16 30       	cpi	r17, 0x06	; 6
+ 68c:	39 f4       	brne	.+14     	; 0x69c <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0x112>
+ 68e:	80 91 0d 02 	lds	r24, 0x020D	; 0x80020d <FCV_0cc51_gLCD_SSD1306_i2c1__BACKGROUND_COL_VAR>
+ 692:	90 91 0e 02 	lds	r25, 0x020E	; 0x80020e <FCV_0cc51_gLCD_SSD1306_i2c1__BACKGROUND_COL_VAR+0x1>
+ 696:	cc 5e       	subi	r28, 0xEC	; 236
+ 698:	dd 4f       	sbci	r29, 0xFD	; 253
+ 69a:	08 c0       	rjmp	.+16     	; 0x6ac <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0x122>
+ 69c:	17 30       	cpi	r17, 0x07	; 7
+ 69e:	09 f5       	brne	.+66     	; 0x6e2 <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0x158>
+ 6a0:	80 91 0d 02 	lds	r24, 0x020D	; 0x80020d <FCV_0cc51_gLCD_SSD1306_i2c1__BACKGROUND_COL_VAR>
+ 6a4:	90 91 0e 02 	lds	r25, 0x020E	; 0x80020e <FCV_0cc51_gLCD_SSD1306_i2c1__BACKGROUND_COL_VAR+0x1>
+ 6a8:	c4 56       	subi	r28, 0x64	; 100
+ 6aa:	dc 4f       	sbci	r29, 0xFC	; 252
+ 6ac:	28 81       	ld	r18, Y
+ 6ae:	89 2b       	or	r24, r25
+ 6b0:	41 f0       	breq	.+16     	; 0x6c2 <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0x138>
+ 6b2:	81 e0       	ldi	r24, 0x01	; 1
+ 6b4:	90 e0       	ldi	r25, 0x00	; 0
+ 6b6:	01 c0       	rjmp	.+2      	; 0x6ba <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0x130>
+ 6b8:	88 0f       	add	r24, r24
+ 6ba:	0a 95       	dec	r16
+ 6bc:	ea f7       	brpl	.-6      	; 0x6b8 <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0x12e>
+ 6be:	82 2b       	or	r24, r18
+ 6c0:	08 c0       	rjmp	.+16     	; 0x6d2 <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0x148>
+ 6c2:	81 e0       	ldi	r24, 0x01	; 1
+ 6c4:	90 e0       	ldi	r25, 0x00	; 0
+ 6c6:	01 c0       	rjmp	.+2      	; 0x6ca <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0x140>
+ 6c8:	88 0f       	add	r24, r24
+ 6ca:	0a 95       	dec	r16
+ 6cc:	ea f7       	brpl	.-6      	; 0x6c8 <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot+0x13e>
+ 6ce:	80 95       	com	r24
+ 6d0:	82 23       	and	r24, r18
+ 6d2:	88 83       	st	Y, r24
+ 6d4:	88 81       	ld	r24, Y
+ 6d6:	df 91       	pop	r29
+ 6d8:	cf 91       	pop	r28
+ 6da:	1f 91       	pop	r17
+ 6dc:	0f 91       	pop	r16
+ 6de:	0c 94 69 01 	jmp	0x2d2	; 0x2d2 <FCD_0cc51_gLCD_SSD1306_i2c1__SendData>
+ 6e2:	df 91       	pop	r29
+ 6e4:	cf 91       	pop	r28
+ 6e6:	1f 91       	pop	r17
+ 6e8:	0f 91       	pop	r16
+ 6ea:	08 95       	ret
+
+000006ec <FCD_0cc51_gLCD_SSD1306_i2c1__ClearDisplay>:
+ 6ec:	cf 92       	push	r12
+ 6ee:	df 92       	push	r13
+ 6f0:	ef 92       	push	r14
+ 6f2:	ff 92       	push	r15
+ 6f4:	0f 93       	push	r16
+ 6f6:	1f 93       	push	r17
+ 6f8:	cf 93       	push	r28
+ 6fa:	df 93       	push	r29
+ 6fc:	80 91 0d 02 	lds	r24, 0x020D	; 0x80020d <FCV_0cc51_gLCD_SSD1306_i2c1__BACKGROUND_COL_VAR>
+ 700:	90 91 0e 02 	lds	r25, 0x020E	; 0x80020e <FCV_0cc51_gLCD_SSD1306_i2c1__BACKGROUND_COL_VAR+0x1>
+ 704:	c1 e0       	ldi	r28, 0x01	; 1
+ 706:	89 2b       	or	r24, r25
+ 708:	09 f4       	brne	.+2      	; 0x70c <FCD_0cc51_gLCD_SSD1306_i2c1__ClearDisplay+0x20>
+ 70a:	c0 e0       	ldi	r28, 0x00	; 0
+ 70c:	c1 95       	neg	r28
+ 70e:	d0 e0       	ldi	r29, 0x00	; 0
+ 710:	6d 2f       	mov	r22, r29
+ 712:	80 e0       	ldi	r24, 0x00	; 0
+ 714:	0e 94 2f 01 	call	0x25e	; 0x25e <FCD_0cc51_gLCD_SSD1306_i2c1__Goto_XY>
+ 718:	00 e0       	ldi	r16, 0x00	; 0
+ 71a:	10 e0       	ldi	r17, 0x00	; 0
+ 71c:	8d 2f       	mov	r24, r29
+ 71e:	86 95       	lsr	r24
+ 720:	86 95       	lsr	r24
+ 722:	86 95       	lsr	r24
+ 724:	c8 2e       	mov	r12, r24
+ 726:	d1 2c       	mov	r13, r1
+ 728:	8c 2f       	mov	r24, r28
+ 72a:	0e 94 69 01 	call	0x2d2	; 0x2d2 <FCD_0cc51_gLCD_SSD1306_i2c1__SendData>
+ 72e:	f6 01       	movw	r30, r12
+ 730:	31 97       	sbiw	r30, 0x01	; 1
+ 732:	e7 30       	cpi	r30, 0x07	; 7
+ 734:	f1 05       	cpc	r31, r1
+ 736:	00 f5       	brcc	.+64     	; 0x778 <FCD_0cc51_gLCD_SSD1306_i2c1__ClearDisplay+0x8c>
+ 738:	ec 5c       	subi	r30, 0xCC	; 204
+ 73a:	ff 4f       	sbci	r31, 0xFF	; 255
+ 73c:	0c 94 f5 05 	jmp	0xbea	; 0xbea <__tablejump2__>
+ 740:	f8 01       	movw	r30, r16
+ 742:	e8 56       	subi	r30, 0x68	; 104
+ 744:	fd 4f       	sbci	r31, 0xFD	; 253
+ 746:	1b c0       	rjmp	.+54     	; 0x77e <FCD_0cc51_gLCD_SSD1306_i2c1__ClearDisplay+0x92>
+ 748:	f8 01       	movw	r30, r16
+ 74a:	eb 55       	subi	r30, 0x5B	; 91
+ 74c:	fb 4f       	sbci	r31, 0xFB	; 251
+ 74e:	17 c0       	rjmp	.+46     	; 0x77e <FCD_0cc51_gLCD_SSD1306_i2c1__ClearDisplay+0x92>
+ 750:	f8 01       	movw	r30, r16
+ 752:	ee 5f       	subi	r30, 0xFE	; 254
+ 754:	fe 4f       	sbci	r31, 0xFE	; 254
+ 756:	13 c0       	rjmp	.+38     	; 0x77e <FCD_0cc51_gLCD_SSD1306_i2c1__ClearDisplay+0x92>
+ 758:	f8 01       	movw	r30, r16
+ 75a:	e6 5e       	subi	r30, 0xE6	; 230
+ 75c:	fc 4f       	sbci	r31, 0xFC	; 252
+ 75e:	0f c0       	rjmp	.+30     	; 0x77e <FCD_0cc51_gLCD_SSD1306_i2c1__ClearDisplay+0x92>
+ 760:	f8 01       	movw	r30, r16
+ 762:	ef 5d       	subi	r30, 0xDF	; 223
+ 764:	fb 4f       	sbci	r31, 0xFB	; 251
+ 766:	0b c0       	rjmp	.+22     	; 0x77e <FCD_0cc51_gLCD_SSD1306_i2c1__ClearDisplay+0x92>
+ 768:	f8 01       	movw	r30, r16
+ 76a:	ec 5e       	subi	r30, 0xEC	; 236
+ 76c:	fd 4f       	sbci	r31, 0xFD	; 253
+ 76e:	07 c0       	rjmp	.+14     	; 0x77e <FCD_0cc51_gLCD_SSD1306_i2c1__ClearDisplay+0x92>
+ 770:	f8 01       	movw	r30, r16
+ 772:	e4 56       	subi	r30, 0x64	; 100
+ 774:	fc 4f       	sbci	r31, 0xFC	; 252
+ 776:	03 c0       	rjmp	.+6      	; 0x77e <FCD_0cc51_gLCD_SSD1306_i2c1__ClearDisplay+0x92>
+ 778:	f8 01       	movw	r30, r16
+ 77a:	ea 57       	subi	r30, 0x7A	; 122
+ 77c:	fe 4f       	sbci	r31, 0xFE	; 254
+ 77e:	c0 83       	st	Z, r28
+ 780:	0f 5f       	subi	r16, 0xFF	; 255
+ 782:	1f 4f       	sbci	r17, 0xFF	; 255
+ 784:	00 38       	cpi	r16, 0x80	; 128
+ 786:	11 05       	cpc	r17, r1
+ 788:	79 f6       	brne	.-98     	; 0x728 <FCD_0cc51_gLCD_SSD1306_i2c1__ClearDisplay+0x3c>
+ 78a:	d8 5f       	subi	r29, 0xF8	; 248
+ 78c:	d0 34       	cpi	r29, 0x40	; 64
+ 78e:	09 f0       	breq	.+2      	; 0x792 <FCD_0cc51_gLCD_SSD1306_i2c1__ClearDisplay+0xa6>
+ 790:	bf cf       	rjmp	.-130    	; 0x710 <FCD_0cc51_gLCD_SSD1306_i2c1__ClearDisplay+0x24>
+ 792:	df 91       	pop	r29
+ 794:	cf 91       	pop	r28
+ 796:	1f 91       	pop	r17
+ 798:	0f 91       	pop	r16
+ 79a:	ff 90       	pop	r15
+ 79c:	ef 90       	pop	r14
+ 79e:	df 90       	pop	r13
+ 7a0:	cf 90       	pop	r12
+ 7a2:	08 95       	ret
+
+000007a4 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawCircle>:
+ 7a4:	2f 92       	push	r2
+ 7a6:	3f 92       	push	r3
+ 7a8:	4f 92       	push	r4
+ 7aa:	5f 92       	push	r5
+ 7ac:	6f 92       	push	r6
+ 7ae:	7f 92       	push	r7
+ 7b0:	8f 92       	push	r8
+ 7b2:	9f 92       	push	r9
+ 7b4:	af 92       	push	r10
+ 7b6:	bf 92       	push	r11
+ 7b8:	cf 92       	push	r12
+ 7ba:	df 92       	push	r13
+ 7bc:	ef 92       	push	r14
+ 7be:	ff 92       	push	r15
+ 7c0:	0f 93       	push	r16
+ 7c2:	1f 93       	push	r17
+ 7c4:	cf 93       	push	r28
+ 7c6:	df 93       	push	r29
+ 7c8:	cd b7       	in	r28, 0x3d	; 61
+ 7ca:	de b7       	in	r29, 0x3e	; 62
+ 7cc:	2d 97       	sbiw	r28, 0x0d	; 13
+ 7ce:	0f b6       	in	r0, 0x3f	; 63
+ 7d0:	f8 94       	cli
+ 7d2:	de bf       	out	0x3e, r29	; 62
+ 7d4:	0f be       	out	0x3f, r0	; 63
+ 7d6:	cd bf       	out	0x3d, r28	; 61
+ 7d8:	3c 01       	movw	r6, r24
+ 7da:	7b 01       	movw	r14, r22
+ 7dc:	2a 01       	movw	r4, r20
+ 7de:	44 0f       	add	r20, r20
+ 7e0:	55 1f       	adc	r21, r21
+ 7e2:	5f 83       	std	Y+7, r21	; 0x07
+ 7e4:	4e 83       	std	Y+6, r20	; 0x06
+ 7e6:	01 30       	cpi	r16, 0x01	; 1
+ 7e8:	09 f0       	breq	.+2      	; 0x7ec <FCD_0cc51_gLCD_SSD1306_i2c1__DrawCircle+0x48>
+ 7ea:	66 c0       	rjmp	.+204    	; 0x8b8 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawCircle+0x114>
+ 7ec:	1d 82       	std	Y+5, r1	; 0x05
+ 7ee:	83 e0       	ldi	r24, 0x03	; 3
+ 7f0:	90 e0       	ldi	r25, 0x00	; 0
+ 7f2:	6c 01       	movw	r12, r24
+ 7f4:	2e 81       	ldd	r18, Y+6	; 0x06
+ 7f6:	3f 81       	ldd	r19, Y+7	; 0x07
+ 7f8:	c2 1a       	sub	r12, r18
+ 7fa:	d3 0a       	sbc	r13, r19
+ 7fc:	82 01       	movw	r16, r4
+ 7fe:	1a 82       	std	Y+2, r1	; 0x02
+ 800:	19 82       	std	Y+1, r1	; 0x01
+ 802:	49 81       	ldd	r20, Y+1	; 0x01
+ 804:	5a 81       	ldd	r21, Y+2	; 0x02
+ 806:	04 17       	cp	r16, r20
+ 808:	15 07       	cpc	r17, r21
+ 80a:	0c f4       	brge	.+2      	; 0x80e <FCD_0cc51_gLCD_SSD1306_i2c1__DrawCircle+0x6a>
+ 80c:	e0 c0       	rjmp	.+448    	; 0x9ce <__stack+0xcf>
+ 80e:	10 16       	cp	r1, r16
+ 810:	11 06       	cpc	r1, r17
+ 812:	cc f4       	brge	.+50     	; 0x846 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawCircle+0xa2>
+ 814:	69 81       	ldd	r22, Y+1	; 0x01
+ 816:	7a 81       	ldd	r23, Y+2	; 0x02
+ 818:	6e 0d       	add	r22, r14
+ 81a:	7f 1d       	adc	r23, r15
+ 81c:	9b 01       	movw	r18, r22
+ 81e:	48 01       	movw	r8, r16
+ 820:	86 0c       	add	r8, r6
+ 822:	97 1c       	adc	r9, r7
+ 824:	a4 01       	movw	r20, r8
+ 826:	53 01       	movw	r10, r6
+ 828:	a0 1a       	sub	r10, r16
+ 82a:	b1 0a       	sbc	r11, r17
+ 82c:	c5 01       	movw	r24, r10
+ 82e:	0e 94 2f 02 	call	0x45e	; 0x45e <FCD_0cc51_gLCD_SSD1306_i2c1__DrawLine>
+ 832:	b7 01       	movw	r22, r14
+ 834:	49 81       	ldd	r20, Y+1	; 0x01
+ 836:	5a 81       	ldd	r21, Y+2	; 0x02
+ 838:	64 1b       	sub	r22, r20
+ 83a:	75 0b       	sbc	r23, r21
+ 83c:	9b 01       	movw	r18, r22
+ 83e:	a4 01       	movw	r20, r8
+ 840:	c5 01       	movw	r24, r10
+ 842:	0e 94 2f 02 	call	0x45e	; 0x45e <FCD_0cc51_gLCD_SSD1306_i2c1__DrawLine>
+ 846:	89 81       	ldd	r24, Y+1	; 0x01
+ 848:	9a 81       	ldd	r25, Y+2	; 0x02
+ 84a:	18 16       	cp	r1, r24
+ 84c:	19 06       	cpc	r1, r25
+ 84e:	b4 f4       	brge	.+44     	; 0x87c <FCD_0cc51_gLCD_SSD1306_i2c1__DrawCircle+0xd8>
+ 850:	b7 01       	movw	r22, r14
+ 852:	60 1b       	sub	r22, r16
+ 854:	71 0b       	sbc	r23, r17
+ 856:	9b 01       	movw	r18, r22
+ 858:	4c 01       	movw	r8, r24
+ 85a:	86 0c       	add	r8, r6
+ 85c:	97 1c       	adc	r9, r7
+ 85e:	a4 01       	movw	r20, r8
+ 860:	53 01       	movw	r10, r6
+ 862:	a8 1a       	sub	r10, r24
+ 864:	b9 0a       	sbc	r11, r25
+ 866:	c5 01       	movw	r24, r10
+ 868:	0e 94 2f 02 	call	0x45e	; 0x45e <FCD_0cc51_gLCD_SSD1306_i2c1__DrawLine>
+ 86c:	b7 01       	movw	r22, r14
+ 86e:	60 0f       	add	r22, r16
+ 870:	71 1f       	adc	r23, r17
+ 872:	9b 01       	movw	r18, r22
+ 874:	a4 01       	movw	r20, r8
+ 876:	c5 01       	movw	r24, r10
+ 878:	0e 94 2f 02 	call	0x45e	; 0x45e <FCD_0cc51_gLCD_SSD1306_i2c1__DrawLine>
+ 87c:	89 81       	ldd	r24, Y+1	; 0x01
+ 87e:	9a 81       	ldd	r25, Y+2	; 0x02
+ 880:	d7 fe       	sbrs	r13, 7
+ 882:	08 c0       	rjmp	.+16     	; 0x894 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawCircle+0xf0>
+ 884:	88 0f       	add	r24, r24
+ 886:	99 1f       	adc	r25, r25
+ 888:	88 0f       	add	r24, r24
+ 88a:	99 1f       	adc	r25, r25
+ 88c:	06 96       	adiw	r24, 0x06	; 6
+ 88e:	c8 0e       	add	r12, r24
+ 890:	d9 1e       	adc	r13, r25
+ 892:	0b c0       	rjmp	.+22     	; 0x8aa <FCD_0cc51_gLCD_SSD1306_i2c1__DrawCircle+0x106>
+ 894:	80 1b       	sub	r24, r16
+ 896:	91 0b       	sbc	r25, r17
+ 898:	88 0f       	add	r24, r24
+ 89a:	99 1f       	adc	r25, r25
+ 89c:	88 0f       	add	r24, r24
+ 89e:	99 1f       	adc	r25, r25
+ 8a0:	0a 96       	adiw	r24, 0x0a	; 10
+ 8a2:	c8 0e       	add	r12, r24
+ 8a4:	d9 1e       	adc	r13, r25
+ 8a6:	01 50       	subi	r16, 0x01	; 1
+ 8a8:	11 09       	sbc	r17, r1
+ 8aa:	29 81       	ldd	r18, Y+1	; 0x01
+ 8ac:	3a 81       	ldd	r19, Y+2	; 0x02
+ 8ae:	2f 5f       	subi	r18, 0xFF	; 255
+ 8b0:	3f 4f       	sbci	r19, 0xFF	; 255
+ 8b2:	3a 83       	std	Y+2, r19	; 0x02
+ 8b4:	29 83       	std	Y+1, r18	; 0x01
+ 8b6:	a5 cf       	rjmp	.-182    	; 0x802 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawCircle+0x5e>
+ 8b8:	21 30       	cpi	r18, 0x01	; 1
+ 8ba:	09 f0       	breq	.+2      	; 0x8be <FCD_0cc51_gLCD_SSD1306_i2c1__DrawCircle+0x11a>
+ 8bc:	72 c0       	rjmp	.+228    	; 0x9a2 <__stack+0xa3>
+ 8be:	1d 82       	std	Y+5, r1	; 0x05
+ 8c0:	83 e0       	ldi	r24, 0x03	; 3
+ 8c2:	90 e0       	ldi	r25, 0x00	; 0
+ 8c4:	5c 01       	movw	r10, r24
+ 8c6:	2e 81       	ldd	r18, Y+6	; 0x06
+ 8c8:	3f 81       	ldd	r19, Y+7	; 0x07
+ 8ca:	a2 1a       	sub	r10, r18
+ 8cc:	b3 0a       	sbc	r11, r19
+ 8ce:	82 01       	movw	r16, r4
+ 8d0:	1d 86       	std	Y+13, r1	; 0x0d
+ 8d2:	1c 86       	std	Y+12, r1	; 0x0c
+ 8d4:	2c 85       	ldd	r18, Y+12	; 0x0c
+ 8d6:	3d 85       	ldd	r19, Y+13	; 0x0d
+ 8d8:	02 17       	cp	r16, r18
+ 8da:	13 07       	cpc	r17, r19
+ 8dc:	0c f4       	brge	.+2      	; 0x8e0 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawCircle+0x13c>
+ 8de:	77 c0       	rjmp	.+238    	; 0x9ce <__stack+0xcf>
+ 8e0:	67 01       	movw	r12, r14
+ 8e2:	c0 1a       	sub	r12, r16
+ 8e4:	d1 0a       	sbc	r13, r17
+ 8e6:	b6 01       	movw	r22, r12
+ 8e8:	8c 84       	ldd	r8, Y+12	; 0x0c
+ 8ea:	9d 84       	ldd	r9, Y+13	; 0x0d
+ 8ec:	86 0c       	add	r8, r6
+ 8ee:	97 1c       	adc	r9, r7
+ 8f0:	c4 01       	movw	r24, r8
+ 8f2:	0e 94 7e 01 	call	0x2fc	; 0x2fc <FCD_0cc51_gLCD_SSD1306_i2c1__Plot>
+ 8f6:	b6 01       	movw	r22, r12
+ 8f8:	a3 01       	movw	r20, r6
+ 8fa:	8c 85       	ldd	r24, Y+12	; 0x0c
+ 8fc:	9d 85       	ldd	r25, Y+13	; 0x0d
+ 8fe:	48 1b       	sub	r20, r24
+ 900:	59 0b       	sbc	r21, r25
+ 902:	5c 83       	std	Y+4, r21	; 0x04
+ 904:	4b 83       	std	Y+3, r20	; 0x03
+ 906:	ca 01       	movw	r24, r20
+ 908:	0e 94 7e 01 	call	0x2fc	; 0x2fc <FCD_0cc51_gLCD_SSD1306_i2c1__Plot>
+ 90c:	67 01       	movw	r12, r14
+ 90e:	2c 85       	ldd	r18, Y+12	; 0x0c
+ 910:	3d 85       	ldd	r19, Y+13	; 0x0d
+ 912:	c2 1a       	sub	r12, r18
+ 914:	d3 0a       	sbc	r13, r19
+ 916:	b6 01       	movw	r22, r12
+ 918:	a3 01       	movw	r20, r6
+ 91a:	40 0f       	add	r20, r16
+ 91c:	51 1f       	adc	r21, r17
+ 91e:	5a 83       	std	Y+2, r21	; 0x02
+ 920:	49 83       	std	Y+1, r20	; 0x01
+ 922:	ca 01       	movw	r24, r20
+ 924:	0e 94 7e 01 	call	0x2fc	; 0x2fc <FCD_0cc51_gLCD_SSD1306_i2c1__Plot>
+ 928:	b6 01       	movw	r22, r12
+ 92a:	13 01       	movw	r2, r6
+ 92c:	20 1a       	sub	r2, r16
+ 92e:	31 0a       	sbc	r3, r17
+ 930:	c1 01       	movw	r24, r2
+ 932:	0e 94 7e 01 	call	0x2fc	; 0x2fc <FCD_0cc51_gLCD_SSD1306_i2c1__Plot>
+ 936:	67 01       	movw	r12, r14
+ 938:	c0 0e       	add	r12, r16
+ 93a:	d1 1e       	adc	r13, r17
+ 93c:	b6 01       	movw	r22, r12
+ 93e:	c4 01       	movw	r24, r8
+ 940:	0e 94 7e 01 	call	0x2fc	; 0x2fc <FCD_0cc51_gLCD_SSD1306_i2c1__Plot>
+ 944:	b6 01       	movw	r22, r12
+ 946:	8b 81       	ldd	r24, Y+3	; 0x03
+ 948:	9c 81       	ldd	r25, Y+4	; 0x04
+ 94a:	0e 94 7e 01 	call	0x2fc	; 0x2fc <FCD_0cc51_gLCD_SSD1306_i2c1__Plot>
+ 94e:	cc 84       	ldd	r12, Y+12	; 0x0c
+ 950:	dd 84       	ldd	r13, Y+13	; 0x0d
+ 952:	ce 0c       	add	r12, r14
+ 954:	df 1c       	adc	r13, r15
+ 956:	b6 01       	movw	r22, r12
+ 958:	89 81       	ldd	r24, Y+1	; 0x01
+ 95a:	9a 81       	ldd	r25, Y+2	; 0x02
+ 95c:	0e 94 7e 01 	call	0x2fc	; 0x2fc <FCD_0cc51_gLCD_SSD1306_i2c1__Plot>
+ 960:	b6 01       	movw	r22, r12
+ 962:	c1 01       	movw	r24, r2
+ 964:	0e 94 7e 01 	call	0x2fc	; 0x2fc <FCD_0cc51_gLCD_SSD1306_i2c1__Plot>
+ 968:	8c 85       	ldd	r24, Y+12	; 0x0c
+ 96a:	9d 85       	ldd	r25, Y+13	; 0x0d
+ 96c:	b7 fe       	sbrs	r11, 7
+ 96e:	08 c0       	rjmp	.+16     	; 0x980 <__stack+0x81>
+ 970:	88 0f       	add	r24, r24
+ 972:	99 1f       	adc	r25, r25
+ 974:	88 0f       	add	r24, r24
+ 976:	99 1f       	adc	r25, r25
+ 978:	06 96       	adiw	r24, 0x06	; 6
+ 97a:	a8 0e       	add	r10, r24
+ 97c:	b9 1e       	adc	r11, r25
+ 97e:	0b c0       	rjmp	.+22     	; 0x996 <__stack+0x97>
+ 980:	80 1b       	sub	r24, r16
+ 982:	91 0b       	sbc	r25, r17
+ 984:	88 0f       	add	r24, r24
+ 986:	99 1f       	adc	r25, r25
+ 988:	88 0f       	add	r24, r24
+ 98a:	99 1f       	adc	r25, r25
+ 98c:	0a 96       	adiw	r24, 0x0a	; 10
+ 98e:	a8 0e       	add	r10, r24
+ 990:	b9 1e       	adc	r11, r25
+ 992:	01 50       	subi	r16, 0x01	; 1
+ 994:	11 09       	sbc	r17, r1
+ 996:	8c 85       	ldd	r24, Y+12	; 0x0c
+ 998:	9d 85       	ldd	r25, Y+13	; 0x0d
+ 99a:	01 96       	adiw	r24, 0x01	; 1
+ 99c:	9d 87       	std	Y+13, r25	; 0x0d
+ 99e:	8c 87       	std	Y+12, r24	; 0x0c
+ 9a0:	99 cf       	rjmp	.-206    	; 0x8d4 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawCircle+0x130>
+ 9a2:	80 91 9a 03 	lds	r24, 0x039A	; 0x80039a <FCV_0cc51_gLCD_SSD1306_i2c1__FOREGROUND_COL_VAR>
+ 9a6:	90 91 9b 03 	lds	r25, 0x039B	; 0x80039b <FCV_0cc51_gLCD_SSD1306_i2c1__FOREGROUND_COL_VAR+0x1>
+ 9aa:	9c 01       	movw	r18, r24
+ 9ac:	40 e0       	ldi	r20, 0x00	; 0
+ 9ae:	50 e0       	ldi	r21, 0x00	; 0
+ 9b0:	28 87       	std	Y+8, r18	; 0x08
+ 9b2:	39 87       	std	Y+9, r19	; 0x09
+ 9b4:	4a 87       	std	Y+10, r20	; 0x0a
+ 9b6:	5b 87       	std	Y+11, r21	; 0x0b
+ 9b8:	80 91 0d 02 	lds	r24, 0x020D	; 0x80020d <FCV_0cc51_gLCD_SSD1306_i2c1__BACKGROUND_COL_VAR>
+ 9bc:	90 91 0e 02 	lds	r25, 0x020E	; 0x80020e <FCV_0cc51_gLCD_SSD1306_i2c1__BACKGROUND_COL_VAR+0x1>
+ 9c0:	90 93 9b 03 	sts	0x039B, r25	; 0x80039b <FCV_0cc51_gLCD_SSD1306_i2c1__FOREGROUND_COL_VAR+0x1>
+ 9c4:	80 93 9a 03 	sts	0x039A, r24	; 0x80039a <FCV_0cc51_gLCD_SSD1306_i2c1__FOREGROUND_COL_VAR>
+ 9c8:	31 e0       	ldi	r19, 0x01	; 1
+ 9ca:	3d 83       	std	Y+5, r19	; 0x05
+ 9cc:	10 cf       	rjmp	.-480    	; 0x7ee <FCD_0cc51_gLCD_SSD1306_i2c1__DrawCircle+0x4a>
+ 9ce:	4d 81       	ldd	r20, Y+5	; 0x05
+ 9d0:	41 30       	cpi	r20, 0x01	; 1
+ 9d2:	49 f4       	brne	.+18     	; 0x9e6 <__stack+0xe7>
+ 9d4:	88 85       	ldd	r24, Y+8	; 0x08
+ 9d6:	99 85       	ldd	r25, Y+9	; 0x09
+ 9d8:	90 93 9b 03 	sts	0x039B, r25	; 0x80039b <FCV_0cc51_gLCD_SSD1306_i2c1__FOREGROUND_COL_VAR+0x1>
+ 9dc:	80 93 9a 03 	sts	0x039A, r24	; 0x80039a <FCV_0cc51_gLCD_SSD1306_i2c1__FOREGROUND_COL_VAR>
+ 9e0:	92 e0       	ldi	r25, 0x02	; 2
+ 9e2:	9d 83       	std	Y+5, r25	; 0x05
+ 9e4:	6d cf       	rjmp	.-294    	; 0x8c0 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawCircle+0x11c>
+ 9e6:	2d 96       	adiw	r28, 0x0d	; 13
+ 9e8:	0f b6       	in	r0, 0x3f	; 63
+ 9ea:	f8 94       	cli
+ 9ec:	de bf       	out	0x3e, r29	; 62
+ 9ee:	0f be       	out	0x3f, r0	; 63
+ 9f0:	cd bf       	out	0x3d, r28	; 61
+ 9f2:	df 91       	pop	r29
+ 9f4:	cf 91       	pop	r28
+ 9f6:	1f 91       	pop	r17
+ 9f8:	0f 91       	pop	r16
+ 9fa:	ff 90       	pop	r15
+ 9fc:	ef 90       	pop	r14
+ 9fe:	df 90       	pop	r13
+ a00:	cf 90       	pop	r12
+ a02:	bf 90       	pop	r11
+ a04:	af 90       	pop	r10
+ a06:	9f 90       	pop	r9
+ a08:	8f 90       	pop	r8
+ a0a:	7f 90       	pop	r7
+ a0c:	6f 90       	pop	r6
+ a0e:	5f 90       	pop	r5
+ a10:	4f 90       	pop	r4
+ a12:	3f 90       	pop	r3
+ a14:	2f 90       	pop	r2
+ a16:	08 95       	ret
+
+00000a18 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawRectangle>:
+ a18:	8f 92       	push	r8
+ a1a:	9f 92       	push	r9
+ a1c:	af 92       	push	r10
+ a1e:	bf 92       	push	r11
+ a20:	cf 92       	push	r12
+ a22:	df 92       	push	r13
+ a24:	ef 92       	push	r14
+ a26:	0f 93       	push	r16
+ a28:	1f 93       	push	r17
+ a2a:	cf 93       	push	r28
+ a2c:	df 93       	push	r29
+ a2e:	ec 01       	movw	r28, r24
+ a30:	6b 01       	movw	r12, r22
+ a32:	4a 01       	movw	r8, r20
+ a34:	59 01       	movw	r10, r18
+ a36:	9b 01       	movw	r18, r22
+ a38:	0e 94 2f 02 	call	0x45e	; 0x45e <FCD_0cc51_gLCD_SSD1306_i2c1__DrawLine>
+ a3c:	95 01       	movw	r18, r10
+ a3e:	a4 01       	movw	r20, r8
+ a40:	b6 01       	movw	r22, r12
+ a42:	c4 01       	movw	r24, r8
+ a44:	0e 94 2f 02 	call	0x45e	; 0x45e <FCD_0cc51_gLCD_SSD1306_i2c1__DrawLine>
+ a48:	95 01       	movw	r18, r10
+ a4a:	a4 01       	movw	r20, r8
+ a4c:	b5 01       	movw	r22, r10
+ a4e:	ce 01       	movw	r24, r28
+ a50:	0e 94 2f 02 	call	0x45e	; 0x45e <FCD_0cc51_gLCD_SSD1306_i2c1__DrawLine>
+ a54:	95 01       	movw	r18, r10
+ a56:	ae 01       	movw	r20, r28
+ a58:	b6 01       	movw	r22, r12
+ a5a:	ce 01       	movw	r24, r28
+ a5c:	0e 94 2f 02 	call	0x45e	; 0x45e <FCD_0cc51_gLCD_SSD1306_i2c1__DrawLine>
+ a60:	01 11       	cpse	r16, r1
+ a62:	2d c0       	rjmp	.+90     	; 0xabe <FCD_0cc51_gLCD_SSD1306_i2c1__DrawRectangle+0xa6>
+ a64:	8c 16       	cp	r8, r28
+ a66:	9d 06       	cpc	r9, r29
+ a68:	20 f4       	brcc	.+8      	; 0xa72 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawRectangle+0x5a>
+ a6a:	84 01       	movw	r16, r8
+ a6c:	0f 5f       	subi	r16, 0xFF	; 255
+ a6e:	1f 4f       	sbci	r17, 0xFF	; 255
+ a70:	04 c0       	rjmp	.+8      	; 0xa7a <FCD_0cc51_gLCD_SSD1306_i2c1__DrawRectangle+0x62>
+ a72:	8e 01       	movw	r16, r28
+ a74:	0f 5f       	subi	r16, 0xFF	; 255
+ a76:	1f 4f       	sbci	r17, 0xFF	; 255
+ a78:	e4 01       	movw	r28, r8
+ a7a:	ac 14       	cp	r10, r12
+ a7c:	bd 04       	cpc	r11, r13
+ a7e:	10 f4       	brcc	.+4      	; 0xa84 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawRectangle+0x6c>
+ a80:	45 01       	movw	r8, r10
+ a82:	12 c0       	rjmp	.+36     	; 0xaa8 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawRectangle+0x90>
+ a84:	46 01       	movw	r8, r12
+ a86:	8f ef       	ldi	r24, 0xFF	; 255
+ a88:	88 1a       	sub	r8, r24
+ a8a:	98 0a       	sbc	r9, r24
+ a8c:	65 01       	movw	r12, r10
+ a8e:	0f c0       	rjmp	.+30     	; 0xaae <FCD_0cc51_gLCD_SSD1306_i2c1__DrawRectangle+0x96>
+ a90:	b4 01       	movw	r22, r8
+ a92:	c5 01       	movw	r24, r10
+ a94:	ee 20       	and	r14, r14
+ a96:	81 f0       	breq	.+32     	; 0xab8 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawRectangle+0xa0>
+ a98:	0e 94 7e 01 	call	0x2fc	; 0x2fc <FCD_0cc51_gLCD_SSD1306_i2c1__Plot>
+ a9c:	8f ef       	ldi	r24, 0xFF	; 255
+ a9e:	a8 1a       	sub	r10, r24
+ aa0:	b8 0a       	sbc	r11, r24
+ aa2:	ac 16       	cp	r10, r28
+ aa4:	bd 06       	cpc	r11, r29
+ aa6:	a0 f3       	brcs	.-24     	; 0xa90 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawRectangle+0x78>
+ aa8:	8f ef       	ldi	r24, 0xFF	; 255
+ aaa:	88 1a       	sub	r8, r24
+ aac:	98 0a       	sbc	r9, r24
+ aae:	8c 14       	cp	r8, r12
+ ab0:	9d 04       	cpc	r9, r13
+ ab2:	28 f4       	brcc	.+10     	; 0xabe <FCD_0cc51_gLCD_SSD1306_i2c1__DrawRectangle+0xa6>
+ ab4:	58 01       	movw	r10, r16
+ ab6:	f5 cf       	rjmp	.-22     	; 0xaa2 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawRectangle+0x8a>
+ ab8:	0e 94 c5 02 	call	0x58a	; 0x58a <FCD_0cc51_gLCD_SSD1306_i2c1__BPlot>
+ abc:	ef cf       	rjmp	.-34     	; 0xa9c <FCD_0cc51_gLCD_SSD1306_i2c1__DrawRectangle+0x84>
+ abe:	df 91       	pop	r29
+ ac0:	cf 91       	pop	r28
+ ac2:	1f 91       	pop	r17
+ ac4:	0f 91       	pop	r16
+ ac6:	ef 90       	pop	r14
+ ac8:	df 90       	pop	r13
+ aca:	cf 90       	pop	r12
+ acc:	bf 90       	pop	r11
+ ace:	af 90       	pop	r10
+ ad0:	9f 90       	pop	r9
+ ad2:	8f 90       	pop	r8
+ ad4:	08 95       	ret
+
+00000ad6 <FCD_0cc51_gLCD_SSD1306_i2c1__Initialise>:
+ ad6:	8c e3       	ldi	r24, 0x3C	; 60
+ ad8:	0e 94 cf 00 	call	0x19e	; 0x19e <FC_CAL_I2C_Transaction_Init_1>
+ adc:	8e ea       	ldi	r24, 0xAE	; 174
+ ade:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ ae2:	80 e0       	ldi	r24, 0x00	; 0
+ ae4:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ ae8:	80 e1       	ldi	r24, 0x10	; 16
+ aea:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ aee:	80 e4       	ldi	r24, 0x40	; 64
+ af0:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ af4:	81 e8       	ldi	r24, 0x81	; 129
+ af6:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ afa:	8f ec       	ldi	r24, 0xCF	; 207
+ afc:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ b00:	81 ea       	ldi	r24, 0xA1	; 161
+ b02:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ b06:	88 ec       	ldi	r24, 0xC8	; 200
+ b08:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ b0c:	86 ea       	ldi	r24, 0xA6	; 166
+ b0e:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ b12:	88 ea       	ldi	r24, 0xA8	; 168
+ b14:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ b18:	8f e3       	ldi	r24, 0x3F	; 63
+ b1a:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ b1e:	83 ed       	ldi	r24, 0xD3	; 211
+ b20:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ b24:	80 e0       	ldi	r24, 0x00	; 0
+ b26:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ b2a:	85 ed       	ldi	r24, 0xD5	; 213
+ b2c:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ b30:	80 e8       	ldi	r24, 0x80	; 128
+ b32:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ b36:	89 ed       	ldi	r24, 0xD9	; 217
+ b38:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ b3c:	81 ef       	ldi	r24, 0xF1	; 241
+ b3e:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ b42:	8a ed       	ldi	r24, 0xDA	; 218
+ b44:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ b48:	82 e1       	ldi	r24, 0x12	; 18
+ b4a:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ b4e:	8b ed       	ldi	r24, 0xDB	; 219
+ b50:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ b54:	80 e4       	ldi	r24, 0x40	; 64
+ b56:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ b5a:	80 e2       	ldi	r24, 0x20	; 32
+ b5c:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ b60:	82 e0       	ldi	r24, 0x02	; 2
+ b62:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ b66:	8d e8       	ldi	r24, 0x8D	; 141
+ b68:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ b6c:	84 e1       	ldi	r24, 0x14	; 20
+ b6e:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ b72:	84 ea       	ldi	r24, 0xA4	; 164
+ b74:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ b78:	86 ea       	ldi	r24, 0xA6	; 166
+ b7a:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ b7e:	8f ea       	ldi	r24, 0xAF	; 175
+ b80:	0e 94 1b 01 	call	0x236	; 0x236 <FCD_0cc51_gLCD_SSD1306_i2c1__SendCommand>
+ b84:	8f ef       	ldi	r24, 0xFF	; 255
+ b86:	90 e0       	ldi	r25, 0x00	; 0
+ b88:	90 93 9b 03 	sts	0x039B, r25	; 0x80039b <FCV_0cc51_gLCD_SSD1306_i2c1__FOREGROUND_COL_VAR+0x1>
+ b8c:	80 93 9a 03 	sts	0x039A, r24	; 0x80039a <FCV_0cc51_gLCD_SSD1306_i2c1__FOREGROUND_COL_VAR>
+ b90:	10 92 0e 02 	sts	0x020E, r1	; 0x80020e <FCV_0cc51_gLCD_SSD1306_i2c1__BACKGROUND_COL_VAR+0x1>
+ b94:	10 92 0d 02 	sts	0x020D, r1	; 0x80020d <FCV_0cc51_gLCD_SSD1306_i2c1__BACKGROUND_COL_VAR>
+ b98:	0c 94 76 03 	jmp	0x6ec	; 0x6ec <FCD_0cc51_gLCD_SSD1306_i2c1__ClearDisplay>
+
+00000b9c <main>:
+ b9c:	14 be       	out	0x34, r1	; 52
+ b9e:	0e 94 6b 05 	call	0xad6	; 0xad6 <FCD_0cc51_gLCD_SSD1306_i2c1__Initialise>
+ ba2:	0e 94 76 03 	call	0x6ec	; 0x6ec <FCD_0cc51_gLCD_SSD1306_i2c1__ClearDisplay>
+ ba6:	0e 94 76 03 	call	0x6ec	; 0x6ec <FCD_0cc51_gLCD_SSD1306_i2c1__ClearDisplay>
+ baa:	00 e0       	ldi	r16, 0x00	; 0
+ bac:	20 e0       	ldi	r18, 0x00	; 0
+ bae:	45 e0       	ldi	r20, 0x05	; 5
+ bb0:	50 e0       	ldi	r21, 0x00	; 0
+ bb2:	6a e0       	ldi	r22, 0x0A	; 10
+ bb4:	70 e0       	ldi	r23, 0x00	; 0
+ bb6:	8a e0       	ldi	r24, 0x0A	; 10
+ bb8:	90 e0       	ldi	r25, 0x00	; 0
+ bba:	0e 94 d2 03 	call	0x7a4	; 0x7a4 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawCircle>
+ bbe:	84 ef       	ldi	r24, 0xF4	; 244
+ bc0:	91 e0       	ldi	r25, 0x01	; 1
+ bc2:	0e 94 5a 00 	call	0xb4	; 0xb4 <FCI_DELAYINT_MS>
+ bc6:	ee 24       	eor	r14, r14
+ bc8:	e3 94       	inc	r14
+ bca:	01 e0       	ldi	r16, 0x01	; 1
+ bcc:	2e e3       	ldi	r18, 0x3E	; 62
+ bce:	30 e0       	ldi	r19, 0x00	; 0
+ bd0:	4e e7       	ldi	r20, 0x7E	; 126
+ bd2:	50 e0       	ldi	r21, 0x00	; 0
+ bd4:	61 e0       	ldi	r22, 0x01	; 1
+ bd6:	70 e0       	ldi	r23, 0x00	; 0
+ bd8:	81 e0       	ldi	r24, 0x01	; 1
+ bda:	90 e0       	ldi	r25, 0x00	; 0
+ bdc:	0e 94 0c 05 	call	0xa18	; 0xa18 <FCD_0cc51_gLCD_SSD1306_i2c1__DrawRectangle>
+ be0:	84 ef       	ldi	r24, 0xF4	; 244
+ be2:	91 e0       	ldi	r25, 0x01	; 1
+ be4:	0e 94 5a 00 	call	0xb4	; 0xb4 <FCI_DELAYINT_MS>
+ be8:	de cf       	rjmp	.-68     	; 0xba6 <main+0xa>
+
+00000bea <__tablejump2__>:
+ bea:	ee 0f       	add	r30, r30
+ bec:	ff 1f       	adc	r31, r31
+ bee:	05 90       	lpm	r0, Z+
+ bf0:	f4 91       	lpm	r31, Z
+ bf2:	e0 2d       	mov	r30, r0
+ bf4:	09 94       	ijmp
+
+00000bf6 <_exit>:
+ bf6:	f8 94       	cli
+
+00000bf8 <__stop_program>:
+ bf8:	ff cf       	rjmp	.-2      	; 0xbf8 <__stop_program>

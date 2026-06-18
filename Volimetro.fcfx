@@ -1,0 +1,324 @@
+<root>
+<document scada='0' projtype='1' schema='103' license='1,FREE_VERSION,TCW03R' title='Voltimetro' description='New &lt;Arduino Uno R3 PDIP&gt; Embedded Project' fcversion='720898' target='ARD.ATMEGA.Arduino Uno R3 PDIP' >
+	<config data='' clkspd='16000000' simspd='0' usewdt='0' constif='0' SSH_IP='DD6171BB7AD97877' SSH_User='DD6171BB7AD97877' SSH_Pass='DD6171BB7AD97877' Use3V3='0' />
+	<plugins >
+		<dll_models enabled='1' />
+	</plugins>
+	<supplement use='0' head='' body='' />
+	<debug >
+		<watch expr='LeituraAdc' />
+		<watch expr='TensaoVolts' />
+		<watch expr='ValorConvertido' />
+	</debug>
+	<traces />
+	<ghost >
+		<FK2 >
+			<data name='FK2D0' port='4294967295' pin='4294967295' />
+			<data name='FK2D1' port='4294967295' pin='4294967295' />
+			<data name='FK2D2' port='4294967295' pin='4294967295' />
+			<data name='FK2D3' port='4294967295' pin='4294967295' />
+			<data name='FK2D4' port='4294967295' pin='4294967295' />
+			<data name='FK2D5' port='4294967295' pin='4294967295' />
+			<data name='FK2D6' port='4294967295' pin='4294967295' />
+			<data name='FK2D7' port='4294967295' pin='4294967295' />
+			<data name='FK2D8' port='4294967295' pin='4294967295' />
+			<data name='FK2D9' port='4294967295' pin='4294967295' />
+			<data name='FK2D10' port='4294967295' pin='4294967295' />
+			<data name='FK2D11' port='4294967295' pin='4294967295' />
+			<data name='FK2D12' port='4294967295' pin='4294967295' />
+			<data name='FK2D13' port='4294967295' pin='4294967295' />
+			<data name='FK2D14' port='4294967295' pin='4294967295' />
+			<data name='FK2D15' port='4294967295' pin='4294967295' />
+			<data name='FK2A0' port='4294967295' pin='4294967295' />
+			<data name='FK2A1' port='4294967295' pin='4294967295' />
+			<data name='FK2A2' port='4294967295' pin='4294967295' />
+			<data name='FK2A3' port='4294967295' pin='4294967295' />
+			<data name='FK2A4' port='4294967295' pin='4294967295' />
+			<data name='FK2A5' port='4294967295' pin='4294967295' />
+		</FK2>
+		<ICD >
+			<data name='AnalogPrescaleValue' value='19' />
+			<data name='DigitalSampleRate' value='100000' />
+			<data name='BreakpointCount' value='8' />
+			<data name='CallStackDepthCount' value='8' />
+			<data name='ClockPort' value='3' />
+			<data name='ClockPin' value='1' />
+			<data name='DataPort' value='3' />
+			<data name='DataPin' value='0' />
+			<data name='UseDefaultPins' value='1' />
+			<data name='WrapEnabled' value='1' />
+			<data name='CommsDelayOverridden' value='0' />
+			<data name='CommsDelay' value='11' />
+			<data name='CalculatedCommsDelay' value='11' />
+			<data name='AnalogEB2PrescaleValue' value='2' />
+			<data name='DigitalEB2SampleRate' value='100000' />
+		</ICD>
+		<pins >
+			<digital A='0' B='0' C='0' D='0' E='0' F='0' G='0' H='0' I='0' J='0' K='0' L='0' M='0' N='0' O='0' P='0' Q='0' R='0' S='0' T='0' U='0' V='0' W='0' X='0' Y='0' Z='0' />
+			<analog A='0' B='0' C='0' D='0' E='0' F='0' G='0' H='0' I='0' J='0' K='0' L='0' M='0' N='0' O='0' P='0' Q='0' R='0' S='0' T='0' U='0' V='0' W='0' X='0' Y='0' Z='0' />
+		</pins>
+	</ghost>
+	<components >
+		<settings autoimg='0' center='1' unitscale='0' fixedscale='0' fixedx='25' fixedy='25' fixedz='25' headcode='0' />
+		<definition guid='0bf0d2d0-27b1-4ead-8b10-da13d982c9ae' vstate='40' vmin='0' vmaj='1' srcleaf='' visiblename='' description='' category='' category2='' category3='' bIs2dOnly='0' bIs3dOnly='0' bIsWysiwyg='0' catenable='1' author='' manuname='' manucode='' sysinfo='0' keywords='' dynamic='1' scadaCompatible='0' embeddedCompatible='1' showmacros='1' iconpath='' />
+		<component class_type='root' codename='ComponentRoot' panelId='-1' x='0' y='0' z='0' xsz='1' ysz='1' zsz='1' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='0' poslock='0' ancTop='0' ancBottom='0' ancLeft='0' ancRight='0' ancMinX='0' ancMinY='0' comp2dType='0' >
+			<resources />
+			<properties />
+			<values />
+			<events />
+			<apis />
+			<variables >
+				<variable public='0' >
+					<def class_type='variable' name='TensaoVolts' type='f32' description='' isconst='0' isHidden='0' isinit='1' usrinit='0.0' setinit='0' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='ValorConvertido' type='T8' description='' isconst='0' isHidden='0' isinit='1' usrinit='&quot;&quot;' setinit='&quot;&quot;' >
+						<array size='4' />
+					</def>
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='false' type='b1' description='' isconst='1' isHidden='0' isinit='1' usrinit='0' setinit='0' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='LeituraAdc' type='u16' description='' isconst='0' isHidden='0' isinit='1' usrinit='0' setinit='0' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='TensaoVots' type='f32' description='' isconst='0' isHidden='0' isinit='1' usrinit='0.0' setinit='0' />
+				</variable>
+				<variable public='0' >
+					<def class_type='variable' name='true' type='b1' description='' isconst='1' isHidden='0' isinit='1' usrinit='1' setinit='1' />
+				</variable>
+			</variables>
+			<macros >
+				<macro >
+					<flowline name='LeituraAdc' description='' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<command class_type='call' title='Component Macro' component='Potentiometer1' macro='GetInt' >
+							<return exp='LeituraAdc' />
+						</command>
+						<command class_type='calculation' title='Calculation' >
+							<exp exp='TensaoVolts = (5.0 / 1024) * LeituraAdc' />
+							<exp exp='ValorConvertido = FloatToString$(TensaoVolts)' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='EscreveDisplay' description='' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<command class_type='call' title='Component Macro' component='LCDAdafruitOLED2' macro='Cursor' >
+							<argument exp='3' />
+							<argument exp='1' />
+						</command>
+						<command class_type='call' title='Component Macro' component='LCDAdafruitOLED2' macro='PrintString' >
+							<argument exp='ValorConvertido' />
+						</command>
+						<command class_type='delay' title='Delay' exp='50' type='1' />
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='inicializacao' description='' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<command class_type='call' title='Component Macro' component='LCDAdafruitOLED1' macro='Start' />
+						<command class_type='call' title='Component Macro' component='LCDAdafruitOLED2' macro='Clear' />
+						<command class_type='call' title='Component Macro' component='LCDAdafruitOLED2' macro='PrintString' >
+							<argument exp='&quot;   Voltimetro   &quot;' />
+						</command>
+						<command class_type='call' title='Component Macro' component='LCDAdafruitOLED2' macro='Cursor' >
+							<argument exp='0' />
+							<argument exp='1' />
+						</command>
+						<command class_type='call' title='Component Macro' component='LCDAdafruitOLED2' macro='PrintString' >
+							<argument exp='&quot;V=     V&quot;' />
+						</command>
+					</flowline>
+				</macro>
+				<macro >
+					<flowline name='Main' description='' statediag='0' >
+						<return name='Return' type='v0' description='' isconst='0' isHidden='0' isinit='0' usrinit='' setinit='' />
+						<command class_type='call' title='inicializaçao' macro='inicializacao' />
+						<command class_type='loop' title='Loop' type='3' exp='1' for1='' for3='' >
+							<flowline >
+								<command class_type='call' title='User Macro' macro='LeituraAdc' />
+								<command class_type='call' title='User Macro' macro='EscreveDisplay' />
+							</flowline>
+						</command>
+					</flowline>
+				</macro>
+			</macros>
+			<component class_type='ref' guid='14683ea8-5a08-4b3a-be2d-3dea3e17e720' vmin='3' vmaj='1' codename='pot_color_cap1' panelId='-1' x='0' y='0' z='0' xsz='25.1419' ysz='25.1419' zsz='18.45' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='0' poslock='1' ancTop='0' ancBottom='0' ancLeft='0' ancRight='0' ancMinX='0' ancMinY='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='angle_start' data='225.000000' />
+					<value target='angle_sweep' data='270.000000' />
+					<value target='cap_color' data='192' />
+					<value target='point_color' data='16777215' />
+					<value target='ScopeTraces' data='0' />
+					<value target='RetainValue' data='0' />
+					<value target='SetValue' data='0.574074' />
+					<value target='channel' data='0' />
+					<value target='vrefvol' data='500' />
+					<value target='vrefop' data='000' />
+					<value target='adc_base::convspd' data='6' />
+					<value target='actime' data='40' />
+					<value target='bits' data='10' />
+					<value target='bitmul' data='0.004883' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='672cb410-6026-403b-aff7-0628fe9e8140' vmin='8' vmaj='1' codename='LCDAdafruitOLED1' panelId='-1' x='0' y='20' z='0' xsz='25' ysz='25' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='1' poslock='1' ancTop='0' ancBottom='0' ancLeft='0' ancRight='0' ancMinX='0' ancMinY='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='d0_pin' data='$PORTB.0' />
+					<value target='d1_pin' data='$PORTB.1' />
+					<value target='d2_pin' data='$PORTB.2' />
+					<value target='d3_pin' data='$PORTB.3' />
+					<value target='rs_pin' data='$PORTB.4' />
+					<value target='rw_pin' data='$PORTB.5' />
+					<value target='enable_pin' data='$PORTB.6' />
+					<value target='Rows' data='2' />
+					<value target='Columns' data='16' />
+					<value target='Font' data='Arial' />
+					<value target='CursorPosX' data='0' />
+					<value target='CursorPosY' data='1' />
+					<value target='LCD_Base1::Rows' data='002' />
+					<value target='LCD_Base1::Columns' data='016' />
+					<value target='LCD_Base1::ctrl_lcd::Base_GLCD1::ComponentLabel' data='000' />
+					<value target='LCD_Base1::ctrl_lcd::Base_GLCD1::GdiText1::sText' data='LCDAdafruitOLED1' />
+					<value target='LCD_Base1::ctrl_lcd::Base_GLCD1::GdiText1::dScale' data='1.4' />
+					<value target='LCD_Base1::ctrl_lcd::TextColour' data='16776960' />
+					<value target='LCD_Base1::ctrl_lcd::TextBg' data='8388608' />
+					<value target='LCD_Base1::ctrl_lcd::DisplayBg' data='4720649' />
+					<value target='LCD_Base1::DelayTiming' data='100' />
+					<value target='LCD_Base1::CursorPosX' data='0' />
+					<value target='LCD_Base1::CursorPosY' data='0' />
+					<value target='LCD_Base1::DoubleDelay' data='0' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='672cb410-6026-403b-aff7-0628fe9e8140' vmin='8' vmaj='1' codename='LCDAdafruitOLED2' panelId='0' x='243.5' y='-78.5' z='0' xsz='24.9314' ysz='25.3226' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='1' ancTop='0' ancBottom='0' ancLeft='0' ancRight='0' ancMinX='0' ancMinY='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='d0_pin' data='$D4' />
+					<value target='d1_pin' data='$PORTD.5' />
+					<value target='d2_pin' data='$PORTD.6' />
+					<value target='d3_pin' data='$PORTD.7' />
+					<value target='rs_pin' data='$PORTB.0' />
+					<value target='rw_pin' data='$PORTB.5' />
+					<value target='enable_pin' data='$PORTB.1' />
+					<value target='Rows' data='2' />
+					<value target='Columns' data='16' />
+					<value target='Font' data='Arial' />
+					<value target='CursorPosX' data='0' />
+					<value target='CursorPosY' data='1' />
+					<value target='LCD_Base1::Rows' data='002' />
+					<value target='LCD_Base1::Columns' data='016' />
+					<value target='LCD_Base1::ctrl_lcd::Base_GLCD1::ComponentLabel' data='000' />
+					<value target='LCD_Base1::ctrl_lcd::Base_GLCD1::GdiText1::sText' data='LCDAdafruitOLED2' />
+					<value target='LCD_Base1::ctrl_lcd::Base_GLCD1::GdiText1::dScale' data='1.4' />
+					<value target='LCD_Base1::ctrl_lcd::TextColour' data='16776960' />
+					<value target='LCD_Base1::ctrl_lcd::TextBg' data='8388608' />
+					<value target='LCD_Base1::ctrl_lcd::DisplayBg' data='4720649' />
+					<value target='LCD_Base1::DelayTiming' data='100' />
+					<value target='LCD_Base1::CursorPosX' data='7' />
+					<value target='LCD_Base1::CursorPosY' data='1' />
+					<value target='LCD_Base1::DoubleDelay' data='0' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+			<component class_type='ref' guid='11ca2f38-de81-4812-9338-4b5a7a89a658' vmin='0' vmaj='1' codename='Potentiometer1' panelId='0' x='257' y='-246.5' z='1' xsz='25' ysz='25.036' zsz='25' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' scadavisible='1' interactive='1' solid='1' layer='2' poslock='0' ancTop='0' ancBottom='0' ancLeft='0' ancRight='0' ancMinX='0' ancMinY='0' comp2dType='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='adc_base1::channel' data='0' />
+					<value target='adc_base1::vrefvol' data='500' />
+					<value target='adc_base1::vrefop' data='1' />
+					<value target='adc_base1::convspd' data='006' />
+					<value target='adc_base1::actime' data='40' />
+					<value target='adc_base1::bits' data='10' />
+					<value target='VrefForCalculations' data='' />
+					<value target='BitDepth' data='10' />
+					<value target='SetValue' data='0.000000' />
+					<value target='RetainValue' data='1' />
+					<value target='ModifiedConnection' data='An 0' />
+					<value target='ComponentLabel' data='000' />
+					<value target='LabelColour' data='9868950' />
+					<value target='GdiText2::sText' data='Potentiometer1' />
+					<value target='ConnectionLabels' data='1' />
+					<value target='ShowPinValue' data='1' />
+					<value target='Style' data='0' />
+					<value target='Gauge1::brFill' data='288230376147764163' />
+					<value target='Gauge1::colFrameOutline' data='9868950' />
+					<value target='Gauge1::brFrameFill' data='261490253360251843' />
+					<value target='Gauge1::colPointerOutline' data='9868950' />
+					<value target='Gauge1::brPointerFill' data='261490253360251843' />
+					<value target='Gauge1::colText' data='9868950' />
+					<value target='Gauge1::colTickMarkOutline' data='9868950' />
+					<value target='Gauge1::brTickMarkFill' data='12829635' />
+					<value target='Gauge1::colCapOutline' data='12829635' />
+					<value target='Gauge1::brCapFill' data='261490253360251843' />
+					<value target='Gauge1::sMainImage' data='' />
+					<value target='Gauge1::sCapImage' data='' />
+					<value target='GdiGauge1::nPointerKnob' data='  2' />
+					<value target='GdiSwitch1::nType' data='  2' />
+					<value target='UpperBoundValue' data='5.000050' />
+					<value target='adc_base1::ScopeTraces' data='0' />
+					<value target='StoredColourStyle' data='0' />
+					<value target='FlowcodeType' data='0' />
+					<value target='Enabled' data='1' />
+					<value target='Product' data='ARD' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
+		</component>
+	</components>
+	<scadaresourcelookup />
+	<keymap />
+	<panel2d shadows='0' lighting='2' brightness='0' >
+		<background rgb='7292207' img='' style='0' />
+		<camera xe='0' ye='0' ze='355.74' xt='0' yt='0' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
+		<viewport dx='128' dy='128' zoom='43.5374' fix_topleft='0' />
+		<page x='1000' y='1000' show='0' rgb='7360576' />
+		<winpos ID='7005' RectRecentFloat='1890,288,2540,738' RectRecentDocked='956,141,1270,841' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='0' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='0' />
+	</panel2d>
+	<panel3d shadows='0' lighting='2' brightness='0' perspective='1' >
+		<background rgb='8409120' img='' style='0' />
+		<table rgb='7360576' img='' style='0' size='0' />
+		<camera xe='-7.52826' ye='-14.804' ze='184.42' xt='-7.52826' yt='-14.804' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
+		<camerakey0 xe='0' ye='0' ze='300' xt='0' yt='0' zt='0' xquat='0' yquat='0' zquat='0' wquat='1' />
+		<camerakey1 xe='-3.67394e-14' ye='0' ze='-300' xt='0' yt='0' zt='0' xquat='0' yquat='1' zquat='0' wquat='6.12323e-17' />
+		<camerakey2 xe='0' ye='-300' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.707107' yquat='0' zquat='0' wquat='0.707107' />
+		<camerakey3 xe='-3.67394e-14' ye='300' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-4.32978e-17' yquat='0.707107' zquat='0.707107' wquat='4.32978e-17' />
+		<camerakey4 xe='-300' ye='-6.66134e-14' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.5' yquat='0.5' zquat='0.5' wquat='0.5' />
+		<camerakey5 xe='300' ye='-6.66134e-14' ze='6.66134e-14' xt='0' yt='0' zt='0' xquat='-0.5' yquat='-0.5' zquat='-0.5' wquat='0.5' />
+		<camerakey6 xe='-173.205' ye='-173.205' ze='173.205' xt='0' yt='0' zt='0' xquat='-0.424708' yquat='0.17592' zquat='0.339851' wquat='0.820473' />
+		<winpos ID='7004' RectRecentFloat='2105,224,2755,674' RectRecentDocked='1189,141,1600,841' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='0' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='0' />
+	</panel3d>
+	<panels2d count='1' >
+		<panel2d_0 id='0' name='NewPanel' type='0' >
+			<winpos ID='1171' RectRecentFloat='2311,163,2961,827' RectRecentDocked='0,0,650,450' RecentFrameAlignment='16384' RecentRowIndex='0' IsFloating='1' MRUWidth='32767' PinState='0' IsMaximized='0' IsVisible='1' />
+			<background fill='288230376151053813' showgrid='1' gridstyle='1' gridsize='10' gridbrush='71776119075691740' snaptogrid='1' fitcomp='0' disp_x='300' disp_y='400' scale='100' disp_col='16777215' />
+		</panel2d_0>
+	</panels2d>
+	<layout >
+		<view type='0' name='Main' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAOwYAALcCAAA' zoom='100' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='inicializacao' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAOwYAALcCAAA' zoom='100' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='LeituraAdc' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAOwYAALcCAAA' zoom='100' scrollx='0' scrolly='0' flags='0' />
+		<view type='0' name='EscreveDisplay' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAAOwYAALcCAAA' zoom='100' scrollx='0' scrolly='0' flags='0' />
+	</layout>
+</document>
+</root>
