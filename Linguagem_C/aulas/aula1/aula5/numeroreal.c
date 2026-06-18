@@ -36,7 +36,21 @@ int main() {
 
       printf("voce e do sexo: %c", sexo);
       */
+      
+      
+      /*
+      char letra;
+      printf("Digite um caracter: ");
+      letra = getc(stdin);//Ler variavel pelo teclado
 
+      printf("caracter lido: %c\n", letra);
+      */
+
+      char letra;
+       printf("Digite um caracter: ");
+      letra = fgetc(stdin);//Ler variavel pelo teclado(fgetc ler de arquivo mas o stdin le pelo teclado)
+
+      printf("caracter lido: %c\n", letra);
 
 
     return 0;
