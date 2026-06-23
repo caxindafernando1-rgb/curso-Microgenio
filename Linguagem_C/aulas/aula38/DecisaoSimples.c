@@ -12,8 +12,10 @@ int main() {
     printf("Digite um número: ");
     scanf("%d", &a);
 
-    printf("Resultado logico: %d\n\n", a < 0);
+    printf("\n\nOperador TÉRNARIO:\n" );
+    a < 0 ? printf("%d É um numero negativo\n\n", a) :  printf("%d é um número Positivo ou igual a 0\n\n", a);
     
+    printf("\n\n\nOperadores IF/ELSE: \n");
     if (a < 0){
       printf("%d É um numero negativo\n\n", a);
       }
