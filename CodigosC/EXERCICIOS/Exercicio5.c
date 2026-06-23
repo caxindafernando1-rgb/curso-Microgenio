@@ -8,18 +8,13 @@ int main() {
     SetConsoleCP(CP_UTF8);
     setlocale(LC_ALL, ".UTF8");
 
-    float dias, desconto, valorTotal;
+    float valorDolar, valorReal;
 
-    printf("Dias trabalhados: ");
-    scanf(" %f", &dias);
+    printf("Quantos reais você quer converter em dolar: ");
+    scanf("%f", &valorReal);
 
-    valorTotal = dias * 45;
-    desconto = valorTotal  * 8/100 ;
-    valorTotal = valorTotal - desconto;
+    valorDolar = valorReal / 5.30;
 
-    printf("\n\nVai receber: %.2f\n", valorTotal);
-    printf("Desconto: %.2f", desconto);
-
-
+    printf(" %.2f reais são %.2f Dolares ", valorReal, valorDolar);
 
 }
