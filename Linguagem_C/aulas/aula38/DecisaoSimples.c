@@ -11,13 +11,16 @@ int main() {
     int a;
     printf("Digite um número: ");
     scanf("%d", &a);
-    
-    if (a < 0)
-      printf("%d É um numero negativo\n\n", a);
-    else
-      printf("%d é um número Positivo ou igual a 0\n\n", a);
 
-    printf("Continuação do programa...");
+    printf("Resultado logico: %d\n\n", a < 0);
+    
+    if (a < 0){
+      printf("%d É um numero negativo\n\n", a);
+      }
+    else{
+      printf("%d é um número Positivo ou igual a 0\n\n", a);
+   }
+  printf("Continuação do programa...");
 
 
 }
