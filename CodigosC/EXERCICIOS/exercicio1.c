@@ -18,10 +18,13 @@ int main() {
    printf("valor inicial de A: %d\n", a);
    printf("Valor inicia de B: %d\n\n", b);
 
-   int c = a;
-   int f = b;
+   a = b + a;
+   a = a - b;
+   b = a - b;
 
-   printf("Valor secundario de A: %d\n", f);
-   printf("Valor secundario de B: %d\n\n\n", c);
+  
+
+   printf("Valor secundario de A: %d\n", b);
+   printf("Valor secundario de B: %d\n\n\n", a);
     return 0;
 }
