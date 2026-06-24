@@ -13,7 +13,10 @@ int main() {
     scanf("%d", &a);
 
     printf("\n\nOperador TÉRNARIO:\n" );
-    a < 0 ? printf("%d É um numero negativo\n\n", a) :  printf("%d é um número Positivo ou igual a 0\n\n", a);
+    a < 0 ? printf("%d É um numero negativo\n\n", a) : 
+      a > 0 ? printf("%d é um número positivo\n\n", a) : printf("%d é igual a 0\n\n", a);
+    /*
+    printf("%d é um número Positivo ou igual a 0\n\n", a);
     
     printf("\n\n\nOperadores IF/ELSE: \n");
     if (a < 0){
@@ -21,11 +24,11 @@ int main() {
       }
     else{
       if (a > 0)
-        printf("%d é um número positivo\n\n");
+        printf("%d é um número positivo\n\n", a);
       else
-        printf("%d é igual a 0\n\n");
+        printf("%d é igual a 0\n\n", a);
    }
    printf("Continuação do programa...");
-
+*/
 
 }
