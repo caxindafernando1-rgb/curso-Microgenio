@@ -20,9 +20,12 @@ int main() {
       printf("%d É um numero negativo\n\n", a);
       }
     else{
-      printf("%d é um número Positivo ou igual a 0\n\n", a);
+      if (a > 0)
+        printf("%d é um número positivo\n\n");
+      else
+        printf("%d é igual a 0\n\n");
    }
-  printf("Continuação do programa...");
+   printf("Continuação do programa...");
 
 
 }
