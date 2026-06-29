@@ -8,7 +8,7 @@ int main() {
     SetConsoleCP(CP_UTF8);
     setlocale(LC_ALL, ".UTF8");
 
-    float n1, n2, n3, maior, menor;
+    float n1, n2, n3, n4, n5, p, n;
     printf("Digite 3 numeros para serem comparados: \n");
     printf("N1: ");
     scanf("%f", &n1);
@@ -16,25 +16,42 @@ int main() {
     scanf(" %f", &n2);
     printf("\nN3: ");
     scanf(" %f", &n3);
+    printf("\nN4: ");
+    scanf(" %f", &n4);
+    printf("\nN5: ");
+    scanf(" %f", &n5);
 
-    if (n1 > n2 && n1 > n3){
-      maior = n1;
-      }
-      else( n1 < n2 && n1 < n3 );
-        {menor = n1;} 
-        
-        
-        if (n2 > n1 && n2 > n3){
-      maior = n2;
-      }
-      else( n2 < n1 && n2 < n3 );
-        {menor = n2;} 
+   if (n1 < 0){
+      p += 1;
+   }
+   else
+   n +=1;
 
-        if (n3 > n2 && n3 > n2){
-      maior = n3;
-      }
-      else( n3 < n2 && n3 < n1 );
-        {menor = n3;} 
-    printf("o menor número é %.1f", menor);
-    printf("O mair numero é %.1f", maior);
+    if (n2 < 0){
+      p += 1;
+   }
+   else
+   n +=1;
+
+    if (n3 < 0){
+      p += 1;
+   }
+   else
+   n +=1;
+
+    if (n4 < 0){
+      p += 1;
+   }
+   else
+   n +=1;
+
+    if (n5 < 0){
+      p += 1;
+   }
+   else
+   n +=1;
+
+   printf("foram digitados %f numeros negativos\n", p);
+   printf("foram digitados %f numeros positivos", n);
+
 }
