@@ -8,25 +8,27 @@ int main() {
     SetConsoleCP(CP_UTF8);
     setlocale(LC_ALL, ".UTF8");
 
-    float dol, real, n;
+    float dol = 1, real =  6, n;
     int opcoes, c;
 
-    prontf("Digita um valor para ser convertido: ");
+    printf("Digita um valor para ser convertido: ");
     scanf("%f", &n);
 
     printf("#Para dolar digite 1\n#Para converter em euros digite 2\n");
+    printf("Opção: ");
     scanf(" %d", &opcoes);
 
     switch(opcoes){
         case 1:
           n = real;
           c = real * dol;
-          printf("%f são %.2f dolares", n, dol);
+          printf("%.2f reais são %.2f dolares", n, dol);
           break;
         case 2:
           n = dol;
-          c = n * real;
-          printf("%f são %.2f reais", n, real);
+          c = dol * real;
+          printf("%.2f dolares são %.2f reais", n, real);
           break;
 }
 return 0;
+}
