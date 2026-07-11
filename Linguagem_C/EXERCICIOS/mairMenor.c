@@ -13,9 +13,11 @@ int main() {
   printf("Digite um valor: ");
   scanf("%c", &letra);
   
-  if (letra == "a" || letra == "A" || letra == "e" || letra == "E"|| letra == "i" || letra == "I" || letra == "O" || letra == "o" || letra == "u" || letra == "U")
-    {printf("%c é uma letra", letra);}
+  if (letra == "a" || letra == "A" || letra == "e" || letra == "E"|| letra == "i"
+    || letra == "I" || letra == "O" || letra == "o" || letra == "u" || letra == "U")
+    printf("%c é uma letra", letra);
   else
     printf("%c é uma consoante", letra);
+    
 return 0;
 }
