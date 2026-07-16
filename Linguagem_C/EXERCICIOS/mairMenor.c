@@ -8,16 +8,16 @@ int main() {
   SetConsoleCP(CP_UTF8);
   setlocale(LC_ALL, ".UTF8");
 
-  char letra;
-    
-  printf("Digite um valor: ");
-  scanf("%c", &letra);
+  int limite, i, s;
+  printf("Digite o valor limite: ");
+  scanf("%d", &limite);
+
+  for ( i = 0; i <= limite; i+=1)
+  {
+    s = limite * 2 - 1;
+    printf("%d ", s);
+  }
   
-  if (letra == "a" || letra == "A" || letra == "e" || letra == "E"|| letra == "i"
-    || letra == "I" || letra == "O" || letra == "o" || letra == "u" || letra == "U")
-    printf("%c é uma letra", letra);
-  else
-    printf("%c é uma consoante", letra);
     
 return 0;
 }
