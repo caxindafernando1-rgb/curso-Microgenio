@@ -7,15 +7,18 @@ int main() {
     SetConsoleCP(CP_UTF8);
     setlocale(LC_ALL, ".UTF8");
 
-    int i, valorInicial = 1, valorFinal = 1;
+    float massa;
+    int tempo = 0;
 
-    for(i = 1; i <= 29; i++ ){
-        valorInicial = valorInicial * 2;
-        valorFinal += valorInicial;
+    printf("Digite a massa incial: ");
+    scanf("%f", &massa);
 
+    while (massa >= 0.05){
+        massa = massa / 2;
+        tempo += 50;
     }
 
-    printf("No final de 30 dias, você terá %d, Centavos \n\n", valorFinal);
-    printf("Isso dá %.2f dolares ", valorFinal / 100.0);
+    printf("Tempo dinal %d\n", tempo);
+    printf("Massa final %f", massa);
 
 }
