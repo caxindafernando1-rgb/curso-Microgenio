@@ -7,18 +7,31 @@ int main() {
     SetConsoleCP(CP_UTF8);
     setlocale(LC_ALL, ".UTF8");
 
-    float massa;
-    int tempo = 0;
+   int i, idade, idadeBaixinhos = 0, quantidadeBaix = 0, quantAlturaMaior20 = 0;
+   float idadeMedia, alturaMedia, altura, AlturaMais20 = 0;
 
-    printf("Digite a massa incial: ");
-    scanf("%f", &massa);
+   for (i = 0; i <= 2; i++){
+    printf("idade: ");
+    scanf("%d", &idade);
+   
 
-    while (massa >= 0.05){
-        massa = massa / 2;
-        tempo += 50;
+    printf("Altura: ");
+    scanf("%f", &altura);
+    if (altura < 1.7){
+        idadeBaixinhos += idade;
+        quantidadeBaix++;
     }
 
-    printf("Tempo dinal %d\n", tempo);
-    printf("Massa final %f", massa);
+    if (idade > 20 ){
+        AlturaMais20 += altura;
+        quantAlturaMaior20++;
+    }
+}
+   
+   idadeMedia = (float)idadeBaixinhos / quantidadeBaix;
+   alturaMedia = AlturaMais20 / quantAlturaMaior20;
 
+   printf("A média das idades é de: %.2f \n", idadeMedia);
+   printf("A altura média é de: %.2f", alturaMedia);
+   
 }
