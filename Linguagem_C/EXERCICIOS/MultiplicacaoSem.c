@@ -8,16 +8,17 @@ int main() {
     SetConsoleCP(CP_UTF8);
     setlocale(LC_ALL, ".UTF8");
 
-    int i, divisores, valor = 8;
+    int num, positivos = 0, negativos = 0;
 
     do{
-      divisores = 0;
-      valor+= 2;
-      for (i = 1; i <=  10; i++){
-        if(valor % i == 0)
-          divisores++;
-      }
-    }while(divisores != 10);
+      printf("Digite um número: ");
+      scanf(" %d", &num);
 
-    printf("o valor é: %d", valor);
+      if(num > 0)
+         positivos++;
+      if(num < 0)
+        negativos++;
+    }while(num != 0);
+
+    printf("Número de positivos: %d\nNúmero de Negativos: %d\n\n", positivos, negativos);
 }
