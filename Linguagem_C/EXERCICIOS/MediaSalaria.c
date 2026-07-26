@@ -7,37 +7,26 @@ int main() {
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
     setlocale(LC_ALL, ".UTF8");
+    
+    int x, y;
 
-    int i, x, idade, maiorIdade = 0, menorIdade = 9999, quantM = 0;
-    char sexo;
-    float salario, mediaSalario = 0;
 
-    printf("Número de funcionarios: ");
+    do{
+    printf("X: ");
     scanf("%d", &x);
-
-
-    for (i = 1; i <= x; i++ ){
-      printf("Idade: ");
-      scanf(" %d", &idade);
-      printf("Sexo: ");
-      scanf(" %c", &sexo);
-      printf("Salario: ");
-      scanf(" %f", &salario);
-
-      mediaSalario += salario;
-
-      if(maiorIdade  < idade)
-        maiorIdade = idade;
-      if(menorIdade  > idade)
-        menorIdade = idade;
-
-      if(sexo == 'f' && salario>=2000)
-        quantM++;
-    }
-
-  printf("Media salario: %.2f\n", mediaSalario / x);
-  printf("Maior idade: %d\n", maiorIdade);
-  printf("Menor idade: %d\n", menorIdade);
-  printf("Mulher acima da media: %d\n\n", quantM);
-
+    printf("Y: ");
+    scanf(" %d", &y);
+    
+    if ( x != 0  & y != 0 ){
+      if( x > 0 & y  > 0 )
+        printf("Primeito quadrante\n\n");
+      else if(x < 0 & y > 0)
+        printf("Segundo quadrante\n\n");
+      else if(x < 0 & y < 0 )
+        printf(" Terceiro quadrante\n\n");
+      else
+        printf("Quarto quadrante\n\n");
+      }
+    }while(x != 0  & y != 0);
+        
 }
