@@ -8,17 +8,15 @@ int main() {
     SetConsoleCP(CP_UTF8);
     setlocale(LC_ALL, ".UTF8");
 
-    int idade;
-    char sexo;
+    int i;
+    long double inicio, somatorio;
 
-    printf("Idade: ");
-    scanf("%d", &idade);
+    for (i = 2; i <= 63; i++){
+      inicio *= 2;
+      somatorio += inicio;
+      __mingw_printf("%d Valor: %Lf", i, inicio);
+    }
 
-    printf("Sexo: ");
-    scanf(" %c", &sexo);
-
-    if(sexo == 'm' && idade == 18)// as duas condições tenhem de ser verdadeiras && == e é
-      printf("Alistamento Obrigatorio!");
-    else
-      printf("Despendado.");
+    __mingw_printf("Somatorio: %Lf", somatorio);
+    return 0;
 }
