@@ -8,14 +8,12 @@ int main() {
     SetConsoleCP(CP_UTF8);
     setlocale(LC_ALL, ".UTF8");
 
-   int a , b, c;
-   printf("Digite um número: ");
-   scanf("%d", &b);
-
-   for (a = 0; a <= 10; a++){
-      c = a * b;
-      printf("%d x %d = %d\n", b, a, c);
+   int a , c;
+   
+   for(c = 1; c <= 40; c++){
+      for (a = 1; a <= c; a++)
+         printf("*");
+      printf("\n");
    }
-
 
 }
