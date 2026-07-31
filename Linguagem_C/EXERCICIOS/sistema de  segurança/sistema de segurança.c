@@ -11,7 +11,7 @@ int main() {
     int i, x, y;
       
     printf("X: ");
-    scanf("%d", &x);
+    scanf("%d", &x); 
 
     printf("Y: ");
     scanf(" %d", &y);
