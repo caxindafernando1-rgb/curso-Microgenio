@@ -8,21 +8,28 @@ int main() {
     SetConsoleCP(CP_UTF8);
     setlocale(LC_ALL, ".UTF8");
 
-    int numPessoas;
-    float dispTotal, gorjeta, quantPorPessa, valorTotal;
+    float not1, not2, media;
+    int opcao;
 
-    printf("Valor da dispesa total: ");
-    scanf("%f", &dispTotal);
 
-    printf("Percentagem da Gorjeta: ");
-    scanf("%f", &gorjeta);
+    do{
+        do{
+            printf("Primeira Nota: ");
+            scanf("%f", &not1);
+        }while(not1 < 0 || not1 > 10 );
 
-    printf("Nº de pessoas: ");
-    scanf("%d", &numPessoas);
 
-    valorTotal = dispTotal * gorjeta/100 + dispTotal;
-    quantPorPessa = valorTotal / numPessoas;
+        do{
+            printf("Segunda Nota: ");
+            scanf(" %f", &not2);
+        }while(not2 < 0 || not2 > 10 );
 
-    printf("\n\n O valor total é: %.2f Kwanzas\n ", valorTotal);
-    printf("Quantidade por Pessoa: %.2f Kwanzas\n", quantPorPessa);   
+        media = (not1 + not2) / 2;
+        printf("\n\nMédia: %.2f\n\n", media);
+
+        printf("Opção (1-continuar 2-sair): ");
+        scanf(" %d", &opcao);
+    }while(opcao != 2);
+    
+ return 0;
 }
