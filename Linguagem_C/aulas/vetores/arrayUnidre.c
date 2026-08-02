@@ -8,23 +8,17 @@ int main() {
     SetConsoleCP(CP_UTF8);
     setlocale(LC_ALL, ".UTF8");
       
-    int i, num[] = {2, 4, 15};
-    char vogais[5] = {'a', 'e', 'i', 'o', 'u'};
-    float num2[3] = {3.5, 56.7, 89.4};
+    int i, num[3];
+   
     
-    for(i = 0; i < 3; i++ )
-      printf("%d ", num[i]);
+    for(i = 0; i < 3; i++ ){
+      printf("Digite o valor na posição %d: ", i);
+      scanf("%d", &num[i]);
+    }
 
-    printf("\n\n");
-
-   for(i = 0; i < 5; i++)
-      printf("%c ", vogais[i]);
-    
-    printf("\n\n");
-
-    for(i = 0; i < 3; i++)
-      printf("%.2f ", num2[i]);
-    printf("\n\n");
-    
+  
+   for(i = 0; i < 3; i++){
+    printf("valor %d: ", i); 
+       printf("%d \n", num[i]);}
 
 }
