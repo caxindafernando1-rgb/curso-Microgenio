@@ -9,13 +9,21 @@ int main() {
     SetConsoleCP(CP_UTF8);
     setlocale(LC_ALL, ".UTF8");
       
-    int l, c, num[3][3] = { 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    int l, c, num[3][3];
 
     for ( l = 0; l < 3; l++){
-      for (c = 0; c < 3; c++)
-            printf("%d ", num[l][c]);
-      printf("\n");
-        }
+      for ( c = 0; c < 3; c++){
+            printf("Digite o valor |%d||%d|: ", l, c);
+            scanf("%d", &num[l][c]);
+
+      }
+    }
     
 
+     printf("\n\n");
+    for ( l = 0; l < 3; l++){
+      for (c = 0; c < 3; c++)
+            printf("%3d ", num[l][c]);
+      printf("\n");
+        }
 }
