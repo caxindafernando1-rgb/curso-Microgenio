@@ -13,7 +13,7 @@ int main() {
    srand(time(NULL));
     
     for(i = 0; i < 3; i++ )
-      num[i] = rand();
+      num[i] = 1 + rand() % 10;
 
   
    for(i = 0; i < 3; i++){
