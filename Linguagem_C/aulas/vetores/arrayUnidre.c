@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <locale.h>
 #include <windows.h>  
+#include <time.h>  
 
 int main() {
     
@@ -9,12 +10,10 @@ int main() {
     setlocale(LC_ALL, ".UTF8");
       
     int i, num[3];
-   
+   srand(time(NULL));
     
-    for(i = 0; i < 3; i++ ){
-      printf("Digite o valor na posição %d: ", i);
-      scanf("%d", &num[i]);
-    }
+    for(i = 0; i < 3; i++ )
+      num[i] = rand();
 
   
    for(i = 0; i < 3; i++){
