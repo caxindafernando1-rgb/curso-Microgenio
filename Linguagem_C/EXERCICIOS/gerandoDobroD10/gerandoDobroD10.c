@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <locale.h>
 #include <windows.h>  
-                                          /*1) Faça um programa que preencha um vetor de inteiros de tamanho 10 pedindo valores ao usuário. 
-                                          Em seguida, calcule e salve num segundo vetor o quadrado de cada elemento do primeiro vetor. Por
-                                                                       fim, imprima os dois vetores*/
+
+                                    /* Faça um programa que some o conteúdo de dois vetores de tamanho 25 e armazene o resultado 
+                                                  em um terceiro vetor. Imprima os três vetores na tela.*/
 
 int main() {
     
@@ -11,30 +11,16 @@ int main() {
     SetConsoleCP(CP_UTF8);
     setlocale(LC_ALL, ".UTF8");
       
-    int l, c, user[10];
+    int l, c, num1[25] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 47, 19, 283, 38, 19, 48,93, 289, 38, 28, 18, 18, 38, 49, 58, 1 }, num2[25] =  { 21, 32, 13, 44, 55, 76, 7, 8, 9, 7, 1, 53, 3, 6, 4, 3, 29, 8, 2, 8, 1, 3, 4, 5, 9}, num[25];
 
-    for ( l = 0; l < 10; l++){
-            printf("Digete o valor |%d|: ", l);
-            scanf("%d", &user[l] );
-      }
-    
-        printf("\n\nValores digitados:\n");
-      for ( l = 0; l < 10; l++){
-            printf("Volor |%3d |: %d", l, user[l]);
-            printf("\n");
-      }
-      
-      
-      printf("\n\nDobro: \n");
-      for ( l = 0; l < 10; l++){
-           c = user[l] * 2;
-           printf("Volor | %3d |\n", c);
-      }
 
-      
-       
-      
-      
+
+    printf("\n\nSoma dos dois vetores:\n");
+      for ( l = 0; l < 25; l++){
+           num[l] = num1[l] + num2[l];
+           printf("|%d| %3d + %3d = %3d \n", l, num1[l], num2[l], num[l]);
+      }
+   
     
   
 }
