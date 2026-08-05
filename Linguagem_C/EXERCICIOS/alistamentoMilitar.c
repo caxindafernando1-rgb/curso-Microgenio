@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include <locale.h>
-#include <windows.h>  
+#include <windows.h> 
+#include <time.h> 
 
-                              /*Faça um programa que leia 10 números reais e os armazene em um vetor. Em seguida, leia um 
-código inteiro e faça uma das ações abaixo:
-0 – finaliza o programa;
-1 – imprime o vetor na ordem do início ao fim;
-2 – imprime o vetor na ordem inversa (do fim para o início).
-O programa deve funcionar até que o usuário digite 0 para finalizar*/
+                /* Faça um programa para ordenar um vetor com 100 números inteiros. Imprima o vetor antes e 
+                                                após a ordenação.*/
+
 
 int main() {
     
@@ -15,29 +13,42 @@ int main() {
     SetConsoleCP(CP_UTF8);
     setlocale(LC_ALL, ".UTF8");
 
-  int i, opcao, menu[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    
+
+  int i, contador = 0, copia = 0, troca, vetor[100];
+
+  srand(time(NULL));
+
+
+  for ( i = 0; i < 100; i++){
+    vetor[i] = rand() % 1000;
+  }
+ 
+  printf("Ordem original:\n");
+   for ( i = 0; i < 100; i++){
+    printf("%3d ", vetor[i]);
+  }
+ 
+  
 
   do{
-    printf("== MENO DE OPÇÃOS ==\n\n");
-    printf("0 - FINALIZAR PROGRAMA\n1 - VER NÚMEROS\n2 - VER NÚMEROS INVETIDOS ");
-    printf("\nOpção: ");
-    scanf("%d", &opcao);
-
-    switch (opcao){
-    case 1:
-      for ( i = 0; i < 10; i++){
-        printf("%d ", menu[i]);}
-        printf("\n\n");
-      break;
-
-    case 2:
-      for ( i = 10; i = 0; i--){
-        printf("%d ", menu[i]);}
-        printf("\n\n");
-      break;
+    troca = 0;
+    contador++;
+    for (i = 0; i < 99; i++){
+      if(vetor[i] > vetor[i + 1]){
+        copia = vetor[i];
+        vetor[i] = vetor[i + 1];
+        vetor[i + 1] = copia; 
+        troca = 1;
+      }
     }
-  }while(opcao != 0);
-
+  }while (troca);
+  
+  printf("\n\nOrdem organizada: \n");
+  for ( i = 0; i < 100; i++){
+    printf("%3d ", vetor[i]);
+  }
+  printf("\n\ncontou: %d vezes", contador);
 
     return 0;
 }
