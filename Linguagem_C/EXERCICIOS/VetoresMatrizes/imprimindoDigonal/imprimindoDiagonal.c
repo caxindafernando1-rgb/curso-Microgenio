@@ -15,33 +15,56 @@ int main() {
 
     srand(time(NULL));
 
-    int l, c, tam = 7, matriz[tam][tam];
+    int l, c, taml = 5, tamc = 5, matriz[taml][tamc],   matriz2[tamc][taml];
 
-     for ( l = 0; l <  tam ; l++){
-        for ( c = 0; c < tam; c++){
+     for ( l = 0; l <  taml ; l++){
+        for ( c = 0; c < tamc; c++){
            matriz[l][c] = rand() % 100;
         }
     }
 
-     printf("\n\nMatriz Diagonal: \n");
-    for (l = 0; l < tam ; l++){
-      for ( c = 0; c < tam; c++){
+     printf("\n\nMatriz: \n");
+    for (l = 0; l < taml ; l++){
+      for ( c = 0; c < tamc; c++){
             printf("%3d ", matriz[l][c]);
       }
       printf("\n");
     }
 
-     printf("\n\nMatriz Diagonal: \n");
-    for (l = 0; l < tam ; l++){
-      for ( c = 0; c < tam; c++){
-            if( l == c )
-                  printf("%3d ", matriz[l][c]);
+   
+    for (l = 0; l < taml ; l++){
+      for ( c = 0; c < tamc; c++){
+           matriz2[c][l] = matriz [l][c];
+      }
+    }
+           
+
+      printf("\n\nMatriz Invertida: \n");
+    for (l = 0; l < taml ; l++){
+      for ( c = 0; c < tamc; c++){
+            printf("%3d ", matriz2[l][c]);
+      }
+      printf("\n");
+    }
+
+
+    printf("\n\nMatriz Diagonal: \n");
+    for (l = 0; l < taml ; l++){
+      for ( c = 0; c < tamc; c++){
+            if(l == c)
+                  printf("%3d ", matriz2[l][c]);
             else
                   printf("   ");
+      }
+      printf("\n");
     }
-    printf("\n");
-}
 
-      
+
+
+
+
+
+
+
  return 0;
 }
