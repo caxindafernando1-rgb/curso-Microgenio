@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <locale.h>
 #include <windows.h>  
-#include <time.h>  
+#include <time.h>
 
-
-                                          /*Faça um programa que imprima na tela a diagonal secundária de uma matriz 7 x 7*/
+/*                                             Faça um programa que imprima na tela a diagonal secundária de uma matriz 7 x 7
+                                          Faça um programa para calcular a transposta de uma matriz 5 x 4. Imprima as duas matrizes na 
+tela.
+*/
                                                         
 
 int main() {
