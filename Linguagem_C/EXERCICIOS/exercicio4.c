@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <locale.h>
 #include <windows.h>  
+#include <time.h>  
+                      /* Faça um programa que calcule e imprima a soma de todos os elementos de uma matriz 5 x 7.*/
 
 int main() {
     
@@ -8,28 +10,26 @@ int main() {
     SetConsoleCP(CP_UTF8);
     setlocale(LC_ALL, ".UTF8");
 
-    float not1, not2, media;
-    int opcao;
+    srand(time(NULL));
+
+    int i, j, soma, matriz[5][7];
+
+     for ( i = 0; i < 5; i++){
+        for ( j = 0; j < 7; j++){
+           matriz[i][j] = rand() % 100;
+        }
+    }
 
 
-    do{
-        do{
-            printf("Primeira Nota: ");
-            scanf("%f", &not1);
-        }while(not1 < 0 || not1 > 10 );
-
-
-        do{
-            printf("Segunda Nota: ");
-            scanf(" %f", &not2);
-        }while(not2 < 0 || not2 > 10 );
-
-        media = (not1 + not2) / 2;
-        printf("\n\nMédia: %.2f\n\n", media);
-
-        printf("Opção (1-continuar 2-sair): ");
-        scanf(" %d", &opcao);
-    }while(opcao != 2);
+    for ( i = 0; i < 5; i++){
+        for ( j = 0; j < 7; j++){
+            soma += matriz[i][j];
+             printf("%7d ", matriz[i][j]);
+        }
+        printf("\n");
+    }
+    
+    printf("\n\nSoma total: %d \n\n", soma);
     
  return 0;
 }
