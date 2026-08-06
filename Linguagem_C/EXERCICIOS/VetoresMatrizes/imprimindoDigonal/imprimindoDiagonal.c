@@ -61,7 +61,17 @@ int main() {
       printf("\n");
     }
 
-
+    
+    printf("\n\nMatriz A Baixo da Diagonal: \n");
+    for (l = 0; l < taml ; l++){
+      for ( c = 0; c < tamc; c++){
+            if(l > c)
+                  printf("%3d ", matriz2[l][c]);
+            else
+                  printf("   ");
+      }
+      printf("\n");
+    }
 
 
 
