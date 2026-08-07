@@ -14,7 +14,10 @@ int main() {
    
     char nome[] = {"Antonio"};
 
-    printf("\n\n%s\n\n", nome);
+    printf("\n\nDigite seu n: ", nome);
+    scanf("%[^\n]", nome);
+
+    printf("\n%s\n", nome);
 
  return 0;
 }
