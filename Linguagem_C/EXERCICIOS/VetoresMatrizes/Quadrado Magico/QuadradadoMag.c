@@ -42,9 +42,9 @@ int main() {
             soma += mat[l][c];
       printf("\nLinha %d: %d\n", l, soma);
    
-       if(total != soma){
-      printf("\nA Linha %d é diferente\n", l);
-       falhou = 1;
+      if(total != soma){
+            printf("\nA Linha %d é diferente\n", l);
+            falhou = 1;
    }
 }
 
