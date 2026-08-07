@@ -3,8 +3,7 @@
 #include <windows.h>  
 #include <time.h>
 
-/*                                             Faça um programa que imprima na tela a diagonal secundária de uma matriz 7 x 7
-                                          Faça um programa para calcular a transposta de uma matriz 5 x 4. Imprima as duas matrizes na tela.
+/*                                             Dada uma matriz 4 x 4 faça um programa que diga se ela é um Quadrado Mágico ou não.
 */
                                                         
 
