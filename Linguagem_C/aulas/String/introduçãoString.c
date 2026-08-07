@@ -12,10 +12,12 @@ int main() {
     SetConsoleCP(CP_UTF8);
     setlocale(LC_ALL, ".UTF8");
    
-    char nome[] = {"Antonio"};
+    char nome[20] = {"Antonio"};
 
-    printf("\n\nDigite seu n: ", nome);
-    scanf("%[^\n]", nome);
+    printf("\n\nDigite seu : ", nome);
+    //scanf("%20[^\n]", nome);
+
+    gets(nome);
 
     printf("\n%s\n", nome);
 
