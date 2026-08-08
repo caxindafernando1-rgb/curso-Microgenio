@@ -16,18 +16,21 @@ int main() {
     char nome[20];
 
     printf("\n\nDigite seu : ", nome);
-    //scanf("%20[^\n]", nome);
 
-    //gets(nome);
+/*
+    //ler Pelo taclado - 1:
+    scanf("%20[^\n]", nome);
+
+    //ler pelo teclado - 2:
+    gets(nome);
+    
+*/
+
+    //ler pelo teclado - 3:
     fgets(nome, 20, stdin);
+    
 
-
-    i = 0;
-    while ( nome[i] != '\0'){
-        tam++;
-        i++;
-    }
-
+    //Eliminar ultimo espaço vazeio 'Parar de ler o teclado  do Enter':
     i = 0;
     while(nome[i] != '\0'){
         if(nome[i] == '\n')
@@ -36,14 +39,19 @@ int main() {
     }
 
 
+    //imprimir casa char da string:
      i = 0;
     while(nome[i] != '\0'){
         printf("\n %d == %c \n", i, nome[i]);
         i++;
     }
 
+
+    //imprimir a palavra:
     printf("\npalavra digitada: %s \n", nome);
-    printf("\n Tamanho da string: %d", tam);
+
+    //imprimir o número de char da string:
+    printf("\n Tamanho da string: %d", strlen(nome));
  
 
  return 0;
