@@ -12,14 +12,15 @@ int main() {
     SetConsoleCP(CP_UTF8);
     setlocale(LC_ALL, ".UTF8");
    
-    char nome[20] = {"Antonio"};
+    char nome[5];
 
     printf("\n\nDigite seu : ", nome);
     //scanf("%20[^\n]", nome);
 
-    gets(nome);
+    //gets(nome);
+    fgets(nome, 5, stdin);
 
-    printf("\n%s\n", nome);
+    printf("\n%d\n", nome);
 
  return 0;
 }
