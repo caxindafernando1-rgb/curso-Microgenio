@@ -12,7 +12,7 @@ int main() {
     SetConsoleCP(CP_UTF8);
     setlocale(LC_ALL, ".UTF8");
    
-    int i;
+    int i, tam = 0;
     char nome[20];
 
     printf("\n\nDigite seu : ", nome);
@@ -21,15 +21,29 @@ int main() {
     //gets(nome);
     fgets(nome, 20, stdin);
 
-    printf("palavra digitada: %s \n", nome);
 
     i = 0;
-
     while ( nome[i] != '\0'){
-        printf("%d = %d\n", i, nome[i]);
+        tam++;
         i++;
     }
-    printf("\n");
+
+    i = 0;
+    while(nome[i] != '\0'){
+        if(nome[i] == '\n')
+            nome[i] = '\0';
+        i++;
+    }
+
+
+     i = 0;
+    while(nome[i] != '\0'){
+        printf("\n %d == %c \n", i, nome[i]);
+        i++;
+    }
+
+    printf("\npalavra digitada: %s \n", nome);
+    printf("\n Tamanho da string: %d", tam);
  
 
  return 0;
