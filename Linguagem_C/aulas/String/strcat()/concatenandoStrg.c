@@ -15,9 +15,11 @@ int main() {
     char c1[50] = {"ai."};
     char c2[50] = {" Como você está?"}; 
 
-    strcat(c1, c2);//concatenar as strgs:
+    //concatenar as strgs:
+    strcat(c1, c2);
 
-    printf("%s ", c1);//strs concatenadas:
+    //strs concatenadas:
+    printf("%s ", c1);
 
     //comparar strs onde:
     //0 == strs Iguais
@@ -25,5 +27,10 @@ int main() {
     //1 == strs2 é maior
     printf("\n comparação das Strgs: %d",  strcmp(c1, c2));
 
+
+    //copiar strg:
+    strcpy(c1, c2);
+
+    printf("\n\ncopia: %s!\n copia 2: %s ", c1, c2);
  return 0;
 }
