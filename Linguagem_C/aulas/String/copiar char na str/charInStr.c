@@ -12,7 +12,10 @@ int main() {
 
     char c[50] = {" Como você está?"}; 
     char *letra;//variavel ponteiro
+    char *palavra;
+    char str[] = {"Como"};
 
+    palavra = strstr(c, str);//acha a substr 'str' na str'c'
     letra = strchr(c, 'o');//acha o primeiro 'o' dentro de c2
 
     printf("\n%s\n", c);
@@ -24,6 +27,11 @@ int main() {
     printf("\n\nUltimo 'O': %c\n ", *letra);
     printf("A letrra antes do ultimo 'O': %c\n ", *(letra - 1));
 
-    
+    printf("\n\n== Buscando 'Como' ==\n");
+    if(palavra)
+        printf("Ponteiro 'Como' achado: %c%c%c%c\n\n", *palavra, *(palavra + 1) , *(palavra + 2), *(palavra + 3), *(palavra + 4));
+    else
+        printf("PONTEIRO NULLO");
+
  return 0;
 }
