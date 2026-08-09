@@ -11,14 +11,20 @@ int main() {
     setlocale(LC_ALL, ".UTF8");
 
 
-    char strgs[] = {"\n\n\tBom dia!\n\tComo estas?\n\n\n"};
+    char lista[6][50];
+    int i;
 
-    strupr(strgs);
+    for ( i = 0; i < 6; i++){
+      printf("\n%d - Nome: ", i + 1);
+      scanf("%50[^\n]", lista[i]);
+      getchar();//Limpar o buffer de teclado
+    }
 
-    printf("Upper: %s", strgs);
-
-    strlwr(strgs);
-    printf("\nLower: %s", strgs);
+    printf("\n\nLista Nominal: \n");
+    for ( i = 0; i < 6; i++){
+      printf("%d == %s \n", i + 1, lista[i]);
+    }
+    
 
  return 0;
 }
