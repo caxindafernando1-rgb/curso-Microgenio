@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <locale.h>
 #include <windows.h>  
+#include <string.h> 
 
 
 int main() {
