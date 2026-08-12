@@ -12,43 +12,31 @@ int main() {
 
 
 
-    char palavra[30], copia[30];
-    int opcao, i, igual, tam;
+    char palavra[30];
+    int opcao, i, igual = 0, tam;
 
-    do{
-      igual = 0;
+    printf("\n\nDigite uma palavra: ");
+    scanf("%29s", palavra);
 
-    printf("Digite uma palavra: ");
-    scanf("%s", palavra);
 
-    tam = strlen(palavra);
-    for ( i = 0; i < strlen(palavra); i++){
-      copia[i] = palavra[i];
+    tam = strlen(palavra) - 1;
+    i = 0;
+
+
+    while(tam >= i){
+      if(palavra[i] != palavra[tam]){
+            igual++;
+      }
+      i++;
       tam--;
     }
 
-    copia[i] = '\0';
-    tam = strlen(palavra);
 
-    for ( i = 0; i < tam; i++){
-      if(copia[i] == palavra[i]){
-            igual++;
-      }
-    }
-
-    printf("Palavra digitada: %s\nCopia da palavra: %s", palavra, copia);
-
-    if(igual == tam)
-      printf("\n\nÉ Polindromo!\n");
+    if(igual == 0)
+      printf("\n\nÉ polidromo!\n\n");
     else
-      printf("\n\nNão é Polindromo!\n");
-
-
-      printf("\nDIgite [0] PARA SAIR: ");
-      scanf(" %d", &opcao); 
-   }while(opcao != 0);
+      printf("\n\nNão é polidromo!\n\n");
     
 
  return 0;
- 
 }
