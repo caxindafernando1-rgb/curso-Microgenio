@@ -4,7 +4,7 @@
 
 
 
-
+//Funcão:
 int minhaFuncao(char str[]){
       int tam = 0;
 
@@ -16,18 +16,30 @@ int minhaFuncao(char str[]){
 }
 
 
+//Procedimento/Vazio-(Não precisa de retorno)
+void imprimirString(char palavra[]){
+      int i = 0;
+
+      while(palavra[i] != '\0'){
+            printf("%c", palavra[i]);
+            i++;
+      }
+      printf("\n\n");
+}
+
+
+//Função Principal:
 int main() {
     
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
     setlocale(LC_ALL, ".UTF8");
    
-   
-
     char van[20] = {"Caxinda"};
 
-    printf("strlen: %d", strlen(van));
-    printf("\nminha str: %d", minhaFuncao(van));
+    printf("\nstrlen: %d", strlen(van));
+    printf("\nminha str: %d\n", minhaFuncao(van));
+    imprimirString(van);
 
     
  return 0;
