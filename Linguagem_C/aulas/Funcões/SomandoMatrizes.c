@@ -9,7 +9,7 @@
 
 int tam = 5; 
 
-int impritMatr(int c[5][5]){
+void impritMatr(int c[5][5]){
       int i, j;
       for ( i = 0; i < tam; i++){
             for ( j = 0; j < tam; j++){
