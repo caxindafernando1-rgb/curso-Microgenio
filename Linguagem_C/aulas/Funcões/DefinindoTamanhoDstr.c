@@ -17,7 +17,7 @@ int main() {
 
       printf("Digite o tamanho do vetor: ");
       scanf("%d", &tam);
-      scanf("%c");//como limpara melhor??
+      getchar();
  
      // sprintf(str2,"%d[^\n]", tam); 
       snprintf(str2, 10, "%d[^\n]", tam);//str2 recebe um vetor de tamanha 10, com o conteudo' "%d[^\n]" 'com tamanho tam 
