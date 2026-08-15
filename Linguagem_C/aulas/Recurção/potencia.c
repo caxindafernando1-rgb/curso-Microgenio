@@ -14,6 +14,14 @@ int potencia(int x, int n){
       }
 }
 
+//Soma:
+int soma(int n){
+      if(n == 0)
+            return 0;
+      else
+            return n + soma(n - 1);
+}
+
 
 int main() {
     
@@ -22,7 +30,10 @@ int main() {
     setlocale(LC_ALL, ".UTF8");
 
 
-     int x, n;
+     int x, n, s;
+
+      printf("Limite da soma: ");
+     scanf("%d", &s);
 
      printf("Digite o valor de X: ");
      scanf("%d", &x);
@@ -30,7 +41,8 @@ int main() {
      printf("Digite o valor de N: ");
      scanf("%d", &n);
      
-     printf("O valor de %d elevado a %d é: %d", x, n, potencia(x, n));
+     printf("\nO valor de %d elevado a %d é: %d\n", x, n, potencia(x, n));
+     printf("A soma de 1 até %d é: %d\n\n", s, soma(s));
 
  return 0;
 }
