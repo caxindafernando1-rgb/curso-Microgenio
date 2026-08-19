@@ -1,4 +1,4 @@
-#include <stdio.h>
+ #include <stdio.h>
 #include <locale.h>
 #include <windows.h>  
 #include <time.h>
