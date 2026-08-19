@@ -34,13 +34,19 @@ int main() {
     Pessoa1 Joao;
     struct Pessoa2 Fernandes;// Neste segundo tipo, devemos usar sempre o 'struct' para identificar a estrutura
 
+//Atribuindo os valores:
     Joao.idade = 12;
     Joao.sexo = 'M';
     strcpy(Joao.nome, "João Pascal José");
 
-    Fernandes.idade = 11;
-    Fernandes.sexo = 'M';
-    strcpy(Fernandes.nome, "Fernandes Costa Caxinda"); 
+//lendo os dados pelo teclado:
+    printf("Nome: ");
+    scanf("%100[^\n]", Fernandes.nome);
+    printf("Idade: ");
+    scanf(" %d", &Fernandes.idade);
+    getchar();//limpar buffer do teclado
+    printf("Sexo: ");
+    scanf("%c", &Fernandes.sexo); 
 
     printf("\n\nDados do João:\nNome: %s\nSexo: %c\nIdade: %d\n\n", Joao.nome, Joao.sexo, Joao.idade);
     printf("\n\nDados do Fernandes:\nNome: %s\nIdade: %d\nSexo: %c\n\n", Fernandes.nome, Fernandes.idade, Fernandes.sexo);
