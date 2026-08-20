@@ -36,10 +36,33 @@ typedef struct {
 };*/
 
 
+
+Pessoa1 lerDados(){
+    Pessoa1 Fe;
+
+
+    //lendo os dados pelo teclado:
+    printf("Nome: ");
+    scanf("%100[^\n]", Fe.nome);
+    printf("Idade: ");
+    scanf(" %d", &Fe.idade);
+    getchar();//limpar buffer do teclado
+    printf("Sexo: ");
+    scanf("%c", &Fe.sexo);
+    printf("Data de nascimento dd mm aaaa: ");
+    scanf("%d%d%d", &Fe.Nascimento.dia, &Fe.Nascimento.mes, &Fe.Nascimento.ano);
+    
+    Fe.sexo = toupper(Fe.sexo);//Colocar o sexo 'M/F' digitado pelo teclado em Maiuscula
+        
+    return Fe;
+}
+
+
 void imprimir( Pessoa1 fe){
     printf("\n\nDados do Fernandes:\nNome: %s\nIdade: %d\nSexo: %c", fe.nome, fe.idade, fe.sexo);
-    printf("\nData de Nascimento: %d/%d/%d.\n\n\n", fe.Nascimento.dia, fe.Nascimento.mes, fe.Nascimento.ano); 
+    printf("\nData de Nascimento: %d/0%d/%d.\n\n\n", fe.Nascimento.dia, fe.Nascimento.mes, fe.Nascimento.ano); 
 }
+
 
 
 int main() {
@@ -56,20 +79,12 @@ int main() {
     Joao.sexo = 'M';
     strcpy(Joao.nome, "João Pascal José");*/
 
-//lendo os dados pelo teclado:
-    printf("Nome: ");
-    scanf("%100[^\n]", Fernandes.nome);
-    printf("Idade: ");
-    scanf(" %d", &Fernandes.idade);
-    getchar();//limpar buffer do teclado
-    printf("Sexo: ");
-    scanf("%c", &Fernandes.sexo);
-    printf("Data de nascimento dd mm aaaa: ");
-    scanf("%d%d%d", &Fernandes.Nascimento.dia, &Fernandes.Nascimento.mes, &Fernandes.Nascimento.ano); 
 
-    Fernandes.sexo = toupper(Fernandes.sexo);//Colocar o sexo 'M/F' digitado pelo teclado em Maiuscula
+    
 
     /*printf("\n\nDados do João:\nNome: %s\nSexo: %c\nIdade: %d\n\n", Joao.nome, Joao.sexo, Joao.idade);*/
+
+    Fernandes = lerDados();
     imprimir(Fernandes);
     
 
