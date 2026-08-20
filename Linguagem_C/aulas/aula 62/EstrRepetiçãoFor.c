@@ -8,8 +8,12 @@ int main() {
     SetConsoleCP(CP_UTF8);
     setlocale(LC_ALL, ".UTF8");
 
-    int a = 0;
-    for(a = 0; a <= 100; a++ ){
-      printf("%d ", a);
+    int i, j, n;
+
+    printf("Digite o limite: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++){
+      printf("%d "a);
     }
 }
