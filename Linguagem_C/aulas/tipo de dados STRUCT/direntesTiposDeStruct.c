@@ -42,13 +42,13 @@ Pessoa1 lerDados(){
 
 
     //lendo os dados pelo teclado:
-    printf("Nome: ");
-    scanf("%100[^\n]", Fe.nome);
+    printf("\nNome: ");
+    scanf(" %100[^\n]", Fe.nome);
     printf("Idade: ");
     scanf(" %d", &Fe.idade);
     getchar();//limpar buffer do teclado
     printf("Sexo: ");
-    scanf("%c", &Fe.sexo);
+    scanf(" %c", &Fe.sexo);
     printf("Data de nascimento dd mm aaaa: ");
     scanf("%d%d%d", &Fe.Nascimento.dia, &Fe.Nascimento.mes, &Fe.Nascimento.ano);
     
@@ -60,7 +60,7 @@ Pessoa1 lerDados(){
 
 void imprimir( Pessoa1 fe){
     printf("\n\nDados do Fernandes:\nNome: %s\nIdade: %d\nSexo: %c", fe.nome, fe.idade, fe.sexo);
-    printf("\nData de Nascimento: %d/0%d/%d.\n\n\n", fe.Nascimento.dia, fe.Nascimento.mes, fe.Nascimento.ano); 
+    printf("\nData de Nascimento: %02d/%02d/%d.\n\n\n", fe.Nascimento.dia, fe.Nascimento.mes, fe.Nascimento.ano); 
 }
 
 
@@ -70,8 +70,8 @@ int main() {
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
     setlocale(LC_ALL, ".UTF8");
-
-    Pessoa1 Fernandes;
+    int i;
+    Pessoa1 Pessoas[3];
 /*    struct Pessoa2 Fernandes;// Neste segundo tipo, devemos usar sempre o 'struct' para identificar a estrutura
 
 //Atribuindo os valores:
@@ -84,8 +84,12 @@ int main() {
 
     /*printf("\n\nDados do João:\nNome: %s\nSexo: %c\nIdade: %d\n\n", Joao.nome, Joao.sexo, Joao.idade);*/
 
-    Fernandes = lerDados();
-    imprimir(Fernandes);
+    for (i = 0; i < 3; i++)
+        Pessoas[i] = lerDados();
+    
+    
+    for ( i = 0; i < 3; i++)     
+        imprimir(Pessoas[i]);
     
 
  return 0;
