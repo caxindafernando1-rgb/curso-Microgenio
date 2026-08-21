@@ -8,7 +8,7 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Adão Caxinda Kianga/Documents/curso Microgenio",
+      "cwd": "${fileDirname}",
       "program": "c:/Users/Adão Caxinda Kianga/Documents/curso Microgenio/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",

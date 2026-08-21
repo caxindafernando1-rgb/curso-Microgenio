@@ -70,8 +70,9 @@ int main() {
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
     setlocale(LC_ALL, ".UTF8");
-    int i;
-    Pessoa1 Pessoas[3];
+    
+    Pessoa1 Pessoas[2][2];
+
 /*    struct Pessoa2 Fernandes;// Neste segundo tipo, devemos usar sempre o 'struct' para identificar a estrutura
 
 //Atribuindo os valores:
@@ -84,12 +85,9 @@ int main() {
 
     /*printf("\n\nDados do João:\nNome: %s\nSexo: %c\nIdade: %d\n\n", Joao.nome, Joao.sexo, Joao.idade);*/
 
-    for (i = 0; i < 3; i++)
-        Pessoas[i] = lerDados();
-    
-    
-    for ( i = 0; i < 3; i++)     
-        imprimir(Pessoas[i]);
+   
+        Pessoas[0][0] = lerDados();
+        imprimir(Pessoas[0][0]);
     
 
  return 0;
