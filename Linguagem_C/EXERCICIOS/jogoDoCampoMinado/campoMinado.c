@@ -105,10 +105,10 @@ void imprimir(){
 
     printf("\n\n\t   ");
     for (l = 0; l < tam; l++)
-        printf("    %d", l);//indices das colunas
-    printf("\n\t    ---------------------------------------------------\n");
+        printf("    %2d", l);//indices das colunas
+    printf("\n\t    ------------------------------------------------------------\n");
     for(l = 0; l < tam; l++){
-        printf("\t%d ", l);//indices das linhas
+        printf("\t%2d ", l);//indices das linhas
         printf("  | ");
         for (c = 0; c < tam; c++){
             if(jogo[l][c].estaAberta){
@@ -117,10 +117,10 @@ void imprimir(){
                 else
                     printf(" %d ", jogo[l][c].vizinhos);
         }else
-                printf("  ");
+                printf(" . ");
         printf(" | ");
         }
-    printf("\n\t    ---------------------------------------------------\n");
+    printf("\n\t    -------------------------------------------------------------\n");
     }
     printf("\n\n");
 }
@@ -147,23 +147,65 @@ void abrirCelula(int l, int c){
 }
 
 
+/*
+    Função para verificar vitória
+    1 - Ganhou
+    0 - Não ganhou
+*/
+int ganhou(){
+    int quantidade = 0;
+
+     for(l = 0; l < tam; l++){
+        for (c = 0; c < tam; c++){
+            if (jogo[l][c].estaAberta == 0 && jogo[l][c].eBomba == 0)
+                quantidade++;
+        }
+    }
+    return quantidade;
+}
+
+
 
 //Procedimento jogo que faz a leitura dass coodenadas
 void jogar(){
    int linha, coluna;
-    do{
-    printf("\nDIGITE AS COORDENADAS: ");
-    printf("Linha: ");
-    scanf("%d", &linha);
-    printf("Coluna: ");
-    scanf("%d", &coluna);
+   int perdeu = 0; // Variável de controlo local para a derrota
 
-    if(coordenadaEhValida(linha, coluna) == 0)
-        printf("\nCOODENADA INVALIDA!");
-        printf("\nTENTE NOVAMENTE.");
-    }while (coordenadaEhValida(linha, coluna) == 0 || jogo[linha][coluna].estaAberta == 1);
+   do {
+        imprimir();
+        do {
+            printf("\nDIGITE AS COORDENADAS: ");
+            printf("\nLinha: ");
+            scanf("%d", &linha);
+            printf("\nColuna: ");
+            scanf("%d", &coluna);
 
-    abrirCelula(linha, coluna);
+            if(coordenadaEhValida(linha, coluna) == 0 || jogo[linha][coluna].estaAberta == 1) {
+                printf("\nCOORDENADA INVALIDA OU JA ABERTA!");
+                printf("\nTENTE NOVAMENTE.");
+            }
+        } while (coordenadaEhValida(linha, coluna) == 0 || jogo[linha][coluna].estaAberta == 1);
+
+        // 1. Verifica se pisou numa bomba ANTES de abrir ou expandir
+        if (jogo[linha][coluna].eBomba == 1) {
+            perdeu = 1;
+            jogo[linha][coluna].estaAberta = 1; // Abre a bomba para mostrar no ecrã
+        } else {
+            abrirCelula(linha, coluna);
+        }
+
+    // O jogo continua enquanto restarem células seguras (ganhou() > 0) E o jogador não tiver perdido
+    } while (ganhou() != 0 && perdeu == 0);
+
+    // Impressão final com o resultado do último movimento
+    imprimir();
+
+    // 2. Apresenta o resultado correto baseado na variável de controlo
+    if (perdeu) {
+        printf("\n\t WHAT THAT HELL!!!.\nGAME OVER\n");
+    } else {
+        printf("\n\tYOU WIN!!!\n");
+    }
 }
 
 int main() {
@@ -171,13 +213,19 @@ int main() {
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
     setlocale(LC_ALL, ".UTF8");   
-
-
+    int opcao;
+    do{
     inicializarJogo();
     sortearBombas(10);
+    contarBombas();
     printf("\n\n\t\t\t == CAMPO MINADO == ");
-    imprimir();
+    jogar();
+        
 
+    printf("\nDigite 1 para jogar novamente! ");
+    scanf(" %d", &opcao);
+
+    }while (opcao == 1);
 
  return 0;
 }
