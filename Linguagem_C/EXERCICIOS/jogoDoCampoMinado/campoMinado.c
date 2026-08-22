@@ -200,7 +200,7 @@ void jogar(){
     // Impressão final com o resultado do último movimento
     imprimir();
 
-    // 2. Apresenta o resultado correto baseado na variável de controlo
+    //  Apresenta o resultado baseado na variável de controlo
     if (perdeu) {
         printf("\n\t WHAT THAT HELL!!!.\nGAME OVER\n");
     } else {
