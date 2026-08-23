@@ -9,10 +9,14 @@ int main() {
     setlocale(LC_ALL, ".UTF8");
 
        
-   int *p;
+   char *p;
+   int *p2;
+   float *p3;
 
 
    printf("endereço da variavel p: %d\n", sizeof(p));
+    printf("endereço da variavel p: %d\n", sizeof(p2));
+     printf("endereço da variavel p: %d\n", sizeof(p3));
  
 
     return 0;
