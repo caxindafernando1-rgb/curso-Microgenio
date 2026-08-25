@@ -1,21 +1,6 @@
 #include <stdio.h>
 #include <locale.h>
 #include <windows.h> 
-#include <string.h> 
-#include <time.h>
-
-typedef struct{
-
-    int dia, mes, ano;
-
-} Data;
-
-
-void imprimir(Data *X){
-
-    printf("\n%d/%02d/%d ", X->dia, X->mes, X->ano);
-
-}
 
 
 int main() {
@@ -25,21 +10,20 @@ int main() {
     setlocale(LC_ALL, ".UTF8");
 
    
+    int A = 100, *B, **C;
 
-    Data data;
-    Data *P;
-    
-    P = &data;
-    data.dia = 20;
-    data.mes = 07;
-    data.ano = 2000;
+    B = &A;
+    C = &B;
 
-    printf("\n%d/%02d/%d \n",data.dia, data.mes, data.ano);
-    printf(" \n%d // %d", &P, &data);
-    
-    imprimir(P);
-    
-   
+
+   printf("endereço de A: %p Conteudo de A: %d\n", &A, A);
+
+   printf("endereço de B: %p Conteudo apontado de B: %p\n", &B, B);//endereço de B e o endereço apontado por B
+   printf("Conteudo apontado por B: %d\n", *B);//mostrar o conteudo dentro do endereço apontado por B
+
+   printf("endereço de C: %p Conteudo apontado de C: %p\n", &C, C);//endereço de C e o endereço apontado por C
+   printf("Conteudo apontado por B: %d", **C);//mostrar o conteudo dentro do endereço apontado por B
+
 
     return 0;
 }
