@@ -4,7 +4,7 @@
 #include <string.h>
 
 /*
-                                                                        Alocação dinâmica de memória com a função MALLOC.
+                                                                        Alocação dinâmica de memória com a função CALLOC.
                                                                   Retorna um ponteiro para a região de moméria alocada ou NULL.
 */
 
@@ -17,7 +17,7 @@ int main (){
 
    int *x;
 
-   x = malloc(sizeof(int));//recebe a quantida de bytes que quero alocar
+   x = calloc( 1, sizeof(int));//recebe a quantida de elementos e de bytes que quero alocar 
 
    if(x){//é o mesmo que:if(x != NULL)
       printf("\n\nMemoria atribuida com sucesso!!\n");
