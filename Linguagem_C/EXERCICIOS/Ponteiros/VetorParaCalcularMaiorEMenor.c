@@ -4,7 +4,9 @@
 #include <string.h>
 
 
-
+/*
+                                                            Encontrar o maior e o menor elemento de um vetor com ponteiros
+*/
 
 void MaiorMenor(int *vet, int tam, int *maior, int *menor){
 
@@ -29,7 +31,6 @@ int main() {
     int vet[] = {1, 3, 4, 5, 6, 7, 8, 15, 10}; 
     int maior, menor; 
     int tam = sizeof(vet) / sizeof(vet[0]); // Calcula o tamanho do vetor e atribui a variavel tam;
-
    
     MaiorMenor(vet, tam,  &maior,  &menor);
 
