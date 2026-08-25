@@ -5,17 +5,8 @@
 
 
 /*
-                                                           Trocar o conteúdo de duas variáveis por meio de ponteiros | 
+                                                        Imprimir endereço e conteúdo de cada posição de um vetor 
 */
-
-void troca(int *a, int *b){
-
-    float c;
-     c = *a;
-    *a = *b;
-    *b = c;
-
-}
 
    
 int main() {
@@ -24,13 +15,13 @@ int main() {
     SetConsoleCP(CP_UTF8);
     setlocale(LC_ALL, ".UTF8");
 
-    int valorA = 15;
-    int valorB = 32;
+    int vet[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+    int tam = sizeof(vet)/ sizeof(vet[0]);
 
-    printf("\n\nValor de A: %d Valor de B: %d\n", valorA, valorB);
-    troca(&valorA, &valorB);
-    printf("Valor de A: %d Valor de B: %d\n\n", valorA, valorB);
-
+    for (int i = 0; i < tam; i++){
+        printf("Localização: %p  Contudo: %d\n", vet + i, *(vet + i));
+    }
+    
 
  return 0;
 }
