@@ -5,10 +5,11 @@
 
 
 /*
-                                                            Encontrar o maior e o menor elemento de um vetor com ponteiros
+                                                           Trocar o conteúdo de duas variáveis por meio de ponteiros | 
 */
 
 void troca(int *a, int *b){
+
     float c;
      c = *a;
     *a = *b;
@@ -26,11 +27,10 @@ int main() {
     int valorA = 15;
     int valorB = 32;
 
-    printf("Valor de A: %d Valor de B: %d\n", valorA, valorB);
+    printf("\n\nValor de A: %d Valor de B: %d\n", valorA, valorB);
     troca(&valorA, &valorB);
-    printf("Valor de A: %d Valor de B: %d", valorA, valorB);
+    printf("Valor de A: %d Valor de B: %d\n\n", valorA, valorB);
 
-   
 
  return 0;
 }
