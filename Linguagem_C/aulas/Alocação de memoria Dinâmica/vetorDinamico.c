@@ -5,40 +5,53 @@
 #include <time.h>
 #include <stdlib.h>
 
-/*
-                                                                        Vetor Dinâmico
-*/
-
 int main (){
 
    SetConsoleOutputCP(CP_UTF8);
    SetConsoleCP(CP_UTF8);
    setlocale(LC_ALL, ".UTF8");
-
-
-   srand(time(NULL));
+   
    int *vet, tam, i;
 
-   printf("Digite o tamanho do vetor: ");
+   printf("\n\nDigite o tamanho do vetor: ");
    scanf("%d", &tam);
+   srand(time(NULL));
 
    vet = malloc(tam * sizeof(int));
 
    if(vet){
-        printf("\n\nVetor de tamanho %d criando com sucesso!: \n", tam);
-        for (i = 0; i < tam; i++){
+        printf("\nVetor de tamanho %d criado com sucesso!: \n", tam);
+        for (i = 0; i < tam; i++)
             *(vet + i) = 1 + rand() % 100;
-        }
-    
-        for ( i = 0; i < tam; i++){
-            printf("%d ", *(vet + i));
-        }
-        printf("\n\n");
-        free(vet);//liberar a memória alocada
-    }
-   else
-        printf("\n\nFalha ao criar vetor\n\n");
-    
 
+        for ( i = 0; i < tam; i++)
+            printf("%d ", *(vet + i));
+        
+        printf("\n");
+           
+        printf("\n\nDigite o novo tamanho do vetor: ");
+        scanf("%d", &tam);
+
+        // CORREÇÃO: Multiplicar por sizeof(int)
+        int *temp = realloc(vet, tam * sizeof(int)); 
+
+        if (temp != NULL) {
+            vet = temp; // Atualiza o ponteiro com segurança
+            printf("\nVetor redefinido para ter tamanho %d com sucesso: \n", tam);
+            
+            for ( i = 0; i < tam; i++){
+                printf("%d ", *(vet + i));
+            }
+            printf("\n\n");
+        } else {
+            printf("\nFalha ao realocar memória!\n");
+        }
+
+        free(vet); // Liberar a memória alocada no final
+    }
+    else {
+        printf("\n\nFalha ao criar vetor\n\n");
+    }
+   
    return 0;
 }
