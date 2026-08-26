@@ -3,6 +3,7 @@
 #include <windows.h>  
 #include <string.h>
 #include <time.h>
+#include <stdlib.h>
 
 /*
                                                                         Vetor Dinâmico
@@ -23,17 +24,21 @@ int main (){
 
    vet = malloc(tam * sizeof(int));
 
-   if(vet)
-    printf("\n\nVetor de tamanho %d criando com sucesso!: ", tam);
-    for (i = 0; i < tam; i++){
-        *(vet + i) = 1 + rand() % 100;
+   if(vet){
+        printf("\n\nVetor de tamanho %d criando com sucesso!: ", tam);
+        for (i = 0; i < tam; i++){
+            *(vet + i) = 1 + rand() % 100;
+        }
+    
+        for ( i = 0; i < tam; i++){
+            printf("%d ", *(vet + i));
+        }
+        printf("\n\n");
+        free(vet);
     }
-    for ( i = 0; i < tam; i++){
-        printf("%d ", *(vet + i));
-    }
-    printf("\n\n");
    else
         printf("\n\nFalha ao criar vetor\n\n");
     
+
    return 0;
 }
