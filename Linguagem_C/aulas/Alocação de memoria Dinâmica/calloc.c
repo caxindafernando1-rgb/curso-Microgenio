@@ -17,7 +17,7 @@ int main (){
 
    int *x;
 
-   x = calloc( 1, sizeof(int));//recebe a quantida de elementos e de bytes que quero alocar 
+   x = calloc( 1, sizeof(int));//recebe a quantida de elementos e de bytes que se quer alocar
 
    if(x){//é o mesmo que:if(x != NULL)
       printf("\n\nMemoria atribuida com sucesso!!\n");
