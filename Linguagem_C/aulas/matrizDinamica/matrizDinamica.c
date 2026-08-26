@@ -14,30 +14,29 @@ int main (){
    SetConsoleCP(CP_UTF8);
    setlocale(LC_ALL, ".UTF8");
 
-    int **matr;
+   int **matr;
 
-    srand(time(NULL));
+   matr = malloc(4 * sizeof(int));
 
-    matr = malloc(4 * sizeof(int));
+   for (int i = 0; i < 4; i++){
+        matr[i] = malloc(3 * sizeof(int));
+   }
 
-    for (int i = 0; i < 4; i++){
-        matr = malloc(3 * sizeof(int));
-    }
+   srand(time(NULL));
 
-    for (int i = 0; i < 4; i++){
-        for (int j = 0; j < 3; j++)
-            **matr = rand() % 100;
-        printf("\n");
-
-    }
-
-
-    for (int i = 0; i < 4; i++){
-        for (int j = 0; j < 3; j++)
-            printf("%d ", **matr);
+   for (int i = 0; i < 3; i++){
+        for (int j = 0; j < 3; j++){
+            matr[i][j] = rand() % 100;
         }
-    
-    
+   }
+   
+    for (int i = 0; i < 3; i++){
+        for (int j = 0; j < 3; j++){
+            printf("%d ", matr[i][j]);
+        }
+        printf("\n");
+   }
+
 
    return 0;
 }
