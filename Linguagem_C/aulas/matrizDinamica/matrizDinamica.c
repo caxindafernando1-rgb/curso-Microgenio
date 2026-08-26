@@ -5,7 +5,7 @@
 #include <time.h> 
 
 /*
-                                                                        Matriz Dinâmica
+                                                                                      Matriz Dinâmica
 */
 
 int main (){
