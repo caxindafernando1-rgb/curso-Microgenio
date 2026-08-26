@@ -29,10 +29,9 @@ int main (){
         
         printf("\n");
            
-        printf("\n\nDigite o novo tamanho do vetor: ");
+        printf("\nDigite o novo tamanho do vetor: ");
         scanf("%d", &tam);
 
-        // CORREÇÃO: Multiplicar por sizeof(int)
         int *temp = realloc(vet, tam * sizeof(int)); 
 
         if (temp != NULL) {
