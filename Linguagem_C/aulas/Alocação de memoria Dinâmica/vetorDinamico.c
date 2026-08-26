@@ -25,7 +25,7 @@ int main (){
    vet = malloc(tam * sizeof(int));
 
    if(vet){
-        printf("\n\nVetor de tamanho %d criando com sucesso!: ", tam);
+        printf("\n\nVetor de tamanho %d criando com sucesso!: \n", tam);
         for (i = 0; i < tam; i++){
             *(vet + i) = 1 + rand() % 100;
         }
@@ -34,7 +34,7 @@ int main (){
             printf("%d ", *(vet + i));
         }
         printf("\n\n");
-        free(vet);
+        free(vet);//liberar a memória alocada
     }
    else
         printf("\n\nFalha ao criar vetor\n\n");
