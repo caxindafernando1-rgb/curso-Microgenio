@@ -16,27 +16,30 @@ int main (){
 
    int **matr;
 
-   matr = malloc(4 * sizeof(int));
+   matr = malloc(5 * sizeof(int));//Linhas
 
-   for (int i = 0; i < 4; i++){
-        matr[i] = malloc(3 * sizeof(int));
+   for (int i = 0; i < 5; i++){
+        matr[i] = malloc(3 * sizeof(int));//Colunas
    }
 
    srand(time(NULL));
 
-   for (int i = 0; i < 3; i++){
+   for (int i = 0; i < 5; i++){
         for (int j = 0; j < 3; j++){
-            matr[i][j] = rand() % 100;
+            *(*(matr + i) + j) = rand() % 100;//percorrer a matriz e preencher
+            //matr[i][j] = rand() % 100;//percorrer a matriz e preencher
         }
-   }
-   
-    for (int i = 0; i < 3; i++){
-        for (int j = 0; j < 3; j++){
-            printf("%d ", matr[i][j]);
-        }
-        printf("\n");
    }
 
+    printf("\n\n");
+    for (int i = 0; i < 5; i++){
+        for (int j = 0; j < 3; j++){
+            printf("%2d ", *(*(matr + i) + j));//percorrer a matriz e imprimi-la
+            //printf("%d ", matr[i][j]);//percorrer a matriz e imprimi-la
+        }
+        printf("\n\n");
+   }
+   printf("\n");
 
    return 0;
 }
