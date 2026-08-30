@@ -41,5 +41,12 @@ int main (){
    }
    printf("\n");
 
+//liberar a memoria de uma matriz
+   for ( int i = 0; i < 5; i++){
+    free(matr[i]);
+   }
+   free(matr);
+   
+
    return 0;
 }

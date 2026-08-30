@@ -20,6 +20,7 @@ void inverter(char vet[]){
   }  
 }
 
+//inverter a ordem da string usando ponteiro:
 char* inverter2(char vet[]){
   int i, fim, tam = strlen(vet);
   char *novo = malloc((tam + 1) * sizeof(char));
@@ -42,9 +43,9 @@ int main (){
    SetConsoleCP(CP_UTF8);
    setlocale(LC_ALL, ".UTF8");
 
+
   char vetor[30] = {"Fernando Caxinda"};
   char *p;
- 
 
   printf("%s \n", vetor);
   inverter(vetor);
@@ -52,6 +53,7 @@ int main (){
 
   p = inverter2(vetor);
   printf("%s ", p);
+
 
 
    return 0;
