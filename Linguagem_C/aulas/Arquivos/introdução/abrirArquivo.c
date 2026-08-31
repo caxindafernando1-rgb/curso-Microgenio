@@ -26,7 +26,7 @@ int main() {
   char texto;
 
 
-  pasta = fopen("Contos.txt", "w");//abrir a pasta dar titulo(contos) formato do arquivo(txt) que tratamento queremos lhe dar(w)
+  pasta = fopen("Contos.txt", "w+");//abrir a pasta dar titulo(contos) formato do arquivo(txt) que tratamento queremos lhe dar(w)
 
   if (pasta){//se o arquivo for criado com sucesso
     printf("Escreva seu texto e digite 'ENTER' para finalizar.\n");
@@ -35,7 +35,20 @@ int main() {
         fputc(texto, pasta);//conlocar  o texto no arquivo(pasta)
         scanf("%c", &texto);
     }
-        fclose(pasta);//fechar o arquivo
+       
+        
+        //ler o arquivo:
+
+        rewind(pasta);//voltar ao inicio do texto na pasta
+
+        printf("\n\nLer o arquivo dentro da pasta-Contos: \n");
+        while (!feof(pasta)){//enquando não chegar no fim da pasta:
+          texto = fgetc(pasta);//mostra o que esta na pasta
+          printf("%c ", texto);
+        }
+        printf("\n\n");
+      fclose(pasta);//fechar o arquivo
+        
   }
   else
     printf("ERRO!\nO Arquivo não foi criado");//caso o arquivo não seja criado
