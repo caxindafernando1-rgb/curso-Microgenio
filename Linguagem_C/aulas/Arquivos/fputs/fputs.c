@@ -33,6 +33,23 @@ void escrever(char f[]){
         printf("ERRO!\nFalha ao criar o arquivo");
 }
 
+void ler(char f[]){
+    FILE *pasta = fopen(f, "r");
+    char texto[500];
+
+    if (pasta){
+        printf("\n\n\t\t== Conto ==\n");
+        while (!feof(pasta) && fgets(texto, 500, pasta)){//fgets(de onde vai receber, o limite maximo, o arquivo)
+                printf("--> %s", texto);
+        }
+        printf("\n\n");
+        fclose(pasta);
+    }
+    else
+        printf("ERRO!\n Falha ao ler arquivo");
+    
+
+}
 
 int main() {
 
@@ -42,7 +59,8 @@ int main() {
 
   char conto[] = {"contos.txt"};
 
-  escrever(conto);
+  //escrever(conto);
+  ler(conto);
 
 
    return 0;
