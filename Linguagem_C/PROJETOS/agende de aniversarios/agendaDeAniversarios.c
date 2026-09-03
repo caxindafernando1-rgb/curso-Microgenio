@@ -78,14 +78,32 @@ void alterar_contacto(Contacto **c, int quant){
 }
 
 
+void salvar(Contacto **c, int quant, char arq[]){
+    FILE *pasta = fopen(arq, "w");
+
+    if (pasta){
+        fprintf(pasta, "%d\n", quant);
+        for (int i = 0; i < quant; i++){        
+            fputs(c[i]->nome, pasta);
+            fputc('\n', pasta);
+            fprintf(pasta, "%2d %2d %4d\n", c[i]->dia, c[i]->mes, c[i]->ano);
+        }
+        fclose(pasta);
+    }
+    else
+        printf("ERRO!\nFalha ao criar arquivo.");
+    
+}
+
 int main() {
 
   SetConsoleOutputCP(CP_UTF8);
   SetConsoleCP(CP_UTF8);
   setlocale(LC_ALL, ".UTF8");
 
-  Contacto *agenda[50];
-  int opcao, tam = 50, quant = 0;
+    Contacto *agenda[50];
+    int opcao, tam = 50, quant = 0;
+    char arquivo[] = {"Agenda.txt"};
 
   do{
     printf("1 - Cadastrar\n2 - Alterar Cadastro\n3 - Imprimir Cadastro\n4 - Salvar\n5 - Ler Arquivo\n\n");
@@ -103,10 +121,12 @@ int main() {
     case 3:
         imprimir(agenda, quant);
         break;
+    case 4:
+        salvar(agenda, quant, arquivo);
+        break;
     default:
         if (opcao != 0)
             printf("Opção invalida!\n\n");
-        
         break;
     }
   }while (opcao != 0);
