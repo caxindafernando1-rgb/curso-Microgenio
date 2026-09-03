@@ -27,7 +27,7 @@ void escrever(char f[]){
             printf("Altura: ");
             scanf("%f", &altura);
             getchar();
-            fprintf(pasta, "Nome: %s\n Idade: %02d Altura: %.2f ", nome, idade, altura);//arquivo, o que queremos no arquivo, de onde vira o conteudo do arquivo txt
+            fprintf(pasta, "%s;%02d;%.2f ", nome, idade, altura);//arquivo, o que queremos no arquivo, de onde vira o conteudo do arquivo txt
             printf("Digite um 1 para adicionar mais uma pessoa a lista: ");
             scanf("%d", &opcao);
             getchar();
@@ -37,6 +37,23 @@ void escrever(char f[]){
     else
         printf("ERRO!\nFalha ao criar arquivo");
 }
+void ler(char f[]){
+    FILE *pasta = fopen(f, "r");
+    char nome[100];
+    int idade;
+    float altura;
+
+    if (pasta){
+        printf("\n\n== DADOS PESSOAIS ==");
+        while (fscanf(pasta, "%100[^;];%d;%f", nome, &idade, &altura) == 3){
+            printf("\n\tNome: %s\n\tIdade: %d\n\tAltura: %.2f", nome, idade, altura);
+        }        
+        fclose(pasta);
+    }
+    else
+        printf("ERRO!\nFalha ao ler arquivo");
+}
+
 
 int main() {
 
@@ -47,6 +64,7 @@ int main() {
   char contos[100] = {"Dados_Pessoais.txt"};
 
   escrever(contos);
+  ler(contos);
   
 
    return 0;
