@@ -95,6 +95,27 @@ void salvar(Contacto **c, int quant, char arq[]){
     
 }
 
+int Ler_Arquivo(Contacto **c, char arq[]){
+    FILE *pasta = fopen(arq, "r");
+    int quant = 0;
+    Contacto *novo = malloc(sizeof(Contacto));
+
+    if (pasta){
+        fscanf(pasta, "%d\n", &quant);
+        for (int i = 0; i < quant; i++){
+            fscanf(pasta, "%50[^\n]", novo->nome);
+            fscanf(pasta, "%02d %02d %4d\n", &novo->dia, &novo->mes, &novo->ano);
+            c[i] = novo;
+            novo = malloc(sizeof(Contacto));
+        }
+        fclose(pasta);
+    }
+    else
+        printf("ERRO!\nFalha ao ler o arquivo");
+    return quant;
+}
+
+
 int main() {
 
   SetConsoleOutputCP(CP_UTF8);
@@ -123,6 +144,9 @@ int main() {
         break;
     case 4:
         salvar(agenda, quant, arquivo);
+        break;
+    case 5:
+        quant = Ler_Arquivo(agenda, arquivo);
         break;
     default:
         if (opcao != 0)
