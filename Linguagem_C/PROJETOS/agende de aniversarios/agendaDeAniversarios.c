@@ -133,7 +133,7 @@ void lerBinario(Contacto **c, char arq[]){
         printf("ERRO!\nFalha ao ler arquivo binario"); 
 }
 
-void salvarBinario(Contacto **c, char arq[], int quant){
+int salvarBinario(Contacto **c, char arq[], int quant){
     FILE *pasta = fopen(arq, "wb");
 
     if (pasta){
@@ -144,7 +144,7 @@ void salvarBinario(Contacto **c, char arq[], int quant){
     }
     else
         printf("ERRO!\nFalha ao salvar o arquivo binario");
-    
+    return quant; 
    
 
     
