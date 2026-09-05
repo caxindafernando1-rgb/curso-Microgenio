@@ -145,8 +145,44 @@ int salvarBinario(Contacto **c, char arq[], int quant){
     else
         printf("ERRO!\nFalha ao salvar o arquivo binario");
     return quant; 
-   
+}
 
+void alterarBinario(char arq[]){
+    FILE *pasta = fopen(arq, "rb+");
+    int i = 1, id;
+    Contacto c;
+
+    if (pasta){
+    printf("\n\t== Lista de contactos ==\n");
+    printf("------------------------------------------\n");
+    while(fread(&c, sizeof(Contacto), 1, pasta)){
+        printf("%d = %02d/%02d/%4d -- %s\n", i, c.dia, c.mes, c.ano, c.nome);
+        i++;
+    }
+    printf("------------------------------------------\n");
+    
+    printf("Digite o ID que pretende alterar: ");
+    scanf("%d", &id);
+    getchar();
+    id--;
+
+    if (id >= 0 && id < i - 1){
+        printf("Nome: ");
+        scanf("%100[^\n]", c.nome);
+        printf("dia: ");
+        scanf("%d", &c.dia);
+        getchar();
+        printf("Mês: ");
+        scanf("%d", &c.mes);
+        getchar();
+        printf("Ano: ");
+        scanf("%d", &c.ano);
+        fseek(pasta, id * sizeof(Contacto), SEEK_SET);
+        fwrite(&c, sizeof(Contacto), 1, pasta);        
+    }
+        fclose(pasta);
+    }else
+        printf("ERRO!\nFalha ao ler arquivo");
     
 }
 int main() {
@@ -162,7 +198,7 @@ int main() {
 
   do{
     printf("1 - Cadastrar\n2 - Alterar Cadastro\n3 - Imprimir Cadastro\n4 - Salvar\n5 - Ler Arquivo\n");
-    printf("6 - Salvar Binario\n7 - Ler Binariario\n\n");
+    printf("6 - Salvar Binario\n7 - Ler Binariario\n8 - Alterar Binario\n\n");
 
     printf("Opção -- ");
     scanf("%d", &opcao);
@@ -189,6 +225,9 @@ int main() {
         break;
     case 7:
         lerBinario(agenda, arquivob);
+        break;
+    case 8:
+        alterarBinario(arquivo);
         break;
     default:
         if (opcao != 0)
