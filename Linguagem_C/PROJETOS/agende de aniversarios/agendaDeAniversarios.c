@@ -116,6 +116,39 @@ int Ler_Arquivo(Contacto **c, char arq[]){
 }
 
 
+void lerBinario(Contacto **c, char arq[]){
+    int quant = 0;
+    Contacto *novo = malloc(sizeof(Contacto));
+    FILE *pasta = fopen(arq, "rb");
+
+    if (pasta){
+        while (fread(novo, sizeof(Contacto), 1, pasta)){
+            c[quant] = novo;
+            quant++;
+            novo = malloc(sizeof(Contacto));
+        }
+        fclose(pasta);
+    }
+    else
+        printf("ERRO!\nFalha ao ler arquivo binario"); 
+}
+
+void salvarBinario(Contacto **c, char arq[], int quant){
+    FILE *pasta = fopen(arq, "wb");
+
+    if (pasta){
+         for (int i = 0; i < quant; i++){
+            fwrite(c[i], sizeof(Contacto), 1, pasta);
+    }
+       fclose(pasta);
+    }
+    else
+        printf("ERRO!\nFalha ao salvar o arquivo binario");
+    
+   
+
+    
+}
 int main() {
 
   SetConsoleOutputCP(CP_UTF8);
@@ -125,9 +158,12 @@ int main() {
     Contacto *agenda[50];
     int opcao, tam = 50, quant = 0;
     char arquivo[] = {"Agenda.txt"};
+    char arquivob[] = {"Agenda.bin"};
 
   do{
-    printf("1 - Cadastrar\n2 - Alterar Cadastro\n3 - Imprimir Cadastro\n4 - Salvar\n5 - Ler Arquivo\n\n");
+    printf("1 - Cadastrar\n2 - Alterar Cadastro\n3 - Imprimir Cadastro\n4 - Salvar\n5 - Ler Arquivo\n");
+    printf("6 - Salvar Binario\n7 - Ler Binariario\n\n");
+
     printf("Opção -- ");
     scanf("%d", &opcao);
     getchar();
@@ -147,6 +183,12 @@ int main() {
         break;
     case 5:
         quant = Ler_Arquivo(agenda, arquivo);
+        break;
+    case 6:
+        salvarBinario(agenda, arquivob, quant);
+        break;
+    case 7:
+        lerBinario(agenda, arquivob);
         break;
     default:
         if (opcao != 0)
