@@ -177,7 +177,7 @@ void alterarBinario(char arq[]){
         getchar();
         printf("Ano: ");
         scanf("%d", &c.ano);
-        fseek(pasta, id * sizeof(Contacto), SEEK_SET);
+        fseek(pasta, id * sizeof(Contacto), SEEK_SET);//onde esta o arquivo, a posição que esta o que queremos alterara, localização do ponteiro
         fwrite(&c, sizeof(Contacto), 1, pasta);        
     }
         fclose(pasta);
