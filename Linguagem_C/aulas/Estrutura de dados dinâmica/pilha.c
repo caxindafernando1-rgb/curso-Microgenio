@@ -3,7 +3,8 @@
 #include <locale.h>
 #include <windows.h>  
 #include <string.h>
-#include <time.h> 
+#include <time.h>
+#include <stdlib.h> 
 
 
 /*
@@ -27,7 +28,7 @@ typedef struct no{
    struct no *proximo;
 }No;
 
-int ler_pessoa(){
+Pessoa ler_pessoa(){
    Pessoa p;
    printf("Nome: ");
    scanf(" %50[^\n]", p.nome);
@@ -43,7 +44,7 @@ int ler_pessoa(){
 }
 
 void imprimir_pessoa(Pessoa p){
-   printf("Nome: %s\nData de nascimento: %02d/%02d/%4d \n\n")
+   printf("Nome: %s\nData de nascimento: %02d/%02d/%4d \n\n", p.nome, p.data.dia, p.data.mes, p.data.ano);
 }
 
 
@@ -61,6 +62,27 @@ No* empilhar(No *topo){
    return NULL;
 }
 
+//Procedimento para desempilhar
+No* desempilhar(No **topo){
+   if(*topo != NULL){
+      No *remover = *topo;
+      *topo = remover->proximo;
+      return remover;
+   }
+   else
+      printf("ERRO!\nPilha vazia");
+      return NULL;
+}
+
+void imprimir(No *topo){
+   printf("\n---------------------PILHA----------------------------------------\n");
+   while(topo){
+      imprimir_pessoa(topo->p);
+      topo = topo->proximo;
+   }
+    printf("\n-----------------------FIM DA PILHA------------------------------\n");
+}
+
 
 int main() {
 
@@ -69,11 +91,11 @@ int main() {
   setlocale(LC_ALL, ".UTF8");
 
 
-  No *topo = NULL;
+  No *remover, *topo = NULL;
   int opcao;
   
   do{
-  printf("0 - Sair\n1 - Empilhar\n2 - Desempilhar\n3 - Imprimir\n\n");
+  printf("\n\n0 - Sair\n1 - Empilhar\n2 - Desempilhar\n3 - Imprimir\n\n");
   scanf("%d", &opcao);
   getchar();
 
@@ -86,12 +108,18 @@ int main() {
       topo = empilhar(topo);
       break;
    case 2:
-   /* code */
-      break;
+      remover = desempilhar(&topo);
+      if(remover){
+         printf("\nTopo removido com sucesso!\n");
+         imprimir_pessoa(remover->p);
+         free(remover);
+      }
+      else
+         printf("Topo vazio");
+   break;
    case 3:
-      /* code */
+      imprimir(topo);
       break;
-  
   default:
    printf("Erro!\nOpção invalida.\n\n");
    break;
