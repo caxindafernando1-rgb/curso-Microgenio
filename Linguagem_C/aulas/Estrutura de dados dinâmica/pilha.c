@@ -47,7 +47,6 @@ void imprimir_pessoa(Pessoa p){
    printf("Nome: %s\nData de nascimento: %02d/%02d/%4d \n\n", p.nome, p.data.dia, p.data.mes, p.data.ano);
 }
 
-
 //Procedimento para empilhar(push)
 No* empilhar(No *topo){
    No *novo = malloc(sizeof(No));
@@ -68,6 +67,7 @@ No* desempilhar(No **topo){
       No *remover = *topo;
       *topo = remover->proximo;
       return remover;
+      free(remover);
    }
    else
       printf("ERRO!\nPilha vazia");
@@ -75,7 +75,7 @@ No* desempilhar(No **topo){
 }
 
 void imprimir(No *topo){
-   printf("\n---------------------PILHA----------------------------------------\n");
+   printf("\n---------------------PILHA-- --------------------------------------\n");
    while(topo){
       imprimir_pessoa(topo->p);
       topo = topo->proximo;
