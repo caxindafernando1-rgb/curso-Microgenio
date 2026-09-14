@@ -8,7 +8,8 @@
 
 
 /*
-                                                         PUSH / POP
+                                                         PUSH / POP 
+                                                       segunda versão
 */
 
 typedef struct{
