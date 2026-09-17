@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "Mstimer2",
+			"path": "Arduino_IDE/Mstimer2"
+		}
+	],
+	"settings": {}
+}
