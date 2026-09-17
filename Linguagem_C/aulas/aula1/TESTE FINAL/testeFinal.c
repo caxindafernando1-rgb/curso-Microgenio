@@ -75,7 +75,7 @@ int main() {
         case 2:
         printf("\n\n== LISTA DE SENSORES ==\n");
         for (i = 0; i < tam; i++)
-             printf("\n == Nome: %s\nUnidade: %s\nValor: %.2f\nAtivo: %d\n\n", i, listaMat[i].nome, listaMat[i].unidade, listaMat[i].valor, listaMat[i].ativo);
+             printf("\n == Nome: %s\nUnidade: %s\nValor: %.2f\nAtivo: %d\n\n", listaMat[i].nome, listaMat[i].unidade, listaMat[i].valor, listaMat[i].ativo);
         break;
         case 3:
         for (i = 0; i < tam; i++)  
@@ -94,7 +94,7 @@ int main() {
         printf("\n\n== Sensores ativos ==\n");
             for (i = 0; i < tam; i++) {
                 if (listaMat[i].ativo == 1)
-                    printf("\n == Nome: %s\nUnidade: %s\nValor: %.2f\nAtivo: %d\n\n", i, listaMat[i].nome, listaMat[i].unidade, listaMat[i].valor, listaMat[i].ativo);
+                    printf("\n == Nome: %s\nUnidade: %s\nValor: %.2f\nAtivo: %d\n\n", listaMat[i].nome, listaMat[i].unidade, listaMat[i].valor, listaMat[i].ativo);
         }
         case 0:
             break;
