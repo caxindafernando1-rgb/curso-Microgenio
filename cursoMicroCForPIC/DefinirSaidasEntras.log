@@ -2,10 +2,10 @@
 hint: 0	1139	Available RAM: 352 [bytes], Available ROM: 8192 [bytes]	 
 diagnostics: 0	122	Compilation Started	DefinirSaidasEntras.c
 diagnostics: 10	123	Compiled Successfully	DefinirSaidasEntras.c
-diagnostics: 0	127	All files Compiled in 94 ms	 
+diagnostics: 0	127	All files Compiled in 93 ms	 
 hint: 0	1144	Used RAM (bytes): 2 (1%)  Free RAM (bytes): 350 (99%)	Used RAM (bytes): 2 (1%)  Free RAM (bytes): 350 (99%)
 hint: 0	1144	Used ROM (program words): 8 (1%)  Free ROM (program words): 8184 (99%)	Used ROM (program words): 8 (1%)  Free ROM (program words): 8184 (99%)
 diagnostics: 0	125	Project Linked Successfully	DefinirSaidasEntras.mcppi
-diagnostics: 0	128	Linked in 15 ms	 
-diagnostics: 0	129	Project 'DefinirSaidasEntras.mcppi' completed: 265 ms	 
-diagnostics: 0	103	Finished successfully: 18 set 2026, 07:44:30	DefinirSaidasEntras.mcppi
+diagnostics: 0	128	Linked in 32 ms	 
+diagnostics: 0	129	Project 'DefinirSaidasEntras.mcppi' completed: 282 ms	 
+diagnostics: 0	103	Finished successfully: 18 set 2026, 07:52:18	DefinirSaidasEntras.mcppi

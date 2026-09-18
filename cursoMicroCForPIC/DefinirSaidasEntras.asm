@@ -4,8 +4,8 @@ _main:
 ;DefinirSaidasEntras.c,2 :: 		void main() {
 ;DefinirSaidasEntras.c,3 :: 		TRISD = 0X00;// saidas
 	CLRF       TRISD+0
-;DefinirSaidasEntras.c,4 :: 		PORTD = 0XF0;// metade 1 metada em 0
-	MOVLW      240
+;DefinirSaidasEntras.c,4 :: 		PORTD = 0XFF;// metade 1 metada em 0
+	MOVLW      255
 	MOVWF      PORTD+0
 ;DefinirSaidasEntras.c,6 :: 		for(;;) // loop infinito;
 L_main0:

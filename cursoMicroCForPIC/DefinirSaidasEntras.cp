@@ -2,7 +2,7 @@
 
 void main() {
  TRISD = 0X00;
- PORTD = 0XF0;
+ PORTD = 0XFF;
 
  for(;;)
  {
