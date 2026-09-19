@@ -14,21 +14,24 @@ void main() {
  PORTD.F7= 0x00;
 
  for(;;){
- if((BUTTON(&PORTB, 0, 50, 1)) && (estabilizadPortB0 == 0)){
- PORTD.F6 = ~PORTD.F6;
- estabilizadPortB0 = 1;
-
- }
-
  if((BUTTON(&PORTB, 1, 50, 0)) && (estabilizadPortB1 == 0)){
- PORTD.F7 = ~PORTD.F7;
  estabilizadPortB1 = 1;
  }
 
- if(!(BUTTON(&PORTB, 0, 50, 0)) && (estabilizadPortB0 == 1))
- estabilizadPortB0 = 0;
 
- if(!(BUTTON(&PORTB, 1, 50, 1)) && (estabilizadPortB1 == 1))
+ if((BUTTON(&PORTB, 0, 50, 1)) && (estabilizadPortB0 == 0)){
+ estabilizadPortB0 = 1;
+ }
+
+
+ if((!BUTTON(&PORTB, 0, 50, 1)) && (estabilizadPortB0 == 1)) {
+ PORTD.F7 = ~PORTD.F7;
+ estabilizadPortB0 = 0;
+ }
+
+ if((!BUTTON(&PORTB, 1, 50, 0)) && (estabilizadPortB1 == 1)) {
+ PORTD.F6 = ~PORTD.F6;
  estabilizadPortB1 = 0;
+ }
  }
 }
