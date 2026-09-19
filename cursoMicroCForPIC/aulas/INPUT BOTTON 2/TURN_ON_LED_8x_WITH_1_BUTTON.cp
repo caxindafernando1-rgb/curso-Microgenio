@@ -3,24 +3,40 @@
 
 
 
+
 void main() {
- bit flegB0;
+ bit flegB0, flegB2;
+ bit estado_botao1, estado_botao2;
 
  unsigned char contarPULL = 0;
  TRISB.f0 = 1;
+ TRISB.f1 = 1;
 
 
  TRISD = 0;
  PORTD = 0x00;
 
- for(;;){
 
- if( BUTTON(&PORTB, 0, 20, 0)  && flegB0 == 0){
+ for(;;){
+ estado_botao1 =  BUTTON(&PORTB, 0, 20, 0) ;
+ estado_botao2 =  BUTTON(&PORTB, 1, 20, 0) ;
+
+ if(estado_botao1 && flegB0 == 0){
  flegB0 = 1;
  }
- if(! BUTTON(&PORTB, 0, 20, 0)  && flegB0 == 1){
+ if(!estado_botao1 && flegB0 == 1){
  flegB0 = 0;
+ if(contarPULL < 8)
  contarPULL++;
+ }
+
+ if(estado_botao2 && flegB2 == 0){
+ flegB2 = 1;
+ }
+ if(!estado_botao2 && flegB2 == 1){
+ flegB2 = 0;
+ if(contarPULL >0)
+ contarPULL--;
  }
 
  switch(contarPULL){
@@ -46,12 +62,7 @@ void main() {
   PORTD  = 0b01111111;
  break;
  case(8):
-  PORTD  = 0b111111111;
- break;
- default:
-  PORTD  = 0b00000000;
- contarPULL = 0;
-
+  PORTD  = 0b11111111;
  break;
 
 
