@@ -45,7 +45,8 @@ File0=Lcd
 File1=Lcd_Constants
 Count=2
 [EXPANDED_NODES]
-Count=0
+0=lcdPic.mcppi
+Count=1
 [LIB_EXPANDED_NODES]
 0=mikroE Libraries
 1=System Libraries

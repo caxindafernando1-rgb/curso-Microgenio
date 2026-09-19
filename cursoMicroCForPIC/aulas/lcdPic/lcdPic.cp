@@ -18,8 +18,73 @@ void main() {
 
 
  Lcd_Init();
-
+ for(;;){
  Lcd_Chr(1, 4, 'V');
  Lcd_Out(2, 3, "capa");
- Lcd_Out_CP("capa");
+ delay_ms(1000);
+ Lcd_Cmd(_LCD_CLEAR);
+ Lcd_out( 1, 1, "ENG.");
+ Lcd_out(2, 1, "_FERNANDO Caxinda_");
+ delay_ms(1000);
+ Lcd_Cmd(_LCD_SHIFT_LEFT);
+ delay_ms(500);
+ delay_ms(1000);
+ Lcd_Cmd(_LCD_SHIFT_LEFT);
+ delay_ms(500);
+ delay_ms(1000);
+ Lcd_Cmd(_LCD_SHIFT_LEFT);
+ delay_ms(500);
+ delay_ms(1000);
+ Lcd_Cmd(_LCD_SHIFT_LEFT);
+ delay_ms(500);
+ delay_ms(1000);
+ Lcd_Cmd(_LCD_SHIFT_LEFT);
+ delay_ms(500);
+ delay_ms(1000);
+ Lcd_Cmd(_LCD_SHIFT_LEFT);
+ delay_ms(500);
+ delay_ms(1000);
+ Lcd_Cmd(_LCD_SHIFT_LEFT);
+ delay_ms(500);
+ delay_ms(1000);
+ Lcd_Cmd(_LCD_SHIFT_LEFT);
+ delay_ms(500);
+ delay_ms(1000);
+ Lcd_Cmd(_LCD_SHIFT_LEFT);
+ delay_ms(500);
+ delay_ms(1000);
+ Lcd_Cmd(_LCD_SHIFT_LEFT);
+ delay_ms(500);
+ delay_ms(1000);
+ Lcd_Cmd(_LCD_SHIFT_LEFT);
+ delay_ms(500);
+ delay_ms(1000);
+ Lcd_Cmd(_LCD_SHIFT_LEFT);
+ delay_ms(500);
+ delay_ms(1000);
+ Lcd_Cmd(_LCD_SHIFT_LEFT);
+ delay_ms(500);
+ delay_ms(1000);
+ Lcd_Cmd(_LCD_SHIFT_LEFT);
+ delay_ms(500);
+ delay_ms(1000);
+ Lcd_Cmd(_LCD_SHIFT_LEFT);
+ delay_ms(500);
+ delay_ms(1000);
+ Lcd_Cmd(_LCD_SHIFT_LEFT);
+ delay_ms(500);
+ delay_ms(1000);
+ Lcd_Cmd(_LCD_SHIFT_LEFT);
+ delay_ms(500);
+ delay_ms(1000);
+ Lcd_Cmd(_LCD_SHIFT_LEFT);
+ delay_ms(500);
+ delay_ms(1000);
+ Lcd_Cmd(_LCD_SHIFT_LEFT);
+ delay_ms(500);
+ Lcd_out( 1, 1, "ENG.");
+ Lcd_out(2, 1, "_FERNANDO Caxinda_");
+ }
+
+
 }
