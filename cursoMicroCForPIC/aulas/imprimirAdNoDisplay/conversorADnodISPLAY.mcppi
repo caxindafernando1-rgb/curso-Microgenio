@@ -6,7 +6,7 @@ Value=0
 [BUILD_TYPE]
 Value=0
 [ACTIVE_TAB]
-Value=..\..\..\..\..\..\..\..\mikcro c for pic\mikroC PRO for PIC\sequencParAcendLed.c
+Value=conversorADnodISPLAY.c
 [USE_EEPROM]
 Value=0
 [USE_HEAP]
@@ -16,7 +16,7 @@ Value=0
 [EEPROM_DEFINITION]
 Value=
 [FILES]
-File0=..\..\..\..\..\..\..\..\mikcro c for pic\mikroC PRO for PIC\sequencParAcendLed.c
+File0=conversorADnodISPLAY.c
 Count=1
 [BINARIES]
 Count=0
@@ -24,7 +24,7 @@ Count=0
 Count=0
 ActiveImageIndex=-1
 [OPENED_FILES]
-File0=..\..\..\..\..\..\..\..\mikcro c for pic\mikroC PRO for PIC\sequencParAcendLed.c
+File0=conversorADnodISPLAY.c
 Count=1
 [EEPROM]
 Count=0
@@ -33,8 +33,7 @@ Count=0
 [OTHER_FILES]
 Count=0
 [SEARCH_PATH]
-Path0=..\..\..\..\..\..\..\..\mikcro c for pic\mikroC PRO for PIC\
-Count=1
+Count=0
 [HEADER_PATH]
 Count=0
 [HEADERS]
@@ -42,19 +41,18 @@ Count=0
 [PLDS]
 Count=0
 [Useses]
-File0=Button
-File1=Lcd
-File2=Lcd_Constants
-Count=3
+File0=Lcd
+File1=Lcd_Constants
+File2=Conversions
+File3=C_String
+Count=4
 [EXPANDED_NODES]
-0=lcdPic.mcppi
-15=sequencParAcendLed.mcppi
-Count=2
+Count=0
 [LIB_EXPANDED_NODES]
 0=mikroE Libraries
 1=System Libraries
 235=Lcd
-Count=4
+Count=3
 [PROGRAMMER_TYPE]
 Value=mikroE mikroProg
 [CODEGRIP_OPTIONS]
