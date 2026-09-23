@@ -6,7 +6,7 @@ Value=0
 [BUILD_TYPE]
 Value=0
 [ACTIVE_TAB]
-Value=conversorADnodISPLAY.c
+Value=..\imprimirAdNoDisplay\conversorADnodISPLAY.c
 [USE_EEPROM]
 Value=0
 [USE_HEAP]
@@ -16,7 +16,7 @@ Value=0
 [EEPROM_DEFINITION]
 Value=
 [FILES]
-File0=conversorADnodISPLAY.c
+File0=doisConvADnodISPLAY.c
 Count=1
 [BINARIES]
 Count=0
@@ -24,8 +24,7 @@ Count=0
 Count=0
 ActiveImageIndex=-1
 [OPENED_FILES]
-File0=conversorADnodISPLAY.c
-Count=1
+Count=0
 [EEPROM]
 Count=0
 [ACTIVE_COMMENTS_FILES]
@@ -47,12 +46,12 @@ File2=Conversions
 File3=C_String
 Count=4
 [EXPANDED_NODES]
-Count=0
+0=doisConvADnodISPLAY.mcppi
+Count=1
 [LIB_EXPANDED_NODES]
 0=mikroE Libraries
 1=System Libraries
-235=Lcd
-Count=3
+Count=2
 [PROGRAMMER_TYPE]
 Value=mikroE mikroProg
 [CODEGRIP_OPTIONS]

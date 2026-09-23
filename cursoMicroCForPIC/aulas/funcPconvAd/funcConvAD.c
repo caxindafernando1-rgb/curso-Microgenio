@@ -16,34 +16,31 @@ sbit LCD_D7_Direction at TRISB5_bit;
 
 void main() {
 
-      unsigned valConvert = 0;
-      char txt[6];
       ADCON0 = 0b00000000;
-      ADCON1 = 0b11001110;
-      
+      ADCON1 = 0b11000100;
+
       TRISA0_bit = 1;
+      TRISA1_bit = 1;
       TRISC = 0;
       TRISD = 0;
-      
+
       PORTD = 0;
       PORTC = 0;
-      
+
       Lcd_Init();
       Lcd_Cmd(_LCD_CURSOR_OFF);
-      Lcd_Out(1, 1, "VALOR AD: ");
-      
+      Lcd_Out(1, 1, "AN0: ");
+      Lcd_Out(2, 1, "AN0: ");
+
       for(;;){
-         ADON_bit = 1;
-         delay_us(20);
-         GO_NOT_DONE_bit = 1;
-         while(GO_NOT_DONE == 1);
-         PORTD = ADRESH;
-         PORTC = ADRESL;
-         valConvert = (PORTD<<8) + PORTC;//afastar 8 posições
-         ADON_bit = 0;
-         delay_us(20);
+         unsigned valConvert = 0;
+         char txt[6];
+         valConvert = ADC_Read(0);//o valConvert(recebe a inicialização do sinal do canal convertido; ADC_Read(0)(converte o sinal do canal 0)
          WordToStr(valConvert, txt);
-         Lcd_Out(2, 9, txt);
-         
+         Lcd_Out(1, 5, txt);
+
+         valConvert = ADC_Read(1);//o valConvert(recebe a inicialização do sinal do canal convertido; ADC_Read(0)(converte o sinal do canal 0)
+         WordToStr(valConvert, txt);
+         Lcd_Out(2, 5, txt);
       }
 }
