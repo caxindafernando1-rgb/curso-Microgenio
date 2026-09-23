@@ -20,5 +20,7 @@ main
 				Delay_50us
 	ADC_Read
 		Delay_22us
+	Mul_32x32_U
+	Div_32x32_U
 	WordToStr
 		Div_16X16_U

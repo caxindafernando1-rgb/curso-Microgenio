@@ -1,12 +1,12 @@
 0	1	mikroCPIC1618.exe -MSF -DBG -pP16F877A -DL -O11111114 -fo8 -N"C:\Users\Fernandes Caxinda\Documents\GitHub\curso-Microgenio\cursoMicroCForPIC\aulas\funcPconvAd\funcConvAD.mcppi" -SP"C:\mikcro c for pic\mikroC PRO for PIC\Defs\" -SP"C:\mikcro c for pic\mikroC PRO for PIC\Uses\P16\" -SP"C:\Users\Fernandes Caxinda\Documents\GitHub\curso-Microgenio\cursoMicroCForPIC\aulas\funcPconvAd\" -IP"C:\mikcro c for pic\mikroC PRO for PIC\Uses\P16\" "funcConvAD.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_CString.mcl" "__Lib_Conversions.mcl" "__Lib_ADC_A_C.mcl" "__Lib_LcdConsts.mcl" "__Lib_Lcd.mcl"	 
 hint: 0	1139	Available RAM: 352 [bytes], Available ROM: 8192 [bytes]	 
 diagnostics: 0	122	Compilation Started	funcConvAD.c
-diagnostics: 46	123	Compiled Successfully	funcConvAD.c
-hint: 36	1164	Variable 'valConvert' has been eliminated by optimizer	funcConvAD.c
-diagnostics: 0	127	All files Compiled in 109 ms	 
-hint: 0	1144	Used RAM (bytes): 28 (8%)  Free RAM (bytes): 324 (92%)	Used RAM (bytes): 28 (8%)  Free RAM (bytes): 324 (92%)
-hint: 0	1144	Used ROM (program words): 492 (6%)  Free ROM (program words): 7700 (94%)	Used ROM (program words): 492 (6%)  Free ROM (program words): 7700 (94%)
+diagnostics: 47	123	Compiled Successfully	funcConvAD.c
+hint: 36	1164	Variable 'TensaomV' has been eliminated by optimizer	funcConvAD.c
+diagnostics: 0	127	All files Compiled in 172 ms	 
+hint: 0	1144	Used RAM (bytes): 42 (12%)  Free RAM (bytes): 310 (88%)	Used RAM (bytes): 42 (12%)  Free RAM (bytes): 310 (88%)
+hint: 0	1144	Used ROM (program words): 970 (12%)  Free ROM (program words): 7222 (88%)	Used ROM (program words): 970 (12%)  Free ROM (program words): 7222 (88%)
 diagnostics: 0	125	Project Linked Successfully	funcConvAD.mcppi
-diagnostics: 0	128	Linked in 32 ms	 
-diagnostics: 0	129	Project 'funcConvAD.mcppi' completed: 297 ms	 
-diagnostics: 0	103	Finished successfully: 23 set 2026, 19:00:45	funcConvAD.mcppi
+diagnostics: 0	128	Linked in 94 ms	 
+diagnostics: 0	129	Project 'funcConvAD.mcppi' completed: 407 ms	 
+diagnostics: 0	103	Finished successfully: 23 set 2026, 19:24:07	funcConvAD.mcppi

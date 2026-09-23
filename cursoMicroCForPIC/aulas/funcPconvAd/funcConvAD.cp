@@ -30,15 +30,16 @@ void main() {
 
  Lcd_Init();
  Lcd_Cmd(_LCD_CURSOR_OFF);
- Lcd_Out(1, 1, "AN0: ");
- Lcd_Out(2, 1, "AN0: ");
+ Lcd_Out(1, 1, "tensao:     mV");
+ Lcd_Out(2, 1, "AN1: ");
 
  for(;;){
- unsigned valConvert = 0;
+ unsigned long valConvert = 0, TensaomV = 0;
  char txt[6];
  valConvert = ADC_Read(0);
- WordToStr(valConvert, txt);
- Lcd_Out(1, 5, txt);
+ tensaomV = (valConvert * 5000) / 1023;
+ WordToStr(tensaomV, txt);
+ Lcd_Out(1, 7, txt);
 
  valConvert = ADC_Read(1);
  WordToStr(valConvert, txt);
